@@ -25,6 +25,11 @@ Atleast twice a month we will meet up.
 
 Design Goals:
 
+Understand and benchmark different multimodal datasets in a federated setting.
+    Learn about how federated learning approach work and how to apply.
+    Successfully train a machine learning model where we also keep user privacy as a concern.
+    Learn how about benchmarking standards and how to apply to machinbe learning.
+
 Deliverables(from class project powerpoint):
 
 Understand multimodal federated learning (code:https://github.com/yuchenzhao/iotdi22-mmfl)
