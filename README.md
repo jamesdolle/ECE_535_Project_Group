@@ -1,9 +1,9 @@
-James Dolle, Bryan Wleung
+James Dolle, Bryan Leung
 ECE 535
 Project Proposal
 
 Project 5 Proposal:
-Bryan Wleung and James Dolle are going to be partners for Project 5. 
+Bryan Leung and James Dolle are going to be partners for Project 5. 
 We are both Computer Engineers, so we both have a moderate background in data structures, programming, and computer architecture.
 We have developed a basic understanding of Machine Learning through class lectures and research papers we have read to date.
 We will continue to learn more as well by researching machine learning topics and how to use machine learning in our own applications. 
