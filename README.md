@@ -1,4 +1,4 @@
-James Dolle, Bryan Leung
+James Dolle, Bryan Leung, Allen Molekunnel
 ECE 535
 Project Proposal
 
