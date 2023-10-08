@@ -2,7 +2,7 @@ James Dolle, Bryan Leung, Allen Molekunnel
 ECE 535
 Project Proposal
 
-Project 5 Proposal:
+Project 6 Proposal:
 Bryan Leung, James Dolle, and Allen Molekunnel are going to be partners for Project 5. 
 We are both Computer Engineers, so we both have a moderate background in data structures, programming, and computer architecture.
 We have developed a basic understanding of Machine Learning through class lectures and research papers we have read to date.
@@ -37,3 +37,4 @@ Understand multimodal federated learning (code:https://github.com/yuchenzhao/iot
 • data: https://drive.google.com/drive/folders/1rWJYkfMavGs1F-H0jykJ5V0fIiwrQdJV
 • Perform a per-class accuracy analysis of the results and observe the effect of skewed data distribution on the per-class accuracy
 • Evaluate the system on a multimodal dataset that is relatively balanced in class distribution
+
