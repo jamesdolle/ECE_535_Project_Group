@@ -46,18 +46,18 @@ class LocalBase():
         self.std = 1
         self.mean = 0
         
-	# Python is gross looking
+
         
         # use a for loop to iterate through train_data set and add a random
         # https://discuss.pytorch.org/t/how-to-add-noise-to-mnist-dataset-when-using-pytorch/59745
         # torch.randn(tensor.size()) * self.std + self.mean
         # add to ^ number to every image 
         
-        vomit = args.train_distributed_data[client_id]
-        self.dLength_train = len([int(i) for i in vomit])
+        cLength = args.train_distributed_data[client_id]
+        self.dLength_train = len([int(i) for i in cLength])
         
-        vomit = args.test_distributed_data[client_id]
-        self.dLength_test = len([int(i) for i in vomit])
+        cLength = args.test_distributed_data[client_id]
+        self.dLength_test = len([int(i) for i in cLength])
 
 
 
