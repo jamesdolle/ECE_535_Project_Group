@@ -1,4 +1,10 @@
+'''
+Some important notes:
+You'll need to add choices in parameters.py for TERM.
+For client.py, just copy and paste class Fedavg_Local(...) and its methods.
+Then, rewrite the class as class TERM_Local(...) and its methods.
 
+'''
 import sys
 sys.path.append('../../')
 from FL.utils.define_model import define_model
@@ -29,17 +35,40 @@ class Fedavg_Global(GlobalBase):
             local_weights.append(dataclass.weight)
         w_avg=weighted_average_weights(local_weights,global_weight.state_dict())
 
-        torch.save(self.model.state_dict(), "/home/ubuntu/Desktop/ECE_535/project/saved_models/filename.pth") # extra line to save model, change filename after each run
         self.model.load_state_dict(w_avg)
 
+class TERM_Global(GlobalBase):
+    def __init__(self, args):
+        super().__init__(args)
+
+    def aggregate(self,local_params):
+        print("reducing risk...")
+        global_weight=self.model
+        local_weights=[]
+        median=0
+        for client_id ,dataclass in local_params.items():
+            local_weights.append(dataclass.weight)
+        new_local_weights=local_weights.sort()
+        if len(new_local_weights)%2==0:
+             median=0
+             new_val1=new_local_weights[int(i//2)]
+             new_val2=new_local_weights[int(i//2)-1]
+             median=(new_val1+new_val2)/2
+             for i in range(len(new_local_weights)):
+                  new_local_weights[i]=median
+        if len(new_local_weights)%2==1:
+            median=0
+            new_val1=new_local_weights[int(i//2)]
+            median=new_val1
+            for k in range(len(new_local_weights)):
+                  new_local_weights[i]=median
+        w_avg=weighted_average_weights(local_weights,global_weight.state_dict())
+        self.model.load_state_dict(w_avg)
 
 class Afl_Global(GlobalBase):
     def __init__(self, args):
         super().__init__(args)
         self.lambda_vector= torch.Tensor([1/args.n_clients for _ in range(args.n_clients)])
-        
-    
-
     def aggregate(self,local_params):
         print("aggregating weights...")
         global_weight=self.model
@@ -59,7 +88,6 @@ class Afl_Global(GlobalBase):
         self.lambda_vector=lambda_vector
         w_avg=weighted_average_weights(local_weights,global_weight.state_dict(),lambda_vector.to(self.device))
         print("lambda:",lambda_vector)
-        torch.save(self.model.state_dict(),"/home/ubuntu/Desktop/ECE_535/project/saved_models/filename.pth") # extra line to save model, change filename after each run
         self.model.load_state_dict(w_avg)
 
 
@@ -69,7 +97,8 @@ def define_globalnode(args):
         
     elif args.federated_type=='afl':#afl
         return Afl_Global(args)
-        
+    elif args.federated_type=='TERM':#TERM
+        return TERM_Global(args)    
     else:       
         raise NotImplementedError     
         
