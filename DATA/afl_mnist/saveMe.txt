@@ -1,0 +1,1579 @@
+Script started on 2023-12-02 10:41:12-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;jdolle@535-project-CPU-ONLY: ~/agnostic_federated_learning[01;32mjdolle@535-project-CPU-ONLY[00m:[01;34m~/agnostic_federated_learning[00m$ python3 main.py
+Warning!: CPU will be used for training
+
+batch_size: 32
+data_dist: from_csv
+dataset: mnist
+drfa_gamma: 0.01
+federated_type: afl
+from_csv: iid
+global_epochs: 30
+local_epochs: 5
+lr: 0.01
+model: cnn
+n_clients: 3
+on_cuda: 1
+optimizer: sgd
+seed: 1
+seed_num: 0
+
+ INIT DATA 
+
+-----------------client-------------------
+Class distribution of id:0
+train [5923, 6742, 5958, 6131, 5842, 5421, 5918, 6265, 5851, 5949]
+test [1001, 1127, 991, 1032, 980, 863, 1014, 1070, 944, 978]
+
+ INIT DATA 
+
+-----------------client-------------------
+Class distribution of id:1
+train [5923, 6742, 5958, 6131, 5842, 5421, 5918, 6265, 5851, 5949]
+test [1001, 1127, 991, 1032, 980, 863, 1014, 1070, 944, 978]
+
+ INIT DATA 
+
+-----------------client-------------------
+Class distribution of id:2
+train [5923, 6742, 5958, 6131, 5842, 5421, 5918, 6265, 5851, 5949]
+test [1001, 1127, 991, 1032, 980, 863, 1014, 1070, 944, 978]
+| Client id:0 | Test_Loss: 2.302 | Test_Acc: 10.814
+| Class: 0 - airplane   | Class_Acc: 0.000
+| Class: 1 - automobile | Class_Acc: 84.741
+| Class: 2 - bird       | Class_Acc: 0.000
+| Class: 3 - cat        | Class_Acc: 0.308
+| Class: 4 - deer       | Class_Acc: 12.363
+| Class: 5 - dog        | Class_Acc: 0.000
+| Class: 6 - frog       | Class_Acc: 0.000
+| Class: 7 - horse      | Class_Acc: 0.000
+| Class: 8 - ship       | Class_Acc: 1.003
+| Class: 9 - truck      | Class_Acc: 0.000
+| Global Round : 1/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.963 | Train_Acc: 65.960
+| Global Round : 1/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.316 | Train_Acc: 89.853
+| Global Round : 1/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.230 | Train_Acc: 92.624
+| Global Round : 1/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.183 | Train_Acc: 94.024
+| Global Round : 1/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.141 | Train_Acc: 95.369
+| Client id:1 | Test_Loss: 2.302 | Test_Acc: 10.514
+| Class: 0 - airplane   | Class_Acc: 0.000
+| Class: 1 - automobile | Class_Acc: 80.381
+| Class: 2 - bird       | Class_Acc: 0.000
+| Class: 3 - cat        | Class_Acc: 0.000
+| Class: 4 - deer       | Class_Acc: 14.560
+| Class: 5 - dog        | Class_Acc: 0.000
+| Class: 6 - frog       | Class_Acc: 0.000
+| Class: 7 - horse      | Class_Acc: 0.000
+| Class: 8 - ship       | Class_Acc: 0.669
+| Class: 9 - truck      | Class_Acc: 0.000
+| Global Round : 1/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.963 | Train_Acc: 66.805
+| Global Round : 1/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.312 | Train_Acc: 89.818
+| Global Round : 1/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.232 | Train_Acc: 92.489
+| Global Round : 1/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.183 | Train_Acc: 94.009
+| Global Round : 1/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.141 | Train_Acc: 95.349
+| Client id:2 | Test_Loss: 2.302 | Test_Acc: 11.131
+| Class: 0 - airplane   | Class_Acc: 0.000
+| Class: 1 - automobile | Class_Acc: 82.880
+| Class: 2 - bird       | Class_Acc: 0.000
+| Class: 3 - cat        | Class_Acc: 0.000
+| Class: 4 - deer       | Class_Acc: 17.760
+| Class: 5 - dog        | Class_Acc: 0.000
+| Class: 6 - frog       | Class_Acc: 0.000
+| Class: 7 - horse      | Class_Acc: 0.000
+| Class: 8 - ship       | Class_Acc: 0.667
+| Class: 9 - truck      | Class_Acc: 0.000
+| Global Round : 1/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.951 | Train_Acc: 66.630
+| Global Round : 1/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.311 | Train_Acc: 90.018
+| Global Round : 1/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.227 | Train_Acc: 92.497
+| Global Round : 1/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.174 | Train_Acc: 94.132
+| Global Round : 1/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.135 | Train_Acc: 95.381
+aggregating weights...
+lambda: tensor([0.3333, 0.3333, 0.3333])
+| Client id:0 | Test_Loss: 0.180 | Test_Acc: 94.293
+| Class: 0 - airplane   | Class_Acc: 97.778
+| Class: 1 - automobile | Class_Acc: 96.458
+| Class: 2 - bird       | Class_Acc: 96.096
+| Class: 3 - cat        | Class_Acc: 93.538
+| Class: 4 - deer       | Class_Acc: 92.033
+| Class: 5 - dog        | Class_Acc: 93.311
+| Class: 6 - frog       | Class_Acc: 97.313
+| Class: 7 - horse      | Class_Acc: 93.407
+| Class: 8 - ship       | Class_Acc: 94.314
+| Class: 9 - truck      | Class_Acc: 88.720
+| Global Round : 2/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.189 | Train_Acc: 93.744
+| Global Round : 2/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.138 | Train_Acc: 95.324
+| Global Round : 2/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.100 | Train_Acc: 96.609
+| Global Round : 2/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.080 | Train_Acc: 97.270
+| Global Round : 2/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.069 | Train_Acc: 97.665
+| Client id:1 | Test_Loss: 0.215 | Test_Acc: 93.872
+| Class: 0 - airplane   | Class_Acc: 98.095
+| Class: 1 - automobile | Class_Acc: 97.003
+| Class: 2 - bird       | Class_Acc: 94.294
+| Class: 3 - cat        | Class_Acc: 91.077
+| Class: 4 - deer       | Class_Acc: 90.934
+| Class: 5 - dog        | Class_Acc: 93.645
+| Class: 6 - frog       | Class_Acc: 97.612
+| Class: 7 - horse      | Class_Acc: 94.780
+| Class: 8 - ship       | Class_Acc: 91.973
+| Class: 9 - truck      | Class_Acc: 89.024
+| Global Round : 2/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.190 | Train_Acc: 93.869
+| Global Round : 2/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.139 | Train_Acc: 95.434
+| Global Round : 2/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.110 | Train_Acc: 96.349
+| Global Round : 2/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.080 | Train_Acc: 97.285
+| Global Round : 2/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.057 | Train_Acc: 98.080
+| Client id:2 | Test_Loss: 0.200 | Test_Acc: 93.656
+| Class: 0 - airplane   | Class_Acc: 96.203
+| Class: 1 - automobile | Class_Acc: 97.283
+| Class: 2 - bird       | Class_Acc: 93.769
+| Class: 3 - cat        | Class_Acc: 94.495
+| Class: 4 - deer       | Class_Acc: 89.891
+| Class: 5 - dog        | Class_Acc: 91.973
+| Class: 6 - frog       | Class_Acc: 96.142
+| Class: 7 - horse      | Class_Acc: 94.505
+| Class: 8 - ship       | Class_Acc: 91.000
+| Class: 9 - truck      | Class_Acc: 90.854
+| Global Round : 2/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.182 | Train_Acc: 93.972
+| Global Round : 2/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.136 | Train_Acc: 95.426
+| Global Round : 2/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.110 | Train_Acc: 96.271
+| Global Round : 2/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.083 | Train_Acc: 97.351
+| Global Round : 2/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.059 | Train_Acc: 98.001
+aggregating weights...
+lambda: tensor([0.3331, 0.3335, 0.3334])
+| Client id:0 | Test_Loss: 0.183 | Test_Acc: 94.713
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 96.730
+| Class: 2 - bird       | Class_Acc: 97.598
+| Class: 3 - cat        | Class_Acc: 96.615
+| Class: 4 - deer       | Class_Acc: 96.154
+| Class: 5 - dog        | Class_Acc: 93.311
+| Class: 6 - frog       | Class_Acc: 95.224
+| Class: 7 - horse      | Class_Acc: 92.033
+| Class: 8 - ship       | Class_Acc: 92.642
+| Class: 9 - truck      | Class_Acc: 88.110
+| Global Round : 3/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.131 | Train_Acc: 95.619
+| Global Round : 3/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.081 | Train_Acc: 97.180
+| Global Round : 3/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.054 | Train_Acc: 98.165
+| Global Round : 3/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.039 | Train_Acc: 98.730
+| Global Round : 3/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.030 | Train_Acc: 99.030
+| Client id:1 | Test_Loss: 0.185 | Test_Acc: 94.713
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 97.275
+| Class: 2 - bird       | Class_Acc: 96.697
+| Class: 3 - cat        | Class_Acc: 96.000
+| Class: 4 - deer       | Class_Acc: 93.956
+| Class: 5 - dog        | Class_Acc: 93.980
+| Class: 6 - frog       | Class_Acc: 97.313
+| Class: 7 - horse      | Class_Acc: 94.231
+| Class: 8 - ship       | Class_Acc: 90.301
+| Class: 9 - truck      | Class_Acc: 88.415
+| Global Round : 3/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.130 | Train_Acc: 95.419
+| Global Round : 3/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.077 | Train_Acc: 97.420
+| Global Round : 3/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.060 | Train_Acc: 97.900
+| Global Round : 3/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.044 | Train_Acc: 98.485
+| Global Round : 3/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.034 | Train_Acc: 98.930
+| Client id:2 | Test_Loss: 0.196 | Test_Acc: 94.345
+| Class: 0 - airplane   | Class_Acc: 97.468
+| Class: 1 - automobile | Class_Acc: 97.826
+| Class: 2 - bird       | Class_Acc: 96.439
+| Class: 3 - cat        | Class_Acc: 96.942
+| Class: 4 - deer       | Class_Acc: 94.262
+| Class: 5 - dog        | Class_Acc: 90.301
+| Class: 6 - frog       | Class_Acc: 96.142
+| Class: 7 - horse      | Class_Acc: 92.308
+| Class: 8 - ship       | Class_Acc: 90.333
+| Class: 9 - truck      | Class_Acc: 90.549
+| Global Round : 3/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.121 | Train_Acc: 95.896
+| Global Round : 3/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.075 | Train_Acc: 97.381
+| Global Round : 3/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.052 | Train_Acc: 98.261
+| Global Round : 3/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.045 | Train_Acc: 98.445
+| Global Round : 3/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.032 | Train_Acc: 99.035
+aggregating weights...
+lambda: tensor([0.3331, 0.3335, 0.3334])
+| Client id:0 | Test_Loss: 0.194 | Test_Acc: 95.494
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 97.548
+| Class: 2 - bird       | Class_Acc: 97.598
+| Class: 3 - cat        | Class_Acc: 96.308
+| Class: 4 - deer       | Class_Acc: 95.604
+| Class: 5 - dog        | Class_Acc: 94.649
+| Class: 6 - frog       | Class_Acc: 97.313
+| Class: 7 - horse      | Class_Acc: 94.780
+| Class: 8 - ship       | Class_Acc: 94.314
+| Class: 9 - truck      | Class_Acc: 88.110
+| Global Round : 4/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.096 | Train_Acc: 96.720
+| Global Round : 4/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.062 | Train_Acc: 97.955
+| Global Round : 4/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.045 | Train_Acc: 98.535
+| Global Round : 4/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.025 | Train_Acc: 99.230
+| Global Round : 4/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.019 | Train_Acc: 99.440
+| Client id:1 | Test_Loss: 0.194 | Test_Acc: 94.833
+| Class: 0 - airplane   | Class_Acc: 98.730
+| Class: 1 - automobile | Class_Acc: 97.003
+| Class: 2 - bird       | Class_Acc: 96.096
+| Class: 3 - cat        | Class_Acc: 94.769
+| Class: 4 - deer       | Class_Acc: 94.505
+| Class: 5 - dog        | Class_Acc: 95.652
+| Class: 6 - frog       | Class_Acc: 97.015
+| Class: 7 - horse      | Class_Acc: 95.604
+| Class: 8 - ship       | Class_Acc: 91.973
+| Class: 9 - truck      | Class_Acc: 86.585
+| Global Round : 4/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.098 | Train_Acc: 96.730
+| Global Round : 4/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.051 | Train_Acc: 98.195
+| Global Round : 4/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.036 | Train_Acc: 98.790
+| Global Round : 4/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.029 | Train_Acc: 99.100
+| Global Round : 4/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.019 | Train_Acc: 99.440
+| Client id:2 | Test_Loss: 0.208 | Test_Acc: 94.584
+| Class: 0 - airplane   | Class_Acc: 97.785
+| Class: 1 - automobile | Class_Acc: 98.098
+| Class: 2 - bird       | Class_Acc: 94.659
+| Class: 3 - cat        | Class_Acc: 95.413
+| Class: 4 - deer       | Class_Acc: 94.809
+| Class: 5 - dog        | Class_Acc: 92.977
+| Class: 6 - frog       | Class_Acc: 96.439
+| Class: 7 - horse      | Class_Acc: 94.231
+| Class: 8 - ship       | Class_Acc: 91.667
+| Class: 9 - truck      | Class_Acc: 89.024
+| Global Round : 4/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.089 | Train_Acc: 96.871
+| Global Round : 4/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.053 | Train_Acc: 98.136
+| Global Round : 4/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.040 | Train_Acc: 98.690
+| Global Round : 4/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.020 | Train_Acc: 99.410
+| Global Round : 4/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.016 | Train_Acc: 99.565
+aggregating weights...
+lambda: tensor([0.3331, 0.3334, 0.3335])
+| Client id:0 | Test_Loss: 0.197 | Test_Acc: 95.464
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 97.548
+| Class: 2 - bird       | Class_Acc: 96.697
+| Class: 3 - cat        | Class_Acc: 96.308
+| Class: 4 - deer       | Class_Acc: 95.604
+| Class: 5 - dog        | Class_Acc: 93.980
+| Class: 6 - frog       | Class_Acc: 95.224
+| Class: 7 - horse      | Class_Acc: 93.681
+| Class: 8 - ship       | Class_Acc: 93.980
+| Class: 9 - truck      | Class_Acc: 92.988
+| Global Round : 5/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.080 | Train_Acc: 97.090
+| Global Round : 5/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.051 | Train_Acc: 98.300
+| Global Round : 5/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.035 | Train_Acc: 98.775
+| Global Round : 5/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.018 | Train_Acc: 99.535
+| Global Round : 5/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.016 | Train_Acc: 99.520
+| Client id:1 | Test_Loss: 0.193 | Test_Acc: 95.164
+| Class: 0 - airplane   | Class_Acc: 98.730
+| Class: 1 - automobile | Class_Acc: 97.003
+| Class: 2 - bird       | Class_Acc: 95.495
+| Class: 3 - cat        | Class_Acc: 94.462
+| Class: 4 - deer       | Class_Acc: 93.681
+| Class: 5 - dog        | Class_Acc: 95.987
+| Class: 6 - frog       | Class_Acc: 95.522
+| Class: 7 - horse      | Class_Acc: 96.429
+| Class: 8 - ship       | Class_Acc: 92.642
+| Class: 9 - truck      | Class_Acc: 91.463
+| Global Round : 5/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.074 | Train_Acc: 97.465
+| Global Round : 5/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.053 | Train_Acc: 98.115
+| Global Round : 5/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.028 | Train_Acc: 99.090
+| Global Round : 5/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.021 | Train_Acc: 99.300
+| Global Round : 5/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.027 | Train_Acc: 99.105
+| Client id:2 | Test_Loss: 0.202 | Test_Acc: 95.033
+| Class: 0 - airplane   | Class_Acc: 97.152
+| Class: 1 - automobile | Class_Acc: 98.641
+| Class: 2 - bird       | Class_Acc: 94.362
+| Class: 3 - cat        | Class_Acc: 95.719
+| Class: 4 - deer       | Class_Acc: 94.262
+| Class: 5 - dog        | Class_Acc: 94.649
+| Class: 6 - frog       | Class_Acc: 95.846
+| Class: 7 - horse      | Class_Acc: 95.055
+| Class: 8 - ship       | Class_Acc: 91.333
+| Class: 9 - truck      | Class_Acc: 92.683
+| Global Round : 5/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.075 | Train_Acc: 97.416
+| Global Round : 5/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.040 | Train_Acc: 98.675
+| Global Round : 5/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.032 | Train_Acc: 99.010
+| Global Round : 5/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.023 | Train_Acc: 99.250
+| Global Round : 5/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.015 | Train_Acc: 99.585
+aggregating weights...
+lambda: tensor([0.3331, 0.3334, 0.3336])
+| Client id:0 | Test_Loss: 0.195 | Test_Acc: 95.014
+| Class: 0 - airplane   | Class_Acc: 97.460
+| Class: 1 - automobile | Class_Acc: 98.093
+| Class: 2 - bird       | Class_Acc: 96.396
+| Class: 3 - cat        | Class_Acc: 95.077
+| Class: 4 - deer       | Class_Acc: 96.154
+| Class: 5 - dog        | Class_Acc: 93.311
+| Class: 6 - frog       | Class_Acc: 96.716
+| Class: 7 - horse      | Class_Acc: 93.681
+| Class: 8 - ship       | Class_Acc: 93.980
+| Class: 9 - truck      | Class_Acc: 88.720
+| Global Round : 6/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.062 | Train_Acc: 97.870
+| Global Round : 6/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.039 | Train_Acc: 98.730
+| Global Round : 6/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.027 | Train_Acc: 99.110
+| Global Round : 6/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.018 | Train_Acc: 99.440
+| Global Round : 6/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.011 | Train_Acc: 99.775
+| Client id:1 | Test_Loss: 0.206 | Test_Acc: 94.653
+| Class: 0 - airplane   | Class_Acc: 97.778
+| Class: 1 - automobile | Class_Acc: 98.365
+| Class: 2 - bird       | Class_Acc: 93.093
+| Class: 3 - cat        | Class_Acc: 92.000
+| Class: 4 - deer       | Class_Acc: 94.780
+| Class: 5 - dog        | Class_Acc: 95.987
+| Class: 6 - frog       | Class_Acc: 96.119
+| Class: 7 - horse      | Class_Acc: 96.154
+| Class: 8 - ship       | Class_Acc: 93.645
+| Class: 9 - truck      | Class_Acc: 88.110
+| Global Round : 6/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.060 | Train_Acc: 97.900
+| Global Round : 6/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.037 | Train_Acc: 98.675
+| Global Round : 6/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.019 | Train_Acc: 99.470
+| Global Round : 6/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.024 | Train_Acc: 99.270
+| Global Round : 6/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.013 | Train_Acc: 99.675
+| Client id:2 | Test_Loss: 0.205 | Test_Acc: 94.853
+| Class: 0 - airplane   | Class_Acc: 97.152
+| Class: 1 - automobile | Class_Acc: 98.913
+| Class: 2 - bird       | Class_Acc: 91.691
+| Class: 3 - cat        | Class_Acc: 95.719
+| Class: 4 - deer       | Class_Acc: 95.355
+| Class: 5 - dog        | Class_Acc: 93.311
+| Class: 6 - frog       | Class_Acc: 96.439
+| Class: 7 - horse      | Class_Acc: 95.330
+| Class: 8 - ship       | Class_Acc: 92.667
+| Class: 9 - truck      | Class_Acc: 91.159
+| Global Round : 6/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.060 | Train_Acc: 97.806
+| Global Round : 6/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.032 | Train_Acc: 98.980
+| Global Round : 6/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.021 | Train_Acc: 99.315
+| Global Round : 6/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.027 | Train_Acc: 99.095
+| Global Round : 6/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.014 | Train_Acc: 99.585
+aggregating weights...
+lambda: tensor([0.3330, 0.3334, 0.3336])
+| Client id:0 | Test_Loss: 0.194 | Test_Acc: 95.284
+| Class: 0 - airplane   | Class_Acc: 97.143
+| Class: 1 - automobile | Class_Acc: 98.093
+| Class: 2 - bird       | Class_Acc: 96.096
+| Class: 3 - cat        | Class_Acc: 96.615
+| Class: 4 - deer       | Class_Acc: 96.429
+| Class: 5 - dog        | Class_Acc: 93.645
+| Class: 6 - frog       | Class_Acc: 96.119
+| Class: 7 - horse      | Class_Acc: 93.681
+| Class: 8 - ship       | Class_Acc: 93.311
+| Class: 9 - truck      | Class_Acc: 91.159
+| Global Round : 7/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.051 | Train_Acc: 98.240
+| Global Round : 7/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.027 | Train_Acc: 99.155
+| Global Round : 7/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.021 | Train_Acc: 99.385
+| Global Round : 7/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.014 | Train_Acc: 99.585
+| Global Round : 7/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.010 | Train_Acc: 99.760
+| Client id:1 | Test_Loss: 0.196 | Test_Acc: 95.194
+| Class: 0 - airplane   | Class_Acc: 97.778
+| Class: 1 - automobile | Class_Acc: 98.093
+| Class: 2 - bird       | Class_Acc: 95.195
+| Class: 3 - cat        | Class_Acc: 95.692
+| Class: 4 - deer       | Class_Acc: 95.055
+| Class: 5 - dog        | Class_Acc: 95.318
+| Class: 6 - frog       | Class_Acc: 96.716
+| Class: 7 - horse      | Class_Acc: 96.154
+| Class: 8 - ship       | Class_Acc: 91.639
+| Class: 9 - truck      | Class_Acc: 89.634
+| Global Round : 7/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.048 | Train_Acc: 98.255
+| Global Round : 7/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.028 | Train_Acc: 99.080
+| Global Round : 7/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.022 | Train_Acc: 99.335
+| Global Round : 7/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.016 | Train_Acc: 99.510
+| Global Round : 7/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.007 | Train_Acc: 99.865
+| Client id:2 | Test_Loss: 0.200 | Test_Acc: 95.033
+| Class: 0 - airplane   | Class_Acc: 97.785
+| Class: 1 - automobile | Class_Acc: 98.098
+| Class: 2 - bird       | Class_Acc: 93.472
+| Class: 3 - cat        | Class_Acc: 97.554
+| Class: 4 - deer       | Class_Acc: 95.082
+| Class: 5 - dog        | Class_Acc: 93.980
+| Class: 6 - frog       | Class_Acc: 95.846
+| Class: 7 - horse      | Class_Acc: 94.505
+| Class: 8 - ship       | Class_Acc: 91.333
+| Class: 9 - truck      | Class_Acc: 92.073
+| Global Round : 7/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.047 | Train_Acc: 98.415
+| Global Round : 7/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.023 | Train_Acc: 99.285
+| Global Round : 7/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.016 | Train_Acc: 99.535
+| Global Round : 7/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.021 | Train_Acc: 99.355
+| Global Round : 7/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.009 | Train_Acc: 99.810
+aggregating weights...
+lambda: tensor([0.3330, 0.3334, 0.3336])
+| Client id:0 | Test_Loss: 0.203 | Test_Acc: 95.524
+| Class: 0 - airplane   | Class_Acc: 97.778
+| Class: 1 - automobile | Class_Acc: 97.548
+| Class: 2 - bird       | Class_Acc: 97.297
+| Class: 3 - cat        | Class_Acc: 95.692
+| Class: 4 - deer       | Class_Acc: 95.330
+| Class: 5 - dog        | Class_Acc: 95.318
+| Class: 6 - frog       | Class_Acc: 94.627
+| Class: 7 - horse      | Class_Acc: 93.956
+| Class: 8 - ship       | Class_Acc: 94.983
+| Class: 9 - truck      | Class_Acc: 92.683
+| Global Round : 8/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.049 | Train_Acc: 98.330
+| Global Round : 8/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.034 | Train_Acc: 98.895
+| Global Round : 8/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.020 | Train_Acc: 99.450
+| Global Round : 8/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.018 | Train_Acc: 99.485
+| Global Round : 8/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.020 | Train_Acc: 99.385
+| Client id:1 | Test_Loss: 0.213 | Test_Acc: 95.074
+| Class: 0 - airplane   | Class_Acc: 98.095
+| Class: 1 - automobile | Class_Acc: 97.275
+| Class: 2 - bird       | Class_Acc: 94.595
+| Class: 3 - cat        | Class_Acc: 94.462
+| Class: 4 - deer       | Class_Acc: 93.407
+| Class: 5 - dog        | Class_Acc: 95.987
+| Class: 6 - frog       | Class_Acc: 96.119
+| Class: 7 - horse      | Class_Acc: 95.879
+| Class: 8 - ship       | Class_Acc: 93.980
+| Class: 9 - truck      | Class_Acc: 90.854
+| Global Round : 8/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.043 | Train_Acc: 98.505
+| Global Round : 8/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.033 | Train_Acc: 98.920
+| Global Round : 8/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.028 | Train_Acc: 99.085
+| Global Round : 8/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.022 | Train_Acc: 99.245
+| Global Round : 8/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.013 | Train_Acc: 99.605
+| Client id:2 | Test_Loss: 0.200 | Test_Acc: 95.153
+| Class: 0 - airplane   | Class_Acc: 97.785
+| Class: 1 - automobile | Class_Acc: 98.098
+| Class: 2 - bird       | Class_Acc: 95.252
+| Class: 3 - cat        | Class_Acc: 95.719
+| Class: 4 - deer       | Class_Acc: 92.623
+| Class: 5 - dog        | Class_Acc: 94.649
+| Class: 6 - frog       | Class_Acc: 95.846
+| Class: 7 - horse      | Class_Acc: 94.505
+| Class: 8 - ship       | Class_Acc: 93.000
+| Class: 9 - truck      | Class_Acc: 93.902
+| Global Round : 8/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.039 | Train_Acc: 98.650
+| Global Round : 8/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.040 | Train_Acc: 98.615
+| Global Round : 8/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.026 | Train_Acc: 99.195
+| Global Round : 8/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.015 | Train_Acc: 99.530
+| Global Round : 8/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.009 | Train_Acc: 99.765
+aggregating weights...
+lambda: tensor([0.3329, 0.3335, 0.3336])
+| Client id:0 | Test_Loss: 0.188 | Test_Acc: 95.344
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 97.820
+| Class: 2 - bird       | Class_Acc: 97.898
+| Class: 3 - cat        | Class_Acc: 96.000
+| Class: 4 - deer       | Class_Acc: 95.604
+| Class: 5 - dog        | Class_Acc: 93.311
+| Class: 6 - frog       | Class_Acc: 96.119
+| Class: 7 - horse      | Class_Acc: 93.681
+| Class: 8 - ship       | Class_Acc: 95.318
+| Class: 9 - truck      | Class_Acc: 89.024
+| Global Round : 9/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.035 | Train_Acc: 98.875
+| Global Round : 9/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.028 | Train_Acc: 99.095
+| Global Round : 9/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.019 | Train_Acc: 99.475
+| Global Round : 9/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.008 | Train_Acc: 99.790
+| Global Round : 9/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.008 | Train_Acc: 99.775
+| Client id:1 | Test_Loss: 0.196 | Test_Acc: 94.953
+| Class: 0 - airplane   | Class_Acc: 97.778
+| Class: 1 - automobile | Class_Acc: 97.820
+| Class: 2 - bird       | Class_Acc: 95.495
+| Class: 3 - cat        | Class_Acc: 95.077
+| Class: 4 - deer       | Class_Acc: 94.231
+| Class: 5 - dog        | Class_Acc: 95.652
+| Class: 6 - frog       | Class_Acc: 97.015
+| Class: 7 - horse      | Class_Acc: 95.330
+| Class: 8 - ship       | Class_Acc: 93.311
+| Class: 9 - truck      | Class_Acc: 87.500
+| Global Round : 9/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.038 | Train_Acc: 98.750
+| Global Round : 9/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.020 | Train_Acc: 99.380
+| Global Round : 9/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.020 | Train_Acc: 99.380
+| Global Round : 9/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.013 | Train_Acc: 99.615
+| Global Round : 9/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.011 | Train_Acc: 99.720
+| Client id:2 | Test_Loss: 0.191 | Test_Acc: 95.302
+| Class: 0 - airplane   | Class_Acc: 97.468
+| Class: 1 - automobile | Class_Acc: 98.098
+| Class: 2 - bird       | Class_Acc: 95.252
+| Class: 3 - cat        | Class_Acc: 96.942
+| Class: 4 - deer       | Class_Acc: 95.082
+| Class: 5 - dog        | Class_Acc: 93.645
+| Class: 6 - frog       | Class_Acc: 96.736
+| Class: 7 - horse      | Class_Acc: 94.780
+| Class: 8 - ship       | Class_Acc: 93.000
+| Class: 9 - truck      | Class_Acc: 91.463
+| Global Round : 9/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.032 | Train_Acc: 98.880
+| Global Round : 9/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.026 | Train_Acc: 99.170
+| Global Round : 9/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.036 | Train_Acc: 98.830
+| Global Round : 9/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.017 | Train_Acc: 99.535
+| Global Round : 9/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.010 | Train_Acc: 99.760
+aggregating weights...
+lambda: tensor([0.3329, 0.3335, 0.3336])
+| Client id:0 | Test_Loss: 0.190 | Test_Acc: 95.404
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 97.275
+| Class: 2 - bird       | Class_Acc: 97.297
+| Class: 3 - cat        | Class_Acc: 96.000
+| Class: 4 - deer       | Class_Acc: 95.055
+| Class: 5 - dog        | Class_Acc: 94.314
+| Class: 6 - frog       | Class_Acc: 94.627
+| Class: 7 - horse      | Class_Acc: 93.407
+| Class: 8 - ship       | Class_Acc: 95.652
+| Class: 9 - truck      | Class_Acc: 92.073
+| Global Round : 10/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.036 | Train_Acc: 98.845
+| Global Round : 10/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.022 | Train_Acc: 99.290
+| Global Round : 10/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.024 | Train_Acc: 99.290
+| Global Round : 10/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.019 | Train_Acc: 99.435
+| Global Round : 10/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.007 | Train_Acc: 99.815
+| Client id:1 | Test_Loss: 0.187 | Test_Acc: 95.464
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 97.275
+| Class: 2 - bird       | Class_Acc: 95.195
+| Class: 3 - cat        | Class_Acc: 96.615
+| Class: 4 - deer       | Class_Acc: 93.956
+| Class: 5 - dog        | Class_Acc: 95.652
+| Class: 6 - frog       | Class_Acc: 97.015
+| Class: 7 - horse      | Class_Acc: 95.604
+| Class: 8 - ship       | Class_Acc: 94.983
+| Class: 9 - truck      | Class_Acc: 89.939
+| Global Round : 10/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.031 | Train_Acc: 99.000
+| Global Round : 10/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.023 | Train_Acc: 99.280
+| Global Round : 10/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.019 | Train_Acc: 99.430
+| Global Round : 10/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.023 | Train_Acc: 99.285
+| Global Round : 10/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.018 | Train_Acc: 99.420
+| Client id:2 | Test_Loss: 0.182 | Test_Acc: 95.302
+| Class: 0 - airplane   | Class_Acc: 97.785
+| Class: 1 - automobile | Class_Acc: 97.554
+| Class: 2 - bird       | Class_Acc: 94.955
+| Class: 3 - cat        | Class_Acc: 97.554
+| Class: 4 - deer       | Class_Acc: 93.989
+| Class: 5 - dog        | Class_Acc: 94.314
+| Class: 6 - frog       | Class_Acc: 95.846
+| Class: 7 - horse      | Class_Acc: 95.055
+| Class: 8 - ship       | Class_Acc: 94.000
+| Class: 9 - truck      | Class_Acc: 91.768
+| Global Round : 10/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.026 | Train_Acc: 99.175
+| Global Round : 10/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.017 | Train_Acc: 99.520
+| Global Round : 10/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.030 | Train_Acc: 99.035
+| Global Round : 10/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.019 | Train_Acc: 99.350
+| Global Round : 10/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.013 | Train_Acc: 99.625
+aggregating weights...
+lambda: tensor([0.3329, 0.3335, 0.3335])
+| Client id:0 | Test_Loss: 0.196 | Test_Acc: 95.404
+| Class: 0 - airplane   | Class_Acc: 97.143
+| Class: 1 - automobile | Class_Acc: 97.003
+| Class: 2 - bird       | Class_Acc: 96.697
+| Class: 3 - cat        | Class_Acc: 96.308
+| Class: 4 - deer       | Class_Acc: 96.703
+| Class: 5 - dog        | Class_Acc: 94.649
+| Class: 6 - frog       | Class_Acc: 95.522
+| Class: 7 - horse      | Class_Acc: 93.956
+| Class: 8 - ship       | Class_Acc: 94.649
+| Class: 9 - truck      | Class_Acc: 91.159
+| Global Round : 11/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.032 | Train_Acc: 98.950
+| Global Round : 11/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.029 | Train_Acc: 99.120
+| Global Round : 11/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.028 | Train_Acc: 99.075
+| Global Round : 11/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.020 | Train_Acc: 99.360
+| Global Round : 11/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.017 | Train_Acc: 99.460
+| Client id:1 | Test_Loss: 0.194 | Test_Acc: 95.344
+| Class: 0 - airplane   | Class_Acc: 97.778
+| Class: 1 - automobile | Class_Acc: 97.003
+| Class: 2 - bird       | Class_Acc: 94.595
+| Class: 3 - cat        | Class_Acc: 95.692
+| Class: 4 - deer       | Class_Acc: 96.154
+| Class: 5 - dog        | Class_Acc: 97.324
+| Class: 6 - frog       | Class_Acc: 96.716
+| Class: 7 - horse      | Class_Acc: 95.330
+| Class: 8 - ship       | Class_Acc: 93.980
+| Class: 9 - truck      | Class_Acc: 88.720
+| Global Round : 11/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.036 | Train_Acc: 98.755
+| Global Round : 11/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.019 | Train_Acc: 99.465
+| Global Round : 11/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.010 | Train_Acc: 99.715
+| Global Round : 11/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.008 | Train_Acc: 99.780
+| Global Round : 11/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.008 | Train_Acc: 99.785
+| Client id:2 | Test_Loss: 0.199 | Test_Acc: 95.063
+| Class: 0 - airplane   | Class_Acc: 96.203
+| Class: 1 - automobile | Class_Acc: 97.283
+| Class: 2 - bird       | Class_Acc: 93.175
+| Class: 3 - cat        | Class_Acc: 97.554
+| Class: 4 - deer       | Class_Acc: 96.995
+| Class: 5 - dog        | Class_Acc: 94.314
+| Class: 6 - frog       | Class_Acc: 95.846
+| Class: 7 - horse      | Class_Acc: 94.780
+| Class: 8 - ship       | Class_Acc: 92.667
+| Class: 9 - truck      | Class_Acc: 91.159
+| Global Round : 11/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.029 | Train_Acc: 99.040
+| Global Round : 11/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.017 | Train_Acc: 99.520
+| Global Round : 11/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.016 | Train_Acc: 99.510
+| Global Round : 11/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.012 | Train_Acc: 99.640
+| Global Round : 11/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.008 | Train_Acc: 99.820
+aggregating weights...
+lambda: tensor([0.3329, 0.3335, 0.3336])
+| Client id:0 | Test_Loss: 0.183 | Test_Acc: 95.644
+| Class: 0 - airplane   | Class_Acc: 98.730
+| Class: 1 - automobile | Class_Acc: 97.548
+| Class: 2 - bird       | Class_Acc: 97.598
+| Class: 3 - cat        | Class_Acc: 96.000
+| Class: 4 - deer       | Class_Acc: 95.879
+| Class: 5 - dog        | Class_Acc: 94.649
+| Class: 6 - frog       | Class_Acc: 96.418
+| Class: 7 - horse      | Class_Acc: 92.857
+| Class: 8 - ship       | Class_Acc: 94.649
+| Class: 9 - truck      | Class_Acc: 92.073
+| Global Round : 12/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.026 | Train_Acc: 99.195
+| Global Round : 12/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.020 | Train_Acc: 99.330
+| Global Round : 12/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.021 | Train_Acc: 99.305
+| Global Round : 12/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.025 | Train_Acc: 99.260
+| Global Round : 12/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.009 | Train_Acc: 99.800
+| Client id:1 | Test_Loss: 0.187 | Test_Acc: 94.983
+| Class: 0 - airplane   | Class_Acc: 98.730
+| Class: 1 - automobile | Class_Acc: 96.730
+| Class: 2 - bird       | Class_Acc: 95.495
+| Class: 3 - cat        | Class_Acc: 94.154
+| Class: 4 - deer       | Class_Acc: 94.231
+| Class: 5 - dog        | Class_Acc: 95.318
+| Class: 6 - frog       | Class_Acc: 96.119
+| Class: 7 - horse      | Class_Acc: 95.604
+| Class: 8 - ship       | Class_Acc: 92.977
+| Class: 9 - truck      | Class_Acc: 90.244
+| Global Round : 12/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.025 | Train_Acc: 99.180
+| Global Round : 12/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.024 | Train_Acc: 99.230
+| Global Round : 12/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.015 | Train_Acc: 99.630
+| Global Round : 12/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.008 | Train_Acc: 99.795
+| Global Round : 12/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.009 | Train_Acc: 99.735
+| Client id:2 | Test_Loss: 0.190 | Test_Acc: 95.033
+| Class: 0 - airplane   | Class_Acc: 97.468
+| Class: 1 - automobile | Class_Acc: 97.826
+| Class: 2 - bird       | Class_Acc: 94.955
+| Class: 3 - cat        | Class_Acc: 96.942
+| Class: 4 - deer       | Class_Acc: 94.262
+| Class: 5 - dog        | Class_Acc: 94.649
+| Class: 6 - frog       | Class_Acc: 96.142
+| Class: 7 - horse      | Class_Acc: 94.231
+| Class: 8 - ship       | Class_Acc: 91.667
+| Class: 9 - truck      | Class_Acc: 91.768
+| Global Round : 12/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.024 | Train_Acc: 99.185
+| Global Round : 12/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.031 | Train_Acc: 98.995
+| Global Round : 12/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.019 | Train_Acc: 99.410
+| Global Round : 12/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.023 | Train_Acc: 99.220
+| Global Round : 12/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.009 | Train_Acc: 99.805
+aggregating weights...
+lambda: tensor([0.3329, 0.3335, 0.3336])
+| Client id:0 | Test_Loss: 0.190 | Test_Acc: 95.374
+| Class: 0 - airplane   | Class_Acc: 97.778
+| Class: 1 - automobile | Class_Acc: 97.820
+| Class: 2 - bird       | Class_Acc: 96.697
+| Class: 3 - cat        | Class_Acc: 96.000
+| Class: 4 - deer       | Class_Acc: 95.055
+| Class: 5 - dog        | Class_Acc: 94.983
+| Class: 6 - frog       | Class_Acc: 95.522
+| Class: 7 - horse      | Class_Acc: 92.857
+| Class: 8 - ship       | Class_Acc: 93.645
+| Class: 9 - truck      | Class_Acc: 93.293
+| Global Round : 13/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.034 | Train_Acc: 98.900
+| Global Round : 13/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.025 | Train_Acc: 99.275
+| Global Round : 13/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.025 | Train_Acc: 99.155
+| Global Round : 13/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.017 | Train_Acc: 99.520
+| Global Round : 13/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.007 | Train_Acc: 99.840
+| Client id:1 | Test_Loss: 0.190 | Test_Acc: 95.524
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 98.638
+| Class: 2 - bird       | Class_Acc: 94.895
+| Class: 3 - cat        | Class_Acc: 95.692
+| Class: 4 - deer       | Class_Acc: 94.231
+| Class: 5 - dog        | Class_Acc: 95.652
+| Class: 6 - frog       | Class_Acc: 96.418
+| Class: 7 - horse      | Class_Acc: 96.154
+| Class: 8 - ship       | Class_Acc: 92.977
+| Class: 9 - truck      | Class_Acc: 91.768
+| Global Round : 13/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.033 | Train_Acc: 98.935
+| Global Round : 13/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.035 | Train_Acc: 98.885
+| Global Round : 13/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.021 | Train_Acc: 99.405
+| Global Round : 13/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.009 | Train_Acc: 99.770
+| Global Round : 13/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.005 | Train_Acc: 99.940
+| Client id:2 | Test_Loss: 0.203 | Test_Acc: 94.794
+| Class: 0 - airplane   | Class_Acc: 97.468
+| Class: 1 - automobile | Class_Acc: 97.826
+| Class: 2 - bird       | Class_Acc: 92.878
+| Class: 3 - cat        | Class_Acc: 97.248
+| Class: 4 - deer       | Class_Acc: 92.350
+| Class: 5 - dog        | Class_Acc: 95.318
+| Class: 6 - frog       | Class_Acc: 95.846
+| Class: 7 - horse      | Class_Acc: 94.505
+| Class: 8 - ship       | Class_Acc: 92.000
+| Class: 9 - truck      | Class_Acc: 92.378
+| Global Round : 13/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.025 | Train_Acc: 99.220
+| Global Round : 13/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.018 | Train_Acc: 99.510
+| Global Round : 13/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.019 | Train_Acc: 99.365
+| Global Round : 13/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.009 | Train_Acc: 99.790
+| Global Round : 13/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.004 | Train_Acc: 99.905
+aggregating weights...
+lambda: tensor([0.3329, 0.3335, 0.3337])
+| Client id:0 | Test_Loss: 0.191 | Test_Acc: 95.404
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 97.548
+| Class: 2 - bird       | Class_Acc: 96.697
+| Class: 3 - cat        | Class_Acc: 95.385
+| Class: 4 - deer       | Class_Acc: 96.154
+| Class: 5 - dog        | Class_Acc: 93.980
+| Class: 6 - frog       | Class_Acc: 94.925
+| Class: 7 - horse      | Class_Acc: 93.132
+| Class: 8 - ship       | Class_Acc: 95.318
+| Class: 9 - truck      | Class_Acc: 92.378
+| Global Round : 14/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.028 | Train_Acc: 99.150
+| Global Round : 14/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.022 | Train_Acc: 99.360
+| Global Round : 14/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.022 | Train_Acc: 99.300
+| Global Round : 14/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.020 | Train_Acc: 99.385
+| Global Round : 14/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.020 | Train_Acc: 99.330
+| Client id:1 | Test_Loss: 0.192 | Test_Acc: 95.494
+| Class: 0 - airplane   | Class_Acc: 99.048
+| Class: 1 - automobile | Class_Acc: 97.275
+| Class: 2 - bird       | Class_Acc: 95.495
+| Class: 3 - cat        | Class_Acc: 96.000
+| Class: 4 - deer       | Class_Acc: 93.956
+| Class: 5 - dog        | Class_Acc: 95.987
+| Class: 6 - frog       | Class_Acc: 97.015
+| Class: 7 - horse      | Class_Acc: 95.879
+| Class: 8 - ship       | Class_Acc: 92.642
+| Class: 9 - truck      | Class_Acc: 91.463
+| Global Round : 14/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.024 | Train_Acc: 99.240
+| Global Round : 14/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.029 | Train_Acc: 99.045
+| Global Round : 14/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.024 | Train_Acc: 99.240
+| Global Round : 14/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.025 | Train_Acc: 99.230
+| Global Round : 14/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.005 | Train_Acc: 99.895
+| Client id:2 | Test_Loss: 0.201 | Test_Acc: 94.883
+| Class: 0 - airplane   | Class_Acc: 97.785
+| Class: 1 - automobile | Class_Acc: 97.011
+| Class: 2 - bird       | Class_Acc: 93.769
+| Class: 3 - cat        | Class_Acc: 97.554
+| Class: 4 - deer       | Class_Acc: 93.989
+| Class: 5 - dog        | Class_Acc: 93.980
+| Class: 6 - frog       | Class_Acc: 95.549
+| Class: 7 - horse      | Class_Acc: 94.780
+| Class: 8 - ship       | Class_Acc: 92.000
+| Class: 9 - truck      | Class_Acc: 92.073
+| Global Round : 14/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.023 | Train_Acc: 99.290
+| Global Round : 14/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.019 | Train_Acc: 99.435
+| Global Round : 14/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.020 | Train_Acc: 99.440
+| Global Round : 14/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.016 | Train_Acc: 99.455
+| Global Round : 14/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.016 | Train_Acc: 99.525
+aggregating weights...
+lambda: tensor([0.3328, 0.3334, 0.3337])
+| Client id:0 | Test_Loss: 0.181 | Test_Acc: 95.284
+| Class: 0 - airplane   | Class_Acc: 99.683
+| Class: 1 - automobile | Class_Acc: 98.093
+| Class: 2 - bird       | Class_Acc: 96.096
+| Class: 3 - cat        | Class_Acc: 95.385
+| Class: 4 - deer       | Class_Acc: 96.154
+| Class: 5 - dog        | Class_Acc: 93.311
+| Class: 6 - frog       | Class_Acc: 95.821
+| Class: 7 - horse      | Class_Acc: 92.857
+| Class: 8 - ship       | Class_Acc: 94.649
+| Class: 9 - truck      | Class_Acc: 90.549
+| Global Round : 15/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.031 | Train_Acc: 99.025
+| Global Round : 15/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.019 | Train_Acc: 99.415
+| Global Round : 15/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.013 | Train_Acc: 99.620
+| Global Round : 15/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.009 | Train_Acc: 99.815
+| Global Round : 15/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.002 | Train_Acc: 99.995
+| Client id:1 | Test_Loss: 0.196 | Test_Acc: 95.374
+| Class: 0 - airplane   | Class_Acc: 98.730
+| Class: 1 - automobile | Class_Acc: 98.365
+| Class: 2 - bird       | Class_Acc: 94.294
+| Class: 3 - cat        | Class_Acc: 94.462
+| Class: 4 - deer       | Class_Acc: 94.780
+| Class: 5 - dog        | Class_Acc: 94.983
+| Class: 6 - frog       | Class_Acc: 96.418
+| Class: 7 - horse      | Class_Acc: 95.879
+| Class: 8 - ship       | Class_Acc: 93.980
+| Class: 9 - truck      | Class_Acc: 91.463
+| Global Round : 15/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.020 | Train_Acc: 99.390
+| Global Round : 15/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.018 | Train_Acc: 99.475
+| Global Round : 15/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.018 | Train_Acc: 99.425
+| Global Round : 15/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.028 | Train_Acc: 99.100
+| Global Round : 15/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.014 | Train_Acc: 99.570
+| Client id:2 | Test_Loss: 0.197 | Test_Acc: 95.063
+| Class: 0 - airplane   | Class_Acc: 98.418
+| Class: 1 - automobile | Class_Acc: 98.641
+| Class: 2 - bird       | Class_Acc: 94.362
+| Class: 3 - cat        | Class_Acc: 97.859
+| Class: 4 - deer       | Class_Acc: 94.262
+| Class: 5 - dog        | Class_Acc: 93.311
+| Class: 6 - frog       | Class_Acc: 96.142
+| Class: 7 - horse      | Class_Acc: 94.505
+| Class: 8 - ship       | Class_Acc: 91.000
+| Class: 9 - truck      | Class_Acc: 91.463
+| Global Round : 15/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.023 | Train_Acc: 99.255
+| Global Round : 15/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.014 | Train_Acc: 99.615
+| Global Round : 15/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.020 | Train_Acc: 99.390
+| Global Round : 15/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.009 | Train_Acc: 99.770
+| Global Round : 15/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.005 | Train_Acc: 99.890
+aggregating weights...
+lambda: tensor([0.3327, 0.3335, 0.3338])
+| Client id:0 | Test_Loss: 0.202 | Test_Acc: 95.104
+| Class: 0 - airplane   | Class_Acc: 97.778
+| Class: 1 - automobile | Class_Acc: 95.640
+| Class: 2 - bird       | Class_Acc: 98.198
+| Class: 3 - cat        | Class_Acc: 95.692
+| Class: 4 - deer       | Class_Acc: 95.879
+| Class: 5 - dog        | Class_Acc: 92.642
+| Class: 6 - frog       | Class_Acc: 95.821
+| Class: 7 - horse      | Class_Acc: 93.681
+| Class: 8 - ship       | Class_Acc: 95.987
+| Class: 9 - truck      | Class_Acc: 89.634
+| Global Round : 16/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.031 | Train_Acc: 99.045
+| Global Round : 16/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.017 | Train_Acc: 99.525
+| Global Round : 16/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.028 | Train_Acc: 99.155
+| Global Round : 16/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.021 | Train_Acc: 99.340
+| Global Round : 16/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.011 | Train_Acc: 99.695
+| Client id:1 | Test_Loss: 0.194 | Test_Acc: 95.434
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 96.730
+| Class: 2 - bird       | Class_Acc: 96.396
+| Class: 3 - cat        | Class_Acc: 95.385
+| Class: 4 - deer       | Class_Acc: 95.330
+| Class: 5 - dog        | Class_Acc: 94.649
+| Class: 6 - frog       | Class_Acc: 97.015
+| Class: 7 - horse      | Class_Acc: 96.154
+| Class: 8 - ship       | Class_Acc: 94.649
+| Class: 9 - truck      | Class_Acc: 89.329
+| Global Round : 16/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.018 | Train_Acc: 99.520
+| Global Round : 16/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.014 | Train_Acc: 99.605
+| Global Round : 16/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.016 | Train_Acc: 99.530
+| Global Round : 16/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.020 | Train_Acc: 99.365
+| Global Round : 16/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.023 | Train_Acc: 99.260
+| Client id:2 | Test_Loss: 0.197 | Test_Acc: 94.943
+| Class: 0 - airplane   | Class_Acc: 97.468
+| Class: 1 - automobile | Class_Acc: 97.283
+| Class: 2 - bird       | Class_Acc: 95.549
+| Class: 3 - cat        | Class_Acc: 97.554
+| Class: 4 - deer       | Class_Acc: 94.536
+| Class: 5 - dog        | Class_Acc: 92.977
+| Class: 6 - frog       | Class_Acc: 96.142
+| Class: 7 - horse      | Class_Acc: 95.055
+| Class: 8 - ship       | Class_Acc: 90.333
+| Class: 9 - truck      | Class_Acc: 91.768
+| Global Round : 16/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.031 | Train_Acc: 99.015
+| Global Round : 16/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.021 | Train_Acc: 99.335
+| Global Round : 16/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.019 | Train_Acc: 99.465
+| Global Round : 16/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.014 | Train_Acc: 99.555
+| Global Round : 16/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.015 | Train_Acc: 99.550
+aggregating weights...
+lambda: tensor([0.3328, 0.3334, 0.3338])
+| Client id:0 | Test_Loss: 0.187 | Test_Acc: 95.254
+| Class: 0 - airplane   | Class_Acc: 99.048
+| Class: 1 - automobile | Class_Acc: 96.730
+| Class: 2 - bird       | Class_Acc: 95.796
+| Class: 3 - cat        | Class_Acc: 96.308
+| Class: 4 - deer       | Class_Acc: 95.879
+| Class: 5 - dog        | Class_Acc: 92.308
+| Class: 6 - frog       | Class_Acc: 96.119
+| Class: 7 - horse      | Class_Acc: 94.780
+| Class: 8 - ship       | Class_Acc: 95.318
+| Class: 9 - truck      | Class_Acc: 89.939
+| Global Round : 17/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.026 | Train_Acc: 99.140
+| Global Round : 17/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.028 | Train_Acc: 99.050
+| Global Round : 17/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.032 | Train_Acc: 98.925
+| Global Round : 17/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.018 | Train_Acc: 99.430
+| Global Round : 17/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.009 | Train_Acc: 99.760
+| Client id:1 | Test_Loss: 0.196 | Test_Acc: 95.164
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 97.548
+| Class: 2 - bird       | Class_Acc: 94.294
+| Class: 3 - cat        | Class_Acc: 95.692
+| Class: 4 - deer       | Class_Acc: 94.231
+| Class: 5 - dog        | Class_Acc: 95.318
+| Class: 6 - frog       | Class_Acc: 96.716
+| Class: 7 - horse      | Class_Acc: 96.154
+| Class: 8 - ship       | Class_Acc: 93.645
+| Class: 9 - truck      | Class_Acc: 89.329
+| Global Round : 17/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.020 | Train_Acc: 99.455
+| Global Round : 17/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.009 | Train_Acc: 99.775
+| Global Round : 17/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.007 | Train_Acc: 99.815
+| Global Round : 17/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.002 | Train_Acc: 99.995
+| Global Round : 17/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+| Client id:2 | Test_Loss: 0.185 | Test_Acc: 95.063
+| Class: 0 - airplane   | Class_Acc: 97.785
+| Class: 1 - automobile | Class_Acc: 97.554
+| Class: 2 - bird       | Class_Acc: 92.878
+| Class: 3 - cat        | Class_Acc: 97.248
+| Class: 4 - deer       | Class_Acc: 95.902
+| Class: 5 - dog        | Class_Acc: 93.645
+| Class: 6 - frog       | Class_Acc: 96.439
+| Class: 7 - horse      | Class_Acc: 95.330
+| Class: 8 - ship       | Class_Acc: 92.000
+| Class: 9 - truck      | Class_Acc: 91.159
+| Global Round : 17/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.024 | Train_Acc: 99.250
+| Global Round : 17/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.017 | Train_Acc: 99.455
+| Global Round : 17/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.016 | Train_Acc: 99.530
+| Global Round : 17/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.007 | Train_Acc: 99.825
+| Global Round : 17/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.011 | Train_Acc: 99.690
+aggregating weights...
+lambda: tensor([0.3327, 0.3335, 0.3337])
+| Client id:0 | Test_Loss: 0.186 | Test_Acc: 95.644
+| Class: 0 - airplane   | Class_Acc: 99.048
+| Class: 1 - automobile | Class_Acc: 97.820
+| Class: 2 - bird       | Class_Acc: 97.297
+| Class: 3 - cat        | Class_Acc: 95.385
+| Class: 4 - deer       | Class_Acc: 94.231
+| Class: 5 - dog        | Class_Acc: 93.645
+| Class: 6 - frog       | Class_Acc: 96.418
+| Class: 7 - horse      | Class_Acc: 93.956
+| Class: 8 - ship       | Class_Acc: 95.652
+| Class: 9 - truck      | Class_Acc: 92.988
+| Global Round : 18/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.009 | Train_Acc: 99.795
+| Global Round : 18/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.007 | Train_Acc: 99.885
+| Global Round : 18/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.009 | Train_Acc: 99.780
+| Global Round : 18/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.002 | Train_Acc: 99.990
+| Global Round : 18/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+| Client id:1 | Test_Loss: 0.193 | Test_Acc: 95.464
+| Class: 0 - airplane   | Class_Acc: 99.048
+| Class: 1 - automobile | Class_Acc: 97.548
+| Class: 2 - bird       | Class_Acc: 95.195
+| Class: 3 - cat        | Class_Acc: 95.077
+| Class: 4 - deer       | Class_Acc: 94.231
+| Class: 5 - dog        | Class_Acc: 95.318
+| Class: 6 - frog       | Class_Acc: 96.716
+| Class: 7 - horse      | Class_Acc: 95.879
+| Class: 8 - ship       | Class_Acc: 93.311
+| Class: 9 - truck      | Class_Acc: 92.073
+| Global Round : 18/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.029 | Train_Acc: 99.145
+| Global Round : 18/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.026 | Train_Acc: 99.120
+| Global Round : 18/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.032 | Train_Acc: 98.900
+| Global Round : 18/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.030 | Train_Acc: 99.095
+| Global Round : 18/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.014 | Train_Acc: 99.520
+| Client id:2 | Test_Loss: 0.184 | Test_Acc: 95.212
+| Class: 0 - airplane   | Class_Acc: 98.418
+| Class: 1 - automobile | Class_Acc: 97.283
+| Class: 2 - bird       | Class_Acc: 94.955
+| Class: 3 - cat        | Class_Acc: 96.942
+| Class: 4 - deer       | Class_Acc: 94.262
+| Class: 5 - dog        | Class_Acc: 94.983
+| Class: 6 - frog       | Class_Acc: 95.846
+| Class: 7 - horse      | Class_Acc: 93.407
+| Class: 8 - ship       | Class_Acc: 92.000
+| Class: 9 - truck      | Class_Acc: 93.902
+| Global Round : 18/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.023 | Train_Acc: 99.265
+| Global Round : 18/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.018 | Train_Acc: 99.495
+| Global Round : 18/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.015 | Train_Acc: 99.555
+| Global Round : 18/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.024 | Train_Acc: 99.265
+| Global Round : 18/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.013 | Train_Acc: 99.650
+aggregating weights...
+lambda: tensor([0.3327, 0.3336, 0.3337])
+| Client id:0 | Test_Loss: 0.178 | Test_Acc: 95.434
+| Class: 0 - airplane   | Class_Acc: 99.048
+| Class: 1 - automobile | Class_Acc: 97.548
+| Class: 2 - bird       | Class_Acc: 96.096
+| Class: 3 - cat        | Class_Acc: 95.385
+| Class: 4 - deer       | Class_Acc: 96.154
+| Class: 5 - dog        | Class_Acc: 94.649
+| Class: 6 - frog       | Class_Acc: 96.119
+| Class: 7 - horse      | Class_Acc: 95.055
+| Class: 8 - ship       | Class_Acc: 94.649
+| Class: 9 - truck      | Class_Acc: 89.329
+| Global Round : 19/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.033 | Train_Acc: 98.975
+| Global Round : 19/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.027 | Train_Acc: 99.155
+| Global Round : 19/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.027 | Train_Acc: 99.175
+| Global Round : 19/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.021 | Train_Acc: 99.410
+| Global Round : 19/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.017 | Train_Acc: 99.565
+| Client id:1 | Test_Loss: 0.183 | Test_Acc: 95.254
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 98.365
+| Class: 2 - bird       | Class_Acc: 94.294
+| Class: 3 - cat        | Class_Acc: 95.077
+| Class: 4 - deer       | Class_Acc: 94.780
+| Class: 5 - dog        | Class_Acc: 96.321
+| Class: 6 - frog       | Class_Acc: 96.716
+| Class: 7 - horse      | Class_Acc: 95.879
+| Class: 8 - ship       | Class_Acc: 93.311
+| Class: 9 - truck      | Class_Acc: 89.024
+| Global Round : 19/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.010 | Train_Acc: 99.820
+| Global Round : 19/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.010 | Train_Acc: 99.760
+| Global Round : 19/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.015 | Train_Acc: 99.570
+| Global Round : 19/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.022 | Train_Acc: 99.345
+| Global Round : 19/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.022 | Train_Acc: 99.305
+| Client id:2 | Test_Loss: 0.184 | Test_Acc: 94.913
+| Class: 0 - airplane   | Class_Acc: 97.785
+| Class: 1 - automobile | Class_Acc: 97.554
+| Class: 2 - bird       | Class_Acc: 94.362
+| Class: 3 - cat        | Class_Acc: 96.942
+| Class: 4 - deer       | Class_Acc: 94.536
+| Class: 5 - dog        | Class_Acc: 93.980
+| Class: 6 - frog       | Class_Acc: 95.549
+| Class: 7 - horse      | Class_Acc: 95.055
+| Class: 8 - ship       | Class_Acc: 92.333
+| Class: 9 - truck      | Class_Acc: 90.549
+| Global Round : 19/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.016 | Train_Acc: 99.575
+| Global Round : 19/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.022 | Train_Acc: 99.365
+| Global Round : 19/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.008 | Train_Acc: 99.855
+| Global Round : 19/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.009 | Train_Acc: 99.780
+| Global Round : 19/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.004 | Train_Acc: 99.955
+aggregating weights...
+lambda: tensor([0.3327, 0.3336, 0.3337])
+| Client id:0 | Test_Loss: 0.179 | Test_Acc: 95.224
+| Class: 0 - airplane   | Class_Acc: 98.095
+| Class: 1 - automobile | Class_Acc: 97.003
+| Class: 2 - bird       | Class_Acc: 97.598
+| Class: 3 - cat        | Class_Acc: 95.692
+| Class: 4 - deer       | Class_Acc: 95.879
+| Class: 5 - dog        | Class_Acc: 92.642
+| Class: 6 - frog       | Class_Acc: 95.522
+| Class: 7 - horse      | Class_Acc: 92.857
+| Class: 8 - ship       | Class_Acc: 95.318
+| Class: 9 - truck      | Class_Acc: 91.463
+| Global Round : 20/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.015 | Train_Acc: 99.605
+| Global Round : 20/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.011 | Train_Acc: 99.755
+| Global Round : 20/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.013 | Train_Acc: 99.650
+| Global Round : 20/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.007 | Train_Acc: 99.850
+| Global Round : 20/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.003 | Train_Acc: 99.960
+| Client id:1 | Test_Loss: 0.181 | Test_Acc: 95.404
+| Class: 0 - airplane   | Class_Acc: 98.730
+| Class: 1 - automobile | Class_Acc: 96.730
+| Class: 2 - bird       | Class_Acc: 95.796
+| Class: 3 - cat        | Class_Acc: 95.692
+| Class: 4 - deer       | Class_Acc: 94.505
+| Class: 5 - dog        | Class_Acc: 94.983
+| Class: 6 - frog       | Class_Acc: 97.612
+| Class: 7 - horse      | Class_Acc: 95.330
+| Class: 8 - ship       | Class_Acc: 93.645
+| Class: 9 - truck      | Class_Acc: 90.854
+| Global Round : 20/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.017 | Train_Acc: 99.565
+| Global Round : 20/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.022 | Train_Acc: 99.355
+| Global Round : 20/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.024 | Train_Acc: 99.105
+| Global Round : 20/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.019 | Train_Acc: 99.335
+| Global Round : 20/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.025 | Train_Acc: 99.240
+| Client id:2 | Test_Loss: 0.188 | Test_Acc: 94.973
+| Class: 0 - airplane   | Class_Acc: 97.468
+| Class: 1 - automobile | Class_Acc: 97.283
+| Class: 2 - bird       | Class_Acc: 95.549
+| Class: 3 - cat        | Class_Acc: 96.942
+| Class: 4 - deer       | Class_Acc: 92.896
+| Class: 5 - dog        | Class_Acc: 92.642
+| Class: 6 - frog       | Class_Acc: 96.142
+| Class: 7 - horse      | Class_Acc: 94.780
+| Class: 8 - ship       | Class_Acc: 93.667
+| Class: 9 - truck      | Class_Acc: 92.073
+| Global Round : 20/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.024 | Train_Acc: 99.345
+| Global Round : 20/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.020 | Train_Acc: 99.435
+| Global Round : 20/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.021 | Train_Acc: 99.345
+| Global Round : 20/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.021 | Train_Acc: 99.330
+| Global Round : 20/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.021 | Train_Acc: 99.355
+aggregating weights...
+lambda: tensor([0.3327, 0.3336, 0.3338])
+| Client id:0 | Test_Loss: 0.181 | Test_Acc: 95.344
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 97.275
+| Class: 2 - bird       | Class_Acc: 95.796
+| Class: 3 - cat        | Class_Acc: 95.692
+| Class: 4 - deer       | Class_Acc: 96.978
+| Class: 5 - dog        | Class_Acc: 94.314
+| Class: 6 - frog       | Class_Acc: 95.522
+| Class: 7 - horse      | Class_Acc: 95.604
+| Class: 8 - ship       | Class_Acc: 95.652
+| Class: 9 - truck      | Class_Acc: 87.805
+| Global Round : 21/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.029 | Train_Acc: 99.135
+| Global Round : 21/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.031 | Train_Acc: 99.085
+| Global Round : 21/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.027 | Train_Acc: 99.115
+| Global Round : 21/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.020 | Train_Acc: 99.370
+| Global Round : 21/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.017 | Train_Acc: 99.475
+| Client id:1 | Test_Loss: 0.189 | Test_Acc: 95.434
+| Class: 0 - airplane   | Class_Acc: 98.730
+| Class: 1 - automobile | Class_Acc: 97.548
+| Class: 2 - bird       | Class_Acc: 95.796
+| Class: 3 - cat        | Class_Acc: 95.077
+| Class: 4 - deer       | Class_Acc: 95.879
+| Class: 5 - dog        | Class_Acc: 95.318
+| Class: 6 - frog       | Class_Acc: 96.418
+| Class: 7 - horse      | Class_Acc: 96.429
+| Class: 8 - ship       | Class_Acc: 93.980
+| Class: 9 - truck      | Class_Acc: 88.720
+| Global Round : 21/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.017 | Train_Acc: 99.495
+| Global Round : 21/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.025 | Train_Acc: 99.165
+| Global Round : 21/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.026 | Train_Acc: 99.155
+| Global Round : 21/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.017 | Train_Acc: 99.530
+| Global Round : 21/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.008 | Train_Acc: 99.805
+| Client id:2 | Test_Loss: 0.192 | Test_Acc: 95.242
+| Class: 0 - airplane   | Class_Acc: 98.734
+| Class: 1 - automobile | Class_Acc: 97.826
+| Class: 2 - bird       | Class_Acc: 94.659
+| Class: 3 - cat        | Class_Acc: 97.248
+| Class: 4 - deer       | Class_Acc: 95.082
+| Class: 5 - dog        | Class_Acc: 92.977
+| Class: 6 - frog       | Class_Acc: 96.439
+| Class: 7 - horse      | Class_Acc: 94.505
+| Class: 8 - ship       | Class_Acc: 93.333
+| Class: 9 - truck      | Class_Acc: 91.159
+| Global Round : 21/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.022 | Train_Acc: 99.370
+| Global Round : 21/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.031 | Train_Acc: 98.970
+| Global Round : 21/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.028 | Train_Acc: 99.085
+| Global Round : 21/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.015 | Train_Acc: 99.590
+| Global Round : 21/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.007 | Train_Acc: 99.810
+aggregating weights...
+lambda: tensor([0.3326, 0.3336, 0.3338])
+| Client id:0 | Test_Loss: 0.190 | Test_Acc: 95.404
+| Class: 0 - airplane   | Class_Acc: 99.048
+| Class: 1 - automobile | Class_Acc: 96.730
+| Class: 2 - bird       | Class_Acc: 96.697
+| Class: 3 - cat        | Class_Acc: 94.462
+| Class: 4 - deer       | Class_Acc: 96.429
+| Class: 5 - dog        | Class_Acc: 95.318
+| Class: 6 - frog       | Class_Acc: 95.821
+| Class: 7 - horse      | Class_Acc: 94.231
+| Class: 8 - ship       | Class_Acc: 95.652
+| Class: 9 - truck      | Class_Acc: 89.634
+| Global Round : 22/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.024 | Train_Acc: 99.270
+| Global Round : 22/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.016 | Train_Acc: 99.515
+| Global Round : 22/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.006 | Train_Acc: 99.900
+| Global Round : 22/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.004 | Train_Acc: 99.925
+| Global Round : 22/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.002 | Train_Acc: 99.990
+| Client id:1 | Test_Loss: 0.196 | Test_Acc: 95.044
+| Class: 0 - airplane   | Class_Acc: 99.048
+| Class: 1 - automobile | Class_Acc: 97.275
+| Class: 2 - bird       | Class_Acc: 94.895
+| Class: 3 - cat        | Class_Acc: 94.154
+| Class: 4 - deer       | Class_Acc: 93.956
+| Class: 5 - dog        | Class_Acc: 95.318
+| Class: 6 - frog       | Class_Acc: 97.015
+| Class: 7 - horse      | Class_Acc: 96.429
+| Class: 8 - ship       | Class_Acc: 93.980
+| Class: 9 - truck      | Class_Acc: 88.110
+| Global Round : 22/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.017 | Train_Acc: 99.555
+| Global Round : 22/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.014 | Train_Acc: 99.645
+| Global Round : 22/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.013 | Train_Acc: 99.665
+| Global Round : 22/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.011 | Train_Acc: 99.670
+| Global Round : 22/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.006 | Train_Acc: 99.870
+| Client id:2 | Test_Loss: 0.199 | Test_Acc: 95.093
+| Class: 0 - airplane   | Class_Acc: 98.101
+| Class: 1 - automobile | Class_Acc: 97.283
+| Class: 2 - bird       | Class_Acc: 95.252
+| Class: 3 - cat        | Class_Acc: 96.024
+| Class: 4 - deer       | Class_Acc: 94.262
+| Class: 5 - dog        | Class_Acc: 94.314
+| Class: 6 - frog       | Class_Acc: 97.033
+| Class: 7 - horse      | Class_Acc: 95.604
+| Class: 8 - ship       | Class_Acc: 93.000
+| Class: 9 - truck      | Class_Acc: 89.634
+| Global Round : 22/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.016 | Train_Acc: 99.530
+| Global Round : 22/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.009 | Train_Acc: 99.770
+| Global Round : 22/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.003 | Train_Acc: 99.980
+| Global Round : 22/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+| Global Round : 22/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+aggregating weights...
+lambda: tensor([0.3325, 0.3336, 0.3339])
+| Client id:0 | Test_Loss: 0.187 | Test_Acc: 95.584
+| Class: 0 - airplane   | Class_Acc: 99.365
+| Class: 1 - automobile | Class_Acc: 97.003
+| Class: 2 - bird       | Class_Acc: 96.997
+| Class: 3 - cat        | Class_Acc: 96.000
+| Class: 4 - deer       | Class_Acc: 95.330
+| Class: 5 - dog        | Class_Acc: 94.649
+| Class: 6 - frog       | Class_Acc: 95.522
+| Class: 7 - horse      | Class_Acc: 92.308
+| Class: 8 - ship       | Class_Acc: 95.987
+| Class: 9 - truck      | Class_Acc: 92.988
+| Global Round : 23/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.021 | Train_Acc: 99.400
+| Global Round : 23/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.031 | Train_Acc: 99.100
+| Global Round : 23/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.029 | Train_Acc: 99.170
+| Global Round : 23/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.021 | Train_Acc: 99.345
+| Global Round : 23/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.010 | Train_Acc: 99.740
+| Client id:1 | Test_Loss: 0.197 | Test_Acc: 95.404
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 97.275
+| Class: 2 - bird       | Class_Acc: 95.495
+| Class: 3 - cat        | Class_Acc: 96.000
+| Class: 4 - deer       | Class_Acc: 94.231
+| Class: 5 - dog        | Class_Acc: 94.983
+| Class: 6 - frog       | Class_Acc: 96.716
+| Class: 7 - horse      | Class_Acc: 95.330
+| Class: 8 - ship       | Class_Acc: 93.645
+| Class: 9 - truck      | Class_Acc: 91.768
+| Global Round : 23/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.010 | Train_Acc: 99.800
+| Global Round : 23/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.003 | Train_Acc: 99.995
+| Global Round : 23/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+| Global Round : 23/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+| Global Round : 23/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+| Client id:2 | Test_Loss: 0.202 | Test_Acc: 94.943
+| Class: 0 - airplane   | Class_Acc: 98.101
+| Class: 1 - automobile | Class_Acc: 97.011
+| Class: 2 - bird       | Class_Acc: 94.955
+| Class: 3 - cat        | Class_Acc: 97.554
+| Class: 4 - deer       | Class_Acc: 92.623
+| Class: 5 - dog        | Class_Acc: 93.980
+| Class: 6 - frog       | Class_Acc: 95.846
+| Class: 7 - horse      | Class_Acc: 93.956
+| Class: 8 - ship       | Class_Acc: 92.667
+| Class: 9 - truck      | Class_Acc: 92.683
+| Global Round : 23/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.022 | Train_Acc: 99.355
+| Global Round : 23/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.024 | Train_Acc: 99.280
+| Global Round : 23/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.029 | Train_Acc: 99.060
+| Global Round : 23/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.022 | Train_Acc: 99.305
+| Global Round : 23/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.016 | Train_Acc: 99.540
+aggregating weights...
+lambda: tensor([0.3325, 0.3336, 0.3339])
+| Client id:0 | Test_Loss: 0.186 | Test_Acc: 95.164
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 97.275
+| Class: 2 - bird       | Class_Acc: 97.598
+| Class: 3 - cat        | Class_Acc: 94.769
+| Class: 4 - deer       | Class_Acc: 95.604
+| Class: 5 - dog        | Class_Acc: 94.649
+| Class: 6 - frog       | Class_Acc: 95.224
+| Class: 7 - horse      | Class_Acc: 92.857
+| Class: 8 - ship       | Class_Acc: 94.983
+| Class: 9 - truck      | Class_Acc: 90.244
+| Global Round : 24/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.022 | Train_Acc: 99.390
+| Global Round : 24/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.019 | Train_Acc: 99.435
+| Global Round : 24/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.021 | Train_Acc: 99.420
+| Global Round : 24/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.017 | Train_Acc: 99.480
+| Global Round : 24/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.008 | Train_Acc: 99.830
+| Client id:1 | Test_Loss: 0.187 | Test_Acc: 95.374
+| Class: 0 - airplane   | Class_Acc: 97.778
+| Class: 1 - automobile | Class_Acc: 98.638
+| Class: 2 - bird       | Class_Acc: 95.495
+| Class: 3 - cat        | Class_Acc: 94.769
+| Class: 4 - deer       | Class_Acc: 94.505
+| Class: 5 - dog        | Class_Acc: 95.987
+| Class: 6 - frog       | Class_Acc: 97.313
+| Class: 7 - horse      | Class_Acc: 95.879
+| Class: 8 - ship       | Class_Acc: 93.645
+| Class: 9 - truck      | Class_Acc: 89.329
+| Global Round : 24/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.044 | Train_Acc: 98.525
+| Global Round : 24/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.037 | Train_Acc: 98.805
+| Global Round : 24/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.026 | Train_Acc: 99.125
+| Global Round : 24/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.019 | Train_Acc: 99.360
+| Global Round : 24/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.022 | Train_Acc: 99.275
+| Client id:2 | Test_Loss: 0.182 | Test_Acc: 95.272
+| Class: 0 - airplane   | Class_Acc: 98.101
+| Class: 1 - automobile | Class_Acc: 97.554
+| Class: 2 - bird       | Class_Acc: 95.846
+| Class: 3 - cat        | Class_Acc: 97.248
+| Class: 4 - deer       | Class_Acc: 93.716
+| Class: 5 - dog        | Class_Acc: 94.314
+| Class: 6 - frog       | Class_Acc: 95.846
+| Class: 7 - horse      | Class_Acc: 95.330
+| Class: 8 - ship       | Class_Acc: 93.333
+| Class: 9 - truck      | Class_Acc: 91.159
+| Global Round : 24/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.012 | Train_Acc: 99.665
+| Global Round : 24/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.018 | Train_Acc: 99.500
+| Global Round : 24/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.026 | Train_Acc: 99.235
+| Global Round : 24/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.022 | Train_Acc: 99.255
+| Global Round : 24/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.016 | Train_Acc: 99.545
+aggregating weights...
+lambda: tensor([0.3325, 0.3336, 0.3339])
+| Client id:0 | Test_Loss: 0.185 | Test_Acc: 95.074
+| Class: 0 - airplane   | Class_Acc: 98.730
+| Class: 1 - automobile | Class_Acc: 97.003
+| Class: 2 - bird       | Class_Acc: 98.198
+| Class: 3 - cat        | Class_Acc: 94.462
+| Class: 4 - deer       | Class_Acc: 95.330
+| Class: 5 - dog        | Class_Acc: 94.649
+| Class: 6 - frog       | Class_Acc: 94.925
+| Class: 7 - horse      | Class_Acc: 92.857
+| Class: 8 - ship       | Class_Acc: 94.983
+| Class: 9 - truck      | Class_Acc: 89.634
+| Global Round : 25/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.020 | Train_Acc: 99.390
+| Global Round : 25/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.023 | Train_Acc: 99.320
+| Global Round : 25/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.031 | Train_Acc: 98.950
+| Global Round : 25/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.026 | Train_Acc: 99.200
+| Global Round : 25/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.015 | Train_Acc: 99.545
+| Client id:1 | Test_Loss: 0.178 | Test_Acc: 95.254
+| Class: 0 - airplane   | Class_Acc: 98.095
+| Class: 1 - automobile | Class_Acc: 98.093
+| Class: 2 - bird       | Class_Acc: 95.796
+| Class: 3 - cat        | Class_Acc: 94.462
+| Class: 4 - deer       | Class_Acc: 94.780
+| Class: 5 - dog        | Class_Acc: 94.649
+| Class: 6 - frog       | Class_Acc: 96.716
+| Class: 7 - horse      | Class_Acc: 95.604
+| Class: 8 - ship       | Class_Acc: 94.649
+| Class: 9 - truck      | Class_Acc: 89.329
+| Global Round : 25/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.018 | Train_Acc: 99.500
+| Global Round : 25/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.015 | Train_Acc: 99.595
+| Global Round : 25/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.013 | Train_Acc: 99.650
+| Global Round : 25/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.011 | Train_Acc: 99.730
+| Global Round : 25/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.017 | Train_Acc: 99.525
+| Client id:2 | Test_Loss: 0.193 | Test_Acc: 94.913
+| Class: 0 - airplane   | Class_Acc: 98.101
+| Class: 1 - automobile | Class_Acc: 97.554
+| Class: 2 - bird       | Class_Acc: 95.846
+| Class: 3 - cat        | Class_Acc: 95.107
+| Class: 4 - deer       | Class_Acc: 94.536
+| Class: 5 - dog        | Class_Acc: 93.645
+| Class: 6 - frog       | Class_Acc: 96.736
+| Class: 7 - horse      | Class_Acc: 94.505
+| Class: 8 - ship       | Class_Acc: 92.333
+| Class: 9 - truck      | Class_Acc: 90.244
+| Global Round : 25/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.017 | Train_Acc: 99.495
+| Global Round : 25/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.012 | Train_Acc: 99.695
+| Global Round : 25/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.008 | Train_Acc: 99.795
+| Global Round : 25/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.002 | Train_Acc: 99.985
+| Global Round : 25/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+aggregating weights...
+lambda: tensor([0.3325, 0.3335, 0.3340])
+| Client id:0 | Test_Loss: 0.195 | Test_Acc: 95.134
+| Class: 0 - airplane   | Class_Acc: 99.048
+| Class: 1 - automobile | Class_Acc: 96.730
+| Class: 2 - bird       | Class_Acc: 96.396
+| Class: 3 - cat        | Class_Acc: 95.077
+| Class: 4 - deer       | Class_Acc: 95.055
+| Class: 5 - dog        | Class_Acc: 92.977
+| Class: 6 - frog       | Class_Acc: 95.821
+| Class: 7 - horse      | Class_Acc: 93.407
+| Class: 8 - ship       | Class_Acc: 96.321
+| Class: 9 - truck      | Class_Acc: 90.549
+| Global Round : 26/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.017 | Train_Acc: 99.495
+| Global Round : 26/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.016 | Train_Acc: 99.535
+| Global Round : 26/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.021 | Train_Acc: 99.420
+| Global Round : 26/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.031 | Train_Acc: 98.930
+| Global Round : 26/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.025 | Train_Acc: 99.190
+| Client id:1 | Test_Loss: 0.192 | Test_Acc: 95.104
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 97.548
+| Class: 2 - bird       | Class_Acc: 94.895
+| Class: 3 - cat        | Class_Acc: 94.154
+| Class: 4 - deer       | Class_Acc: 93.681
+| Class: 5 - dog        | Class_Acc: 94.983
+| Class: 6 - frog       | Class_Acc: 97.015
+| Class: 7 - horse      | Class_Acc: 96.154
+| Class: 8 - ship       | Class_Acc: 94.983
+| Class: 9 - truck      | Class_Acc: 89.024
+| Global Round : 26/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.019 | Train_Acc: 99.435
+| Global Round : 26/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.017 | Train_Acc: 99.460
+| Global Round : 26/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.014 | Train_Acc: 99.645
+| Global Round : 26/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.021 | Train_Acc: 99.395
+| Global Round : 26/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.015 | Train_Acc: 99.585
+| Client id:2 | Test_Loss: 0.198 | Test_Acc: 95.183
+| Class: 0 - airplane   | Class_Acc: 98.418
+| Class: 1 - automobile | Class_Acc: 97.011
+| Class: 2 - bird       | Class_Acc: 93.769
+| Class: 3 - cat        | Class_Acc: 96.942
+| Class: 4 - deer       | Class_Acc: 94.809
+| Class: 5 - dog        | Class_Acc: 93.311
+| Class: 6 - frog       | Class_Acc: 95.846
+| Class: 7 - horse      | Class_Acc: 94.780
+| Class: 8 - ship       | Class_Acc: 94.000
+| Class: 9 - truck      | Class_Acc: 92.683
+| Global Round : 26/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.022 | Train_Acc: 99.290
+| Global Round : 26/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.033 | Train_Acc: 98.895
+| Global Round : 26/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.024 | Train_Acc: 99.300
+| Global Round : 26/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.015 | Train_Acc: 99.575
+| Global Round : 26/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.011 | Train_Acc: 99.665
+aggregating weights...
+lambda: tensor([0.3325, 0.3335, 0.3340])
+| Client id:0 | Test_Loss: 0.180 | Test_Acc: 95.554
+| Class: 0 - airplane   | Class_Acc: 98.730
+| Class: 1 - automobile | Class_Acc: 96.458
+| Class: 2 - bird       | Class_Acc: 96.396
+| Class: 3 - cat        | Class_Acc: 95.385
+| Class: 4 - deer       | Class_Acc: 95.055
+| Class: 5 - dog        | Class_Acc: 96.656
+| Class: 6 - frog       | Class_Acc: 96.119
+| Class: 7 - horse      | Class_Acc: 93.681
+| Class: 8 - ship       | Class_Acc: 94.649
+| Class: 9 - truck      | Class_Acc: 92.683
+| Global Round : 27/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.015 | Train_Acc: 99.560
+| Global Round : 27/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.012 | Train_Acc: 99.665
+| Global Round : 27/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.009 | Train_Acc: 99.765
+| Global Round : 27/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.005 | Train_Acc: 99.915
+| Global Round : 27/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.002 | Train_Acc: 99.990
+| Client id:1 | Test_Loss: 0.185 | Test_Acc: 95.314
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 97.275
+| Class: 2 - bird       | Class_Acc: 94.294
+| Class: 3 - cat        | Class_Acc: 94.769
+| Class: 4 - deer       | Class_Acc: 93.681
+| Class: 5 - dog        | Class_Acc: 96.990
+| Class: 6 - frog       | Class_Acc: 96.716
+| Class: 7 - horse      | Class_Acc: 95.055
+| Class: 8 - ship       | Class_Acc: 94.983
+| Class: 9 - truck      | Class_Acc: 91.159
+| Global Round : 27/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.017 | Train_Acc: 99.510
+| Global Round : 27/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.012 | Train_Acc: 99.710
+| Global Round : 27/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.011 | Train_Acc: 99.705
+| Global Round : 27/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.008 | Train_Acc: 99.800
+| Global Round : 27/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.006 | Train_Acc: 99.890
+| Client id:2 | Test_Loss: 0.179 | Test_Acc: 94.943
+| Class: 0 - airplane   | Class_Acc: 98.101
+| Class: 1 - automobile | Class_Acc: 97.011
+| Class: 2 - bird       | Class_Acc: 92.878
+| Class: 3 - cat        | Class_Acc: 97.554
+| Class: 4 - deer       | Class_Acc: 93.989
+| Class: 5 - dog        | Class_Acc: 94.649
+| Class: 6 - frog       | Class_Acc: 95.549
+| Class: 7 - horse      | Class_Acc: 93.956
+| Class: 8 - ship       | Class_Acc: 93.333
+| Class: 9 - truck      | Class_Acc: 92.378
+| Global Round : 27/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.017 | Train_Acc: 99.470
+| Global Round : 27/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.016 | Train_Acc: 99.555
+| Global Round : 27/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.017 | Train_Acc: 99.525
+| Global Round : 27/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.024 | Train_Acc: 99.310
+| Global Round : 27/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.015 | Train_Acc: 99.600
+aggregating weights...
+lambda: tensor([0.3325, 0.3335, 0.3340])
+| Client id:0 | Test_Loss: 0.185 | Test_Acc: 95.224
+| Class: 0 - airplane   | Class_Acc: 99.048
+| Class: 1 - automobile | Class_Acc: 96.458
+| Class: 2 - bird       | Class_Acc: 96.997
+| Class: 3 - cat        | Class_Acc: 94.769
+| Class: 4 - deer       | Class_Acc: 96.154
+| Class: 5 - dog        | Class_Acc: 95.318
+| Class: 6 - frog       | Class_Acc: 95.522
+| Class: 7 - horse      | Class_Acc: 93.132
+| Class: 8 - ship       | Class_Acc: 95.318
+| Class: 9 - truck      | Class_Acc: 89.634
+| Global Round : 28/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.021 | Train_Acc: 99.270
+| Global Round : 28/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.025 | Train_Acc: 99.205
+| Global Round : 28/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.020 | Train_Acc: 99.430
+| Global Round : 28/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.010 | Train_Acc: 99.760
+| Global Round : 28/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.020 | Train_Acc: 99.420
+| Client id:1 | Test_Loss: 0.191 | Test_Acc: 95.374
+| Class: 0 - airplane   | Class_Acc: 99.048
+| Class: 1 - automobile | Class_Acc: 97.275
+| Class: 2 - bird       | Class_Acc: 95.495
+| Class: 3 - cat        | Class_Acc: 93.538
+| Class: 4 - deer       | Class_Acc: 95.330
+| Class: 5 - dog        | Class_Acc: 95.652
+| Class: 6 - frog       | Class_Acc: 96.418
+| Class: 7 - horse      | Class_Acc: 96.154
+| Class: 8 - ship       | Class_Acc: 94.649
+| Class: 9 - truck      | Class_Acc: 89.939
+| Global Round : 28/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.008 | Train_Acc: 99.865
+| Global Round : 28/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.004 | Train_Acc: 99.955
+| Global Round : 28/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.011 | Train_Acc: 99.790
+| Global Round : 28/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.002 | Train_Acc: 99.995
+| Global Round : 28/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+| Client id:2 | Test_Loss: 0.193 | Test_Acc: 95.063
+| Class: 0 - airplane   | Class_Acc: 98.101
+| Class: 1 - automobile | Class_Acc: 97.826
+| Class: 2 - bird       | Class_Acc: 94.659
+| Class: 3 - cat        | Class_Acc: 96.636
+| Class: 4 - deer       | Class_Acc: 95.082
+| Class: 5 - dog        | Class_Acc: 94.649
+| Class: 6 - frog       | Class_Acc: 95.549
+| Class: 7 - horse      | Class_Acc: 93.956
+| Class: 8 - ship       | Class_Acc: 92.667
+| Class: 9 - truck      | Class_Acc: 91.159
+| Global Round : 28/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.005 | Train_Acc: 99.965
+| Global Round : 28/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.002 | Train_Acc: 100.000
+| Global Round : 28/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+| Global Round : 28/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+| Global Round : 28/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+aggregating weights...
+lambda: tensor([0.3324, 0.3336, 0.3340])
+| Client id:0 | Test_Loss: 0.186 | Test_Acc: 95.374
+| Class: 0 - airplane   | Class_Acc: 99.365
+| Class: 1 - automobile | Class_Acc: 96.730
+| Class: 2 - bird       | Class_Acc: 97.297
+| Class: 3 - cat        | Class_Acc: 95.385
+| Class: 4 - deer       | Class_Acc: 95.879
+| Class: 5 - dog        | Class_Acc: 94.983
+| Class: 6 - frog       | Class_Acc: 95.522
+| Class: 7 - horse      | Class_Acc: 93.132
+| Class: 8 - ship       | Class_Acc: 96.321
+| Class: 9 - truck      | Class_Acc: 89.329
+| Global Round : 29/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.008 | Train_Acc: 99.850
+| Global Round : 29/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.003 | Train_Acc: 99.985
+| Global Round : 29/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+| Global Round : 29/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+| Global Round : 29/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+| Client id:1 | Test_Loss: 0.186 | Test_Acc: 95.584
+| Class: 0 - airplane   | Class_Acc: 99.048
+| Class: 1 - automobile | Class_Acc: 98.093
+| Class: 2 - bird       | Class_Acc: 96.396
+| Class: 3 - cat        | Class_Acc: 95.077
+| Class: 4 - deer       | Class_Acc: 94.505
+| Class: 5 - dog        | Class_Acc: 95.652
+| Class: 6 - frog       | Class_Acc: 96.716
+| Class: 7 - horse      | Class_Acc: 96.154
+| Class: 8 - ship       | Class_Acc: 94.314
+| Class: 9 - truck      | Class_Acc: 89.634
+| Global Round : 29/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.026 | Train_Acc: 99.200
+| Global Round : 29/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.045 | Train_Acc: 98.495
+| Global Round : 29/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.039 | Train_Acc: 98.585
+| Global Round : 29/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.030 | Train_Acc: 99.055
+| Global Round : 29/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.015 | Train_Acc: 99.585
+| Client id:2 | Test_Loss: 0.195 | Test_Acc: 95.153
+| Class: 0 - airplane   | Class_Acc: 98.101
+| Class: 1 - automobile | Class_Acc: 98.098
+| Class: 2 - bird       | Class_Acc: 94.362
+| Class: 3 - cat        | Class_Acc: 97.248
+| Class: 4 - deer       | Class_Acc: 93.989
+| Class: 5 - dog        | Class_Acc: 93.311
+| Class: 6 - frog       | Class_Acc: 96.142
+| Class: 7 - horse      | Class_Acc: 94.231
+| Class: 8 - ship       | Class_Acc: 93.667
+| Class: 9 - truck      | Class_Acc: 92.073
+| Global Round : 29/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.033 | Train_Acc: 98.970
+| Global Round : 29/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.047 | Train_Acc: 98.420
+| Global Round : 29/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.032 | Train_Acc: 99.030
+| Global Round : 29/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.025 | Train_Acc: 99.215
+| Global Round : 29/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.008 | Train_Acc: 99.785
+aggregating weights...
+lambda: tensor([0.3324, 0.3335, 0.3341])
+| Client id:0 | Test_Loss: 0.187 | Test_Acc: 95.314
+| Class: 0 - airplane   | Class_Acc: 98.095
+| Class: 1 - automobile | Class_Acc: 95.640
+| Class: 2 - bird       | Class_Acc: 97.297
+| Class: 3 - cat        | Class_Acc: 95.385
+| Class: 4 - deer       | Class_Acc: 95.604
+| Class: 5 - dog        | Class_Acc: 92.977
+| Class: 6 - frog       | Class_Acc: 96.119
+| Class: 7 - horse      | Class_Acc: 93.681
+| Class: 8 - ship       | Class_Acc: 95.652
+| Class: 9 - truck      | Class_Acc: 92.683
+| Global Round : 30/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.045 | Train_Acc: 98.470
+| Global Round : 30/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.033 | Train_Acc: 98.945
+| Global Round : 30/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.028 | Train_Acc: 99.140
+| Global Round : 30/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.021 | Train_Acc: 99.370
+| Global Round : 30/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.013 | Train_Acc: 99.635
+| Client id:1 | Test_Loss: 0.186 | Test_Acc: 95.254
+| Class: 0 - airplane   | Class_Acc: 98.413
+| Class: 1 - automobile | Class_Acc: 97.275
+| Class: 2 - bird       | Class_Acc: 95.796
+| Class: 3 - cat        | Class_Acc: 95.385
+| Class: 4 - deer       | Class_Acc: 92.033
+| Class: 5 - dog        | Class_Acc: 95.652
+| Class: 6 - frog       | Class_Acc: 97.313
+| Class: 7 - horse      | Class_Acc: 95.604
+| Class: 8 - ship       | Class_Acc: 93.645
+| Class: 9 - truck      | Class_Acc: 91.463
+| Global Round : 30/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.015 | Train_Acc: 99.595
+| Global Round : 30/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.012 | Train_Acc: 99.725
+| Global Round : 30/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.007 | Train_Acc: 99.885
+| Global Round : 30/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.002 | Train_Acc: 100.000
+| Global Round : 30/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+| Client id:2 | Test_Loss: 0.184 | Test_Acc: 95.183
+| Class: 0 - airplane   | Class_Acc: 97.468
+| Class: 1 - automobile | Class_Acc: 96.739
+| Class: 2 - bird       | Class_Acc: 94.955
+| Class: 3 - cat        | Class_Acc: 97.248
+| Class: 4 - deer       | Class_Acc: 93.443
+| Class: 5 - dog        | Class_Acc: 93.645
+| Class: 6 - frog       | Class_Acc: 97.033
+| Class: 7 - horse      | Class_Acc: 94.780
+| Class: 8 - ship       | Class_Acc: 93.667
+| Class: 9 - truck      | Class_Acc: 92.683
+| Global Round : 30/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.015 | Train_Acc: 99.655
+| Global Round : 30/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.010 | Train_Acc: 99.740
+| Global Round : 30/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.007 | Train_Acc: 99.855
+| Global Round : 30/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.002 | Train_Acc: 100.000
+| Global Round : 30/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+aggregating weights...
+lambda: tensor([0.3324, 0.3335, 0.3341])
+
+Final Results
+| Client id:0 | Test_Loss: 0.189 | Test_Acc: 95.314
+| Class: 0 - airplane   | Class_Acc: 99.048
+| Class: 1 - automobile | Class_Acc: 97.003
+| Class: 2 - bird       | Class_Acc: 96.396
+| Class: 3 - cat        | Class_Acc: 94.769
+| Class: 4 - deer       | Class_Acc: 95.879
+| Class: 5 - dog        | Class_Acc: 94.314
+| Class: 6 - frog       | Class_Acc: 95.522
+| Class: 7 - horse      | Class_Acc: 92.857
+| Class: 8 - ship       | Class_Acc: 95.652
+| Class: 9 - truck      | Class_Acc: 91.768
+| Client id:1 | Test_Loss: 0.191 | Test_Acc: 95.584
+| Class: 0 - airplane   | Class_Acc: 98.730
+| Class: 1 - automobile | Class_Acc: 97.820
+| Class: 2 - bird       | Class_Acc: 95.796
+| Class: 3 - cat        | Class_Acc: 94.462
+| Class: 4 - deer       | Class_Acc: 93.956
+| Class: 5 - dog        | Class_Acc: 95.652
+| Class: 6 - frog       | Class_Acc: 96.119
+| Class: 7 - horse      | Class_Acc: 96.429
+| Class: 8 - ship       | Class_Acc: 94.649
+| Class: 9 - truck      | Class_Acc: 92.073
+| Client id:2 | Test_Loss: 0.197 | Test_Acc: 94.943
+| Class: 0 - airplane   | Class_Acc: 98.101
+| Class: 1 - automobile | Class_Acc: 97.554
+| Class: 2 - bird       | Class_Acc: 93.769
+| Class: 3 - cat        | Class_Acc: 96.942
+| Class: 4 - deer       | Class_Acc: 93.989
+| Class: 5 - dog        | Class_Acc: 93.980
+| Class: 6 - frog       | Class_Acc: 95.846
+| Class: 7 - horse      | Class_Acc: 94.231
+| Class: 8 - ship       | Class_Acc: 92.000
+| Class: 9 - truck      | Class_Acc: 92.683
+]0;jdolle@535-project-CPU-ONLY: ~/agnostic_federated_learning[01;32mjdolle@535-project-CPU-ONLY[00m:[01;34m~/agnostic_federated_learning[00m$ exit
+exit
+
+Script done on 2023-12-02 11:31:14-05:00 [COMMAND_EXIT_CODE="0"]
