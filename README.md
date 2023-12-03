@@ -15,7 +15,7 @@ we aim to better understand federated learning, its different techniques, and th
 
 ## Design Goals and Deliverables:
 • Through the design and development of the data and code provided to us, our goal is to understand and implement different 
-FL techniques – Federated averaging (FedAvg), Tilted Empirical Risk Minimization (TERM), and Agnostic FL  
+FL techniques – Federated averaging (FedAvg) and Agnostic FL  
 • Utilize diverse datasets for training and assessment of two FL techniques  
 • Examine the enhancement in the variance of accuracy among individual client groups when
 employing various federated learning techniques.
