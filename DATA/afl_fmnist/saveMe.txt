@@ -1,0 +1,1580 @@
+Script started on 2023-12-04 09:13:17-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;jdolle@535-project-CPU-ONLY: ~/agnostic_federated_learning[01;32mjdolle@535-project-CPU-ONLY[00m:[01;34m~/agnostic_federated_learning[00m$ python3 main.py
+
+Warning!: CPU will be used for training
+
+batch_size: 32
+data_dist: from_csv
+dataset: fmnist
+drfa_gamma: 0.01
+federated_type: afl
+from_csv: iid
+global_epochs: 30
+local_epochs: 5
+lr: 0.01
+model: cnn
+n_clients: 3
+on_cuda: 1
+optimizer: sgd
+seed: 1
+seed_num: 0
+
+ INIT DATA 
+
+-----------------client-------------------
+Class distribution of id:0
+train [6000, 6000, 6000, 6000, 6000, 6000, 6000, 6000, 6000, 6000]
+test [942, 1027, 1016, 1019, 974, 989, 1021, 1022, 990, 1000]
+
+ INIT DATA 
+
+-----------------client-------------------
+Class distribution of id:1
+train [6000, 6000, 6000, 6000, 6000, 6000, 6000, 6000, 6000, 6000]
+test [942, 1027, 1016, 1019, 974, 989, 1021, 1022, 990, 1000]
+
+ INIT DATA 
+
+-----------------client-------------------
+Class distribution of id:2
+train [6000, 6000, 6000, 6000, 6000, 6000, 6000, 6000, 6000, 6000]
+test [942, 1027, 1016, 1019, 974, 989, 1021, 1022, 990, 1000]
+| Client id:0 | Test_Loss: 2.303 | Test_Acc: 9.189
+| Class: 0 - T-shirt/top | Class_Acc: 0.000
+| Class: 1 - Trouser    | Class_Acc: 76.731
+| Class: 2 - Pullover   | Class_Acc: 0.000
+| Class: 3 - Dress      | Class_Acc: 0.290
+| Class: 4 - Coat       | Class_Acc: 5.373
+| Class: 5 - Sandal     | Class_Acc: 0.000
+| Class: 6 - Shirt      | Class_Acc: 0.000
+| Class: 7 - Sneaker    | Class_Acc: 0.000
+| Class: 8 - Bag        | Class_Acc: 3.205
+| Class: 9 - Ankle boot | Class_Acc: 0.000
+| Global Round : 1/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 1.045 | Train_Acc: 60.585
+| Global Round : 1/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.659 | Train_Acc: 74.950
+| Global Round : 1/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.583 | Train_Acc: 77.915
+| Global Round : 1/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.530 | Train_Acc: 79.965
+| Global Round : 1/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.479 | Train_Acc: 82.005
+| Client id:1 | Test_Loss: 2.303 | Test_Acc: 9.790
+| Class: 0 - T-shirt/top | Class_Acc: 0.000
+| Class: 1 - Trouser    | Class_Acc: 82.548
+| Class: 2 - Pullover   | Class_Acc: 0.000
+| Class: 3 - Dress      | Class_Acc: 0.290
+| Class: 4 - Coat       | Class_Acc: 5.075
+| Class: 5 - Sandal     | Class_Acc: 0.000
+| Class: 6 - Shirt      | Class_Acc: 0.608
+| Class: 7 - Sneaker    | Class_Acc: 0.000
+| Class: 8 - Bag        | Class_Acc: 2.564
+| Class: 9 - Ankle boot | Class_Acc: 0.000
+| Global Round : 1/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 1.029 | Train_Acc: 61.350
+| Global Round : 1/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.656 | Train_Acc: 75.020
+| Global Round : 1/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.582 | Train_Acc: 77.975
+| Global Round : 1/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.525 | Train_Acc: 79.980
+| Global Round : 1/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.475 | Train_Acc: 81.755
+| Client id:2 | Test_Loss: 2.303 | Test_Acc: 8.982
+| Class: 0 - T-shirt/top | Class_Acc: 0.000
+| Class: 1 - Trouser    | Class_Acc: 74.309
+| Class: 2 - Pullover   | Class_Acc: 0.000
+| Class: 3 - Dress      | Class_Acc: 0.578
+| Class: 4 - Coat       | Class_Acc: 4.734
+| Class: 5 - Sandal     | Class_Acc: 0.000
+| Class: 6 - Shirt      | Class_Acc: 1.208
+| Class: 7 - Sneaker    | Class_Acc: 0.000
+| Class: 8 - Bag        | Class_Acc: 2.885
+| Class: 9 - Ankle boot | Class_Acc: 0.000
+| Global Round : 1/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 1.022 | Train_Acc: 61.725
+| Global Round : 1/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.657 | Train_Acc: 75.265
+| Global Round : 1/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.582 | Train_Acc: 78.165
+| Global Round : 1/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.524 | Train_Acc: 80.360
+| Global Round : 1/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.477 | Train_Acc: 81.965
+aggregating weights...
+lambda: tensor([0.3333, 0.3333, 0.3333])
+| Client id:0 | Test_Loss: 0.557 | Test_Acc: 79.489
+| Class: 0 - T-shirt/top | Class_Acc: 76.527
+| Class: 1 - Trouser    | Class_Acc: 95.291
+| Class: 2 - Pullover   | Class_Acc: 66.769
+| Class: 3 - Dress      | Class_Acc: 76.812
+| Class: 4 - Coat       | Class_Acc: 77.313
+| Class: 5 - Sandal     | Class_Acc: 85.460
+| Class: 6 - Shirt      | Class_Acc: 37.082
+| Class: 7 - Sneaker    | Class_Acc: 88.081
+| Class: 8 - Bag        | Class_Acc: 95.192
+| Class: 9 - Ankle boot | Class_Acc: 94.864
+| Global Round : 2/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.527 | Train_Acc: 80.100
+| Global Round : 2/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.464 | Train_Acc: 82.345
+| Global Round : 2/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.409 | Train_Acc: 84.475
+| Global Round : 2/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.345 | Train_Acc: 87.195
+| Global Round : 2/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.293 | Train_Acc: 88.550
+| Client id:1 | Test_Loss: 0.540 | Test_Acc: 80.721
+| Class: 0 - T-shirt/top | Class_Acc: 76.849
+| Class: 1 - Trouser    | Class_Acc: 94.737
+| Class: 2 - Pullover   | Class_Acc: 68.308
+| Class: 3 - Dress      | Class_Acc: 77.971
+| Class: 4 - Coat       | Class_Acc: 84.179
+| Class: 5 - Sandal     | Class_Acc: 87.834
+| Class: 6 - Shirt      | Class_Acc: 40.122
+| Class: 7 - Sneaker    | Class_Acc: 85.756
+| Class: 8 - Bag        | Class_Acc: 95.192
+| Class: 9 - Ankle boot | Class_Acc: 94.864
+| Global Round : 2/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.532 | Train_Acc: 79.820
+| Global Round : 2/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.464 | Train_Acc: 82.165
+| Global Round : 2/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.406 | Train_Acc: 84.415
+| Global Round : 2/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.349 | Train_Acc: 86.805
+| Global Round : 2/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.288 | Train_Acc: 89.020
+| Client id:2 | Test_Loss: 0.565 | Test_Acc: 79.850
+| Class: 0 - T-shirt/top | Class_Acc: 79.487
+| Class: 1 - Trouser    | Class_Acc: 92.818
+| Class: 2 - Pullover   | Class_Acc: 65.231
+| Class: 3 - Dress      | Class_Acc: 78.613
+| Class: 4 - Coat       | Class_Acc: 81.953
+| Class: 5 - Sandal     | Class_Acc: 87.537
+| Class: 6 - Shirt      | Class_Acc: 38.066
+| Class: 7 - Sneaker    | Class_Acc: 86.705
+| Class: 8 - Bag        | Class_Acc: 93.910
+| Class: 9 - Ankle boot | Class_Acc: 93.051
+| Global Round : 2/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.528 | Train_Acc: 80.170
+| Global Round : 2/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.467 | Train_Acc: 82.565
+| Global Round : 2/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.403 | Train_Acc: 84.835
+| Global Round : 2/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.346 | Train_Acc: 86.930
+| Global Round : 2/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.286 | Train_Acc: 89.220
+aggregating weights...
+lambda: tensor([0.3334, 0.3332, 0.3334])
+| Client id:0 | Test_Loss: 0.521 | Test_Acc: 80.601
+| Class: 0 - T-shirt/top | Class_Acc: 76.849
+| Class: 1 - Trouser    | Class_Acc: 94.460
+| Class: 2 - Pullover   | Class_Acc: 72.615
+| Class: 3 - Dress      | Class_Acc: 81.449
+| Class: 4 - Coat       | Class_Acc: 69.254
+| Class: 5 - Sandal     | Class_Acc: 87.537
+| Class: 6 - Shirt      | Class_Acc: 44.985
+| Class: 7 - Sneaker    | Class_Acc: 86.047
+| Class: 8 - Bag        | Class_Acc: 95.833
+| Class: 9 - Ankle boot | Class_Acc: 95.770
+| Global Round : 3/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.433 | Train_Acc: 83.350
+| Global Round : 3/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.315 | Train_Acc: 88.020
+| Global Round : 3/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.243 | Train_Acc: 90.655
+| Global Round : 3/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.191 | Train_Acc: 92.800
+| Global Round : 3/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.145 | Train_Acc: 94.655
+| Client id:1 | Test_Loss: 0.514 | Test_Acc: 81.772
+| Class: 0 - T-shirt/top | Class_Acc: 79.743
+| Class: 1 - Trouser    | Class_Acc: 94.460
+| Class: 2 - Pullover   | Class_Acc: 69.231
+| Class: 3 - Dress      | Class_Acc: 80.870
+| Class: 4 - Coat       | Class_Acc: 76.418
+| Class: 5 - Sandal     | Class_Acc: 89.318
+| Class: 6 - Shirt      | Class_Acc: 49.544
+| Class: 7 - Sneaker    | Class_Acc: 83.721
+| Class: 8 - Bag        | Class_Acc: 96.795
+| Class: 9 - Ankle boot | Class_Acc: 96.677
+| Global Round : 3/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.432 | Train_Acc: 83.145
+| Global Round : 3/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.320 | Train_Acc: 87.990
+| Global Round : 3/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.247 | Train_Acc: 90.675
+| Global Round : 3/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.188 | Train_Acc: 92.965
+| Global Round : 3/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.154 | Train_Acc: 94.160
+| Client id:2 | Test_Loss: 0.529 | Test_Acc: 80.629
+| Class: 0 - T-shirt/top | Class_Acc: 79.167
+| Class: 1 - Trouser    | Class_Acc: 92.818
+| Class: 2 - Pullover   | Class_Acc: 73.538
+| Class: 3 - Dress      | Class_Acc: 80.925
+| Class: 4 - Coat       | Class_Acc: 73.669
+| Class: 5 - Sandal     | Class_Acc: 90.208
+| Class: 6 - Shirt      | Class_Acc: 40.181
+| Class: 7 - Sneaker    | Class_Acc: 86.416
+| Class: 8 - Bag        | Class_Acc: 95.192
+| Class: 9 - Ankle boot | Class_Acc: 93.353
+| Global Round : 3/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.429 | Train_Acc: 83.415
+| Global Round : 3/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.316 | Train_Acc: 88.040
+| Global Round : 3/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.239 | Train_Acc: 90.850
+| Global Round : 3/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.191 | Train_Acc: 92.790
+| Global Round : 3/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.145 | Train_Acc: 94.620
+aggregating weights...
+lambda: tensor([0.3334, 0.3331, 0.3335])
+| Client id:0 | Test_Loss: 0.617 | Test_Acc: 80.571
+| Class: 0 - T-shirt/top | Class_Acc: 75.241
+| Class: 1 - Trouser    | Class_Acc: 93.906
+| Class: 2 - Pullover   | Class_Acc: 65.231
+| Class: 3 - Dress      | Class_Acc: 83.478
+| Class: 4 - Coat       | Class_Acc: 68.955
+| Class: 5 - Sandal     | Class_Acc: 88.724
+| Class: 6 - Shirt      | Class_Acc: 52.280
+| Class: 7 - Sneaker    | Class_Acc: 86.047
+| Class: 8 - Bag        | Class_Acc: 95.833
+| Class: 9 - Ankle boot | Class_Acc: 94.562
+| Global Round : 4/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.360 | Train_Acc: 86.075
+| Global Round : 4/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.212 | Train_Acc: 91.935
+| Global Round : 4/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.146 | Train_Acc: 94.750
+| Global Round : 4/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.102 | Train_Acc: 96.205
+| Global Round : 4/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.093 | Train_Acc: 96.620
+| Client id:1 | Test_Loss: 0.575 | Test_Acc: 80.961
+| Class: 0 - T-shirt/top | Class_Acc: 75.241
+| Class: 1 - Trouser    | Class_Acc: 94.460
+| Class: 2 - Pullover   | Class_Acc: 66.462
+| Class: 3 - Dress      | Class_Acc: 80.580
+| Class: 4 - Coat       | Class_Acc: 74.328
+| Class: 5 - Sandal     | Class_Acc: 89.911
+| Class: 6 - Shirt      | Class_Acc: 52.888
+| Class: 7 - Sneaker    | Class_Acc: 84.884
+| Class: 8 - Bag        | Class_Acc: 95.513
+| Class: 9 - Ankle boot | Class_Acc: 93.958
+| Global Round : 4/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.354 | Train_Acc: 86.570
+| Global Round : 4/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.202 | Train_Acc: 92.560
+| Global Round : 4/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.150 | Train_Acc: 94.420
+| Global Round : 4/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.118 | Train_Acc: 95.840
+| Global Round : 4/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.080 | Train_Acc: 97.100
+| Client id:2 | Test_Loss: 0.616 | Test_Acc: 80.719
+| Class: 0 - T-shirt/top | Class_Acc: 77.564
+| Class: 1 - Trouser    | Class_Acc: 91.989
+| Class: 2 - Pullover   | Class_Acc: 67.385
+| Class: 3 - Dress      | Class_Acc: 81.792
+| Class: 4 - Coat       | Class_Acc: 73.964
+| Class: 5 - Sandal     | Class_Acc: 90.504
+| Class: 6 - Shirt      | Class_Acc: 49.547
+| Class: 7 - Sneaker    | Class_Acc: 86.127
+| Class: 8 - Bag        | Class_Acc: 93.269
+| Class: 9 - Ankle boot | Class_Acc: 93.958
+| Global Round : 4/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.354 | Train_Acc: 86.505
+| Global Round : 4/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.202 | Train_Acc: 92.375
+| Global Round : 4/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.142 | Train_Acc: 94.715
+| Global Round : 4/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.101 | Train_Acc: 96.335
+| Global Round : 4/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.092 | Train_Acc: 96.575
+aggregating weights...
+lambda: tensor([0.3335, 0.3328, 0.3337])
+| Client id:0 | Test_Loss: 0.717 | Test_Acc: 80.571
+| Class: 0 - T-shirt/top | Class_Acc: 76.849
+| Class: 1 - Trouser    | Class_Acc: 94.737
+| Class: 2 - Pullover   | Class_Acc: 68.000
+| Class: 3 - Dress      | Class_Acc: 82.319
+| Class: 4 - Coat       | Class_Acc: 67.463
+| Class: 5 - Sandal     | Class_Acc: 85.163
+| Class: 6 - Shirt      | Class_Acc: 51.672
+| Class: 7 - Sneaker    | Class_Acc: 90.698
+| Class: 8 - Bag        | Class_Acc: 96.154
+| Class: 9 - Ankle boot | Class_Acc: 91.239
+| Global Round : 5/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.295 | Train_Acc: 88.895
+| Global Round : 5/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.147 | Train_Acc: 94.435
+| Global Round : 5/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.100 | Train_Acc: 96.580
+| Global Round : 5/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.069 | Train_Acc: 97.580
+| Global Round : 5/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.058 | Train_Acc: 98.030
+| Client id:1 | Test_Loss: 0.661 | Test_Acc: 81.201
+| Class: 0 - T-shirt/top | Class_Acc: 78.135
+| Class: 1 - Trouser    | Class_Acc: 93.906
+| Class: 2 - Pullover   | Class_Acc: 67.692
+| Class: 3 - Dress      | Class_Acc: 81.449
+| Class: 4 - Coat       | Class_Acc: 72.239
+| Class: 5 - Sandal     | Class_Acc: 87.834
+| Class: 6 - Shirt      | Class_Acc: 53.495
+| Class: 7 - Sneaker    | Class_Acc: 88.953
+| Class: 8 - Bag        | Class_Acc: 94.551
+| Class: 9 - Ankle boot | Class_Acc: 92.447
+| Global Round : 5/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.290 | Train_Acc: 88.920
+| Global Round : 5/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.149 | Train_Acc: 94.490
+| Global Round : 5/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.100 | Train_Acc: 96.340
+| Global Round : 5/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.086 | Train_Acc: 96.885
+| Global Round : 5/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.064 | Train_Acc: 97.740
+| Client id:2 | Test_Loss: 0.706 | Test_Acc: 80.659
+| Class: 0 - T-shirt/top | Class_Acc: 78.846
+| Class: 1 - Trouser    | Class_Acc: 92.265
+| Class: 2 - Pullover   | Class_Acc: 67.077
+| Class: 3 - Dress      | Class_Acc: 84.393
+| Class: 4 - Coat       | Class_Acc: 71.006
+| Class: 5 - Sandal     | Class_Acc: 86.944
+| Class: 6 - Shirt      | Class_Acc: 48.943
+| Class: 7 - Sneaker    | Class_Acc: 89.595
+| Class: 8 - Bag        | Class_Acc: 94.231
+| Class: 9 - Ankle boot | Class_Acc: 92.145
+| Global Round : 5/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.288 | Train_Acc: 89.085
+| Global Round : 5/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.151 | Train_Acc: 94.440
+| Global Round : 5/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.103 | Train_Acc: 96.365
+| Global Round : 5/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.083 | Train_Acc: 97.000
+| Global Round : 5/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.068 | Train_Acc: 97.420
+aggregating weights...
+lambda: tensor([0.3337, 0.3325, 0.3338])
+| Client id:0 | Test_Loss: 0.796 | Test_Acc: 80.511
+| Class: 0 - T-shirt/top | Class_Acc: 75.884
+| Class: 1 - Trouser    | Class_Acc: 95.568
+| Class: 2 - Pullover   | Class_Acc: 68.923
+| Class: 3 - Dress      | Class_Acc: 84.058
+| Class: 4 - Coat       | Class_Acc: 68.955
+| Class: 5 - Sandal     | Class_Acc: 86.944
+| Class: 6 - Shirt      | Class_Acc: 46.201
+| Class: 7 - Sneaker    | Class_Acc: 88.372
+| Class: 8 - Bag        | Class_Acc: 95.833
+| Class: 9 - Ankle boot | Class_Acc: 92.749
+| Global Round : 6/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.253 | Train_Acc: 90.590
+| Global Round : 6/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.119 | Train_Acc: 95.665
+| Global Round : 6/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.077 | Train_Acc: 97.220
+| Global Round : 6/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.058 | Train_Acc: 97.985
+| Global Round : 6/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.050 | Train_Acc: 98.355
+| Client id:1 | Test_Loss: 0.736 | Test_Acc: 80.601
+| Class: 0 - T-shirt/top | Class_Acc: 79.421
+| Class: 1 - Trouser    | Class_Acc: 93.629
+| Class: 2 - Pullover   | Class_Acc: 66.769
+| Class: 3 - Dress      | Class_Acc: 82.899
+| Class: 4 - Coat       | Class_Acc: 69.851
+| Class: 5 - Sandal     | Class_Acc: 89.614
+| Class: 6 - Shirt      | Class_Acc: 49.240
+| Class: 7 - Sneaker    | Class_Acc: 85.756
+| Class: 8 - Bag        | Class_Acc: 95.833
+| Class: 9 - Ankle boot | Class_Acc: 91.843
+| Global Round : 6/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.233 | Train_Acc: 91.305
+| Global Round : 6/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.110 | Train_Acc: 96.210
+| Global Round : 6/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.091 | Train_Acc: 96.720
+| Global Round : 6/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.062 | Train_Acc: 97.765
+| Global Round : 6/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.054 | Train_Acc: 98.085
+| Client id:2 | Test_Loss: 0.761 | Test_Acc: 80.329
+| Class: 0 - T-shirt/top | Class_Acc: 79.167
+| Class: 1 - Trouser    | Class_Acc: 92.818
+| Class: 2 - Pullover   | Class_Acc: 69.231
+| Class: 3 - Dress      | Class_Acc: 84.971
+| Class: 4 - Coat       | Class_Acc: 70.414
+| Class: 5 - Sandal     | Class_Acc: 88.427
+| Class: 6 - Shirt      | Class_Acc: 43.202
+| Class: 7 - Sneaker    | Class_Acc: 88.728
+| Class: 8 - Bag        | Class_Acc: 94.551
+| Class: 9 - Ankle boot | Class_Acc: 90.634
+| Global Round : 6/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.240 | Train_Acc: 90.920
+| Global Round : 6/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.114 | Train_Acc: 95.835
+| Global Round : 6/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.080 | Train_Acc: 97.050
+| Global Round : 6/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.064 | Train_Acc: 97.610
+| Global Round : 6/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.049 | Train_Acc: 98.390
+aggregating weights...
+lambda: tensor([0.3340, 0.3322, 0.3337])
+| Client id:0 | Test_Loss: 0.824 | Test_Acc: 80.511
+| Class: 0 - T-shirt/top | Class_Acc: 76.849
+| Class: 1 - Trouser    | Class_Acc: 95.291
+| Class: 2 - Pullover   | Class_Acc: 66.769
+| Class: 3 - Dress      | Class_Acc: 83.188
+| Class: 4 - Coat       | Class_Acc: 67.463
+| Class: 5 - Sandal     | Class_Acc: 89.318
+| Class: 6 - Shirt      | Class_Acc: 51.976
+| Class: 7 - Sneaker    | Class_Acc: 86.628
+| Class: 8 - Bag        | Class_Acc: 96.154
+| Class: 9 - Ankle boot | Class_Acc: 90.030
+| Global Round : 7/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.210 | Train_Acc: 92.300
+| Global Round : 7/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.101 | Train_Acc: 96.350
+| Global Round : 7/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.068 | Train_Acc: 97.610
+| Global Round : 7/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.043 | Train_Acc: 98.565
+| Global Round : 7/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.039 | Train_Acc: 98.695
+| Client id:1 | Test_Loss: 0.758 | Test_Acc: 80.541
+| Class: 0 - T-shirt/top | Class_Acc: 75.241
+| Class: 1 - Trouser    | Class_Acc: 94.183
+| Class: 2 - Pullover   | Class_Acc: 68.615
+| Class: 3 - Dress      | Class_Acc: 79.710
+| Class: 4 - Coat       | Class_Acc: 68.358
+| Class: 5 - Sandal     | Class_Acc: 91.395
+| Class: 6 - Shirt      | Class_Acc: 53.799
+| Class: 7 - Sneaker    | Class_Acc: 86.047
+| Class: 8 - Bag        | Class_Acc: 96.154
+| Class: 9 - Ankle boot | Class_Acc: 90.634
+| Global Round : 7/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.195 | Train_Acc: 92.905
+| Global Round : 7/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.098 | Train_Acc: 96.360
+| Global Round : 7/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.067 | Train_Acc: 97.630
+| Global Round : 7/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.051 | Train_Acc: 98.275
+| Global Round : 7/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.044 | Train_Acc: 98.480
+| Client id:2 | Test_Loss: 0.793 | Test_Acc: 80.539
+| Class: 0 - T-shirt/top | Class_Acc: 78.846
+| Class: 1 - Trouser    | Class_Acc: 94.199
+| Class: 2 - Pullover   | Class_Acc: 68.923
+| Class: 3 - Dress      | Class_Acc: 79.480
+| Class: 4 - Coat       | Class_Acc: 66.864
+| Class: 5 - Sandal     | Class_Acc: 94.362
+| Class: 6 - Shirt      | Class_Acc: 51.964
+| Class: 7 - Sneaker    | Class_Acc: 86.994
+| Class: 8 - Bag        | Class_Acc: 94.551
+| Class: 9 - Ankle boot | Class_Acc: 88.218
+| Global Round : 7/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.205 | Train_Acc: 92.425
+| Global Round : 7/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.095 | Train_Acc: 96.535
+| Global Round : 7/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.062 | Train_Acc: 97.920
+| Global Round : 7/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.043 | Train_Acc: 98.580
+| Global Round : 7/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.038 | Train_Acc: 98.780
+aggregating weights...
+lambda: tensor([0.3344, 0.3319, 0.3337])
+| Client id:0 | Test_Loss: 0.900 | Test_Acc: 80.420
+| Class: 0 - T-shirt/top | Class_Acc: 73.633
+| Class: 1 - Trouser    | Class_Acc: 93.352
+| Class: 2 - Pullover   | Class_Acc: 69.231
+| Class: 3 - Dress      | Class_Acc: 85.217
+| Class: 4 - Coat       | Class_Acc: 68.955
+| Class: 5 - Sandal     | Class_Acc: 89.911
+| Class: 6 - Shirt      | Class_Acc: 49.240
+| Class: 7 - Sneaker    | Class_Acc: 87.209
+| Class: 8 - Bag        | Class_Acc: 94.231
+| Class: 9 - Ankle boot | Class_Acc: 91.541
+| Global Round : 8/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.177 | Train_Acc: 93.430
+| Global Round : 8/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.092 | Train_Acc: 96.785
+| Global Round : 8/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.066 | Train_Acc: 97.600
+| Global Round : 8/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.037 | Train_Acc: 98.770
+| Global Round : 8/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.028 | Train_Acc: 99.135
+| Client id:1 | Test_Loss: 0.850 | Test_Acc: 80.871
+| Class: 0 - T-shirt/top | Class_Acc: 71.383
+| Class: 1 - Trouser    | Class_Acc: 93.906
+| Class: 2 - Pullover   | Class_Acc: 70.154
+| Class: 3 - Dress      | Class_Acc: 81.739
+| Class: 4 - Coat       | Class_Acc: 72.239
+| Class: 5 - Sandal     | Class_Acc: 90.504
+| Class: 6 - Shirt      | Class_Acc: 54.103
+| Class: 7 - Sneaker    | Class_Acc: 85.756
+| Class: 8 - Bag        | Class_Acc: 94.872
+| Class: 9 - Ankle boot | Class_Acc: 92.447
+| Global Round : 8/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.165 | Train_Acc: 94.125
+| Global Round : 8/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.088 | Train_Acc: 96.910
+| Global Round : 8/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.073 | Train_Acc: 97.400
+| Global Round : 8/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.043 | Train_Acc: 98.625
+| Global Round : 8/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.031 | Train_Acc: 98.990
+| Client id:2 | Test_Loss: 0.864 | Test_Acc: 80.838
+| Class: 0 - T-shirt/top | Class_Acc: 78.205
+| Class: 1 - Trouser    | Class_Acc: 92.818
+| Class: 2 - Pullover   | Class_Acc: 72.308
+| Class: 3 - Dress      | Class_Acc: 83.815
+| Class: 4 - Coat       | Class_Acc: 67.751
+| Class: 5 - Sandal     | Class_Acc: 92.582
+| Class: 6 - Shirt      | Class_Acc: 47.432
+| Class: 7 - Sneaker    | Class_Acc: 87.283
+| Class: 8 - Bag        | Class_Acc: 93.910
+| Class: 9 - Ankle boot | Class_Acc: 91.239
+| Global Round : 8/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.177 | Train_Acc: 93.505
+| Global Round : 8/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.094 | Train_Acc: 96.650
+| Global Round : 8/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.052 | Train_Acc: 98.215
+| Global Round : 8/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.035 | Train_Acc: 98.830
+| Global Round : 8/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.029 | Train_Acc: 99.130
+aggregating weights...
+lambda: tensor([0.3347, 0.3317, 0.3337])
+| Client id:0 | Test_Loss: 0.876 | Test_Acc: 80.180
+| Class: 0 - T-shirt/top | Class_Acc: 74.598
+| Class: 1 - Trouser    | Class_Acc: 94.737
+| Class: 2 - Pullover   | Class_Acc: 62.769
+| Class: 3 - Dress      | Class_Acc: 84.638
+| Class: 4 - Coat       | Class_Acc: 67.164
+| Class: 5 - Sandal     | Class_Acc: 90.208
+| Class: 6 - Shirt      | Class_Acc: 53.495
+| Class: 7 - Sneaker    | Class_Acc: 87.500
+| Class: 8 - Bag        | Class_Acc: 93.590
+| Class: 9 - Ankle boot | Class_Acc: 91.239
+| Global Round : 9/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.157 | Train_Acc: 94.250
+| Global Round : 9/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.087 | Train_Acc: 96.845
+| Global Round : 9/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.057 | Train_Acc: 98.045
+| Global Round : 9/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.045 | Train_Acc: 98.560
+| Global Round : 9/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.036 | Train_Acc: 98.805
+| Client id:1 | Test_Loss: 0.820 | Test_Acc: 80.511
+| Class: 0 - T-shirt/top | Class_Acc: 71.383
+| Class: 1 - Trouser    | Class_Acc: 93.906
+| Class: 2 - Pullover   | Class_Acc: 62.462
+| Class: 3 - Dress      | Class_Acc: 83.768
+| Class: 4 - Coat       | Class_Acc: 69.254
+| Class: 5 - Sandal     | Class_Acc: 89.911
+| Class: 6 - Shirt      | Class_Acc: 57.751
+| Class: 7 - Sneaker    | Class_Acc: 86.047
+| Class: 8 - Bag        | Class_Acc: 96.154
+| Class: 9 - Ankle boot | Class_Acc: 92.749
+| Global Round : 9/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.145 | Train_Acc: 94.640
+| Global Round : 9/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.092 | Train_Acc: 96.860
+| Global Round : 9/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.059 | Train_Acc: 97.905
+| Global Round : 9/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.045 | Train_Acc: 98.485
+| Global Round : 9/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.033 | Train_Acc: 98.810
+| Client id:2 | Test_Loss: 0.821 | Test_Acc: 81.168
+| Class: 0 - T-shirt/top | Class_Acc: 75.962
+| Class: 1 - Trouser    | Class_Acc: 91.160
+| Class: 2 - Pullover   | Class_Acc: 67.385
+| Class: 3 - Dress      | Class_Acc: 84.104
+| Class: 4 - Coat       | Class_Acc: 69.231
+| Class: 5 - Sandal     | Class_Acc: 92.582
+| Class: 6 - Shirt      | Class_Acc: 57.704
+| Class: 7 - Sneaker    | Class_Acc: 86.994
+| Class: 8 - Bag        | Class_Acc: 93.269
+| Class: 9 - Ankle boot | Class_Acc: 92.145
+| Global Round : 9/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.162 | Train_Acc: 94.040
+| Global Round : 9/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.076 | Train_Acc: 97.270
+| Global Round : 9/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.060 | Train_Acc: 98.025
+| Global Round : 9/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.038 | Train_Acc: 98.775
+| Global Round : 9/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.024 | Train_Acc: 99.335
+aggregating weights...
+lambda: tensor([0.3350, 0.3315, 0.3335])
+| Client id:0 | Test_Loss: 0.836 | Test_Acc: 80.511
+| Class: 0 - T-shirt/top | Class_Acc: 72.669
+| Class: 1 - Trouser    | Class_Acc: 95.291
+| Class: 2 - Pullover   | Class_Acc: 67.077
+| Class: 3 - Dress      | Class_Acc: 82.899
+| Class: 4 - Coat       | Class_Acc: 69.552
+| Class: 5 - Sandal     | Class_Acc: 88.724
+| Class: 6 - Shirt      | Class_Acc: 51.672
+| Class: 7 - Sneaker    | Class_Acc: 90.698
+| Class: 8 - Bag        | Class_Acc: 93.590
+| Class: 9 - Ankle boot | Class_Acc: 90.937
+| Global Round : 10/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.137 | Train_Acc: 94.925
+| Global Round : 10/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.078 | Train_Acc: 97.275
+| Global Round : 10/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.052 | Train_Acc: 98.150
+| Global Round : 10/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.046 | Train_Acc: 98.480
+| Global Round : 10/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.027 | Train_Acc: 99.120
+| Client id:1 | Test_Loss: 0.834 | Test_Acc: 80.480
+| Class: 0 - T-shirt/top | Class_Acc: 72.026
+| Class: 1 - Trouser    | Class_Acc: 94.183
+| Class: 2 - Pullover   | Class_Acc: 63.077
+| Class: 3 - Dress      | Class_Acc: 80.580
+| Class: 4 - Coat       | Class_Acc: 74.627
+| Class: 5 - Sandal     | Class_Acc: 89.614
+| Class: 6 - Shirt      | Class_Acc: 56.231
+| Class: 7 - Sneaker    | Class_Acc: 88.663
+| Class: 8 - Bag        | Class_Acc: 94.872
+| Class: 9 - Ankle boot | Class_Acc: 89.124
+| Global Round : 10/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.121 | Train_Acc: 95.710
+| Global Round : 10/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.072 | Train_Acc: 97.425
+| Global Round : 10/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.051 | Train_Acc: 98.375
+| Global Round : 10/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.042 | Train_Acc: 98.680
+| Global Round : 10/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.039 | Train_Acc: 98.700
+| Client id:2 | Test_Loss: 0.834 | Test_Acc: 80.569
+| Class: 0 - T-shirt/top | Class_Acc: 77.244
+| Class: 1 - Trouser    | Class_Acc: 92.265
+| Class: 2 - Pullover   | Class_Acc: 64.923
+| Class: 3 - Dress      | Class_Acc: 80.636
+| Class: 4 - Coat       | Class_Acc: 69.527
+| Class: 5 - Sandal     | Class_Acc: 92.582
+| Class: 6 - Shirt      | Class_Acc: 53.172
+| Class: 7 - Sneaker    | Class_Acc: 89.306
+| Class: 8 - Bag        | Class_Acc: 93.590
+| Class: 9 - Ankle boot | Class_Acc: 91.239
+| Global Round : 10/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.128 | Train_Acc: 95.370
+| Global Round : 10/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.087 | Train_Acc: 96.965
+| Global Round : 10/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.052 | Train_Acc: 98.205
+| Global Round : 10/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.033 | Train_Acc: 98.970
+| Global Round : 10/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.028 | Train_Acc: 99.080
+aggregating weights...
+lambda: tensor([0.3350, 0.3315, 0.3335])
+| Client id:0 | Test_Loss: 0.933 | Test_Acc: 80.240
+| Class: 0 - T-shirt/top | Class_Acc: 75.884
+| Class: 1 - Trouser    | Class_Acc: 95.014
+| Class: 2 - Pullover   | Class_Acc: 66.769
+| Class: 3 - Dress      | Class_Acc: 85.507
+| Class: 4 - Coat       | Class_Acc: 62.687
+| Class: 5 - Sandal     | Class_Acc: 89.614
+| Class: 6 - Shirt      | Class_Acc: 50.456
+| Class: 7 - Sneaker    | Class_Acc: 88.663
+| Class: 8 - Bag        | Class_Acc: 95.833
+| Class: 9 - Ankle boot | Class_Acc: 90.332
+| Global Round : 11/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.122 | Train_Acc: 95.510
+| Global Round : 11/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.085 | Train_Acc: 97.120
+| Global Round : 11/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.035 | Train_Acc: 98.840
+| Global Round : 11/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.020 | Train_Acc: 99.415
+| Global Round : 11/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.019 | Train_Acc: 99.420
+| Client id:1 | Test_Loss: 0.842 | Test_Acc: 80.420
+| Class: 0 - T-shirt/top | Class_Acc: 76.527
+| Class: 1 - Trouser    | Class_Acc: 93.075
+| Class: 2 - Pullover   | Class_Acc: 66.462
+| Class: 3 - Dress      | Class_Acc: 82.319
+| Class: 4 - Coat       | Class_Acc: 67.164
+| Class: 5 - Sandal     | Class_Acc: 92.582
+| Class: 6 - Shirt      | Class_Acc: 52.888
+| Class: 7 - Sneaker    | Class_Acc: 86.919
+| Class: 8 - Bag        | Class_Acc: 95.513
+| Class: 9 - Ankle boot | Class_Acc: 89.426
+| Global Round : 11/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.120 | Train_Acc: 95.715
+| Global Round : 11/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.070 | Train_Acc: 97.490
+| Global Round : 11/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.053 | Train_Acc: 98.220
+| Global Round : 11/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.040 | Train_Acc: 98.630
+| Global Round : 11/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.031 | Train_Acc: 98.970
+| Client id:2 | Test_Loss: 0.869 | Test_Acc: 80.449
+| Class: 0 - T-shirt/top | Class_Acc: 79.167
+| Class: 1 - Trouser    | Class_Acc: 92.265
+| Class: 2 - Pullover   | Class_Acc: 68.615
+| Class: 3 - Dress      | Class_Acc: 82.948
+| Class: 4 - Coat       | Class_Acc: 65.089
+| Class: 5 - Sandal     | Class_Acc: 94.362
+| Class: 6 - Shirt      | Class_Acc: 52.266
+| Class: 7 - Sneaker    | Class_Acc: 85.838
+| Class: 8 - Bag        | Class_Acc: 94.551
+| Class: 9 - Ankle boot | Class_Acc: 88.520
+| Global Round : 11/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.119 | Train_Acc: 95.615
+| Global Round : 11/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.077 | Train_Acc: 97.320
+| Global Round : 11/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.055 | Train_Acc: 98.130
+| Global Round : 11/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.038 | Train_Acc: 98.715
+| Global Round : 11/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.031 | Train_Acc: 98.905
+aggregating weights...
+lambda: tensor([0.3356, 0.3311, 0.3334])
+| Client id:0 | Test_Loss: 0.910 | Test_Acc: 80.270
+| Class: 0 - T-shirt/top | Class_Acc: 74.598
+| Class: 1 - Trouser    | Class_Acc: 95.014
+| Class: 2 - Pullover   | Class_Acc: 63.692
+| Class: 3 - Dress      | Class_Acc: 83.478
+| Class: 4 - Coat       | Class_Acc: 69.254
+| Class: 5 - Sandal     | Class_Acc: 88.427
+| Class: 6 - Shirt      | Class_Acc: 49.848
+| Class: 7 - Sneaker    | Class_Acc: 90.988
+| Class: 8 - Bag        | Class_Acc: 95.513
+| Class: 9 - Ankle boot | Class_Acc: 90.030
+| Global Round : 12/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.120 | Train_Acc: 95.545
+| Global Round : 12/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.081 | Train_Acc: 97.040
+| Global Round : 12/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.046 | Train_Acc: 98.460
+| Global Round : 12/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.034 | Train_Acc: 98.835
+| Global Round : 12/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.038 | Train_Acc: 98.725
+| Client id:1 | Test_Loss: 0.842 | Test_Acc: 80.931
+| Class: 0 - T-shirt/top | Class_Acc: 76.206
+| Class: 1 - Trouser    | Class_Acc: 94.183
+| Class: 2 - Pullover   | Class_Acc: 64.000
+| Class: 3 - Dress      | Class_Acc: 83.188
+| Class: 4 - Coat       | Class_Acc: 69.254
+| Class: 5 - Sandal     | Class_Acc: 91.395
+| Class: 6 - Shirt      | Class_Acc: 55.623
+| Class: 7 - Sneaker    | Class_Acc: 90.116
+| Class: 8 - Bag        | Class_Acc: 94.872
+| Class: 9 - Ankle boot | Class_Acc: 88.822
+| Global Round : 12/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.102 | Train_Acc: 96.465
+| Global Round : 12/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.063 | Train_Acc: 97.845
+| Global Round : 12/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.051 | Train_Acc: 98.340
+| Global Round : 12/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.043 | Train_Acc: 98.645
+| Global Round : 12/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.028 | Train_Acc: 99.140
+| Client id:2 | Test_Loss: 0.872 | Test_Acc: 80.988
+| Class: 0 - T-shirt/top | Class_Acc: 79.167
+| Class: 1 - Trouser    | Class_Acc: 92.265
+| Class: 2 - Pullover   | Class_Acc: 67.385
+| Class: 3 - Dress      | Class_Acc: 83.815
+| Class: 4 - Coat       | Class_Acc: 71.598
+| Class: 5 - Sandal     | Class_Acc: 91.395
+| Class: 6 - Shirt      | Class_Acc: 50.453
+| Class: 7 - Sneaker    | Class_Acc: 89.017
+| Class: 8 - Bag        | Class_Acc: 93.910
+| Class: 9 - Ankle boot | Class_Acc: 89.728
+| Global Round : 12/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.100 | Train_Acc: 96.565
+| Global Round : 12/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.061 | Train_Acc: 97.765
+| Global Round : 12/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.055 | Train_Acc: 98.095
+| Global Round : 12/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.025 | Train_Acc: 99.210
+| Global Round : 12/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.022 | Train_Acc: 99.240
+aggregating weights...
+lambda: tensor([0.3359, 0.3308, 0.3333])
+| Client id:0 | Test_Loss: 0.854 | Test_Acc: 79.850
+| Class: 0 - T-shirt/top | Class_Acc: 75.241
+| Class: 1 - Trouser    | Class_Acc: 93.906
+| Class: 2 - Pullover   | Class_Acc: 64.308
+| Class: 3 - Dress      | Class_Acc: 84.928
+| Class: 4 - Coat       | Class_Acc: 67.761
+| Class: 5 - Sandal     | Class_Acc: 89.021
+| Class: 6 - Shirt      | Class_Acc: 50.456
+| Class: 7 - Sneaker    | Class_Acc: 87.500
+| Class: 8 - Bag        | Class_Acc: 91.987
+| Class: 9 - Ankle boot | Class_Acc: 91.541
+| Global Round : 13/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.102 | Train_Acc: 96.310
+| Global Round : 13/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.072 | Train_Acc: 97.490
+| Global Round : 13/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.057 | Train_Acc: 97.985
+| Global Round : 13/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.039 | Train_Acc: 98.820
+| Global Round : 13/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.025 | Train_Acc: 99.225
+| Client id:1 | Test_Loss: 0.814 | Test_Acc: 80.541
+| Class: 0 - T-shirt/top | Class_Acc: 76.849
+| Class: 1 - Trouser    | Class_Acc: 94.183
+| Class: 2 - Pullover   | Class_Acc: 63.077
+| Class: 3 - Dress      | Class_Acc: 81.449
+| Class: 4 - Coat       | Class_Acc: 72.239
+| Class: 5 - Sandal     | Class_Acc: 91.395
+| Class: 6 - Shirt      | Class_Acc: 55.319
+| Class: 7 - Sneaker    | Class_Acc: 84.012
+| Class: 8 - Bag        | Class_Acc: 92.949
+| Class: 9 - Ankle boot | Class_Acc: 92.447
+| Global Round : 13/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.098 | Train_Acc: 96.490
+| Global Round : 13/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.068 | Train_Acc: 97.745
+| Global Round : 13/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.059 | Train_Acc: 97.865
+| Global Round : 13/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.048 | Train_Acc: 98.340
+| Global Round : 13/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.031 | Train_Acc: 98.950
+| Client id:2 | Test_Loss: 0.819 | Test_Acc: 80.389
+| Class: 0 - T-shirt/top | Class_Acc: 80.128
+| Class: 1 - Trouser    | Class_Acc: 91.989
+| Class: 2 - Pullover   | Class_Acc: 66.769
+| Class: 3 - Dress      | Class_Acc: 83.526
+| Class: 4 - Coat       | Class_Acc: 70.118
+| Class: 5 - Sandal     | Class_Acc: 92.582
+| Class: 6 - Shirt      | Class_Acc: 50.453
+| Class: 7 - Sneaker    | Class_Acc: 85.260
+| Class: 8 - Bag        | Class_Acc: 91.026
+| Class: 9 - Ankle boot | Class_Acc: 90.937
+| Global Round : 13/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.107 | Train_Acc: 96.210
+| Global Round : 13/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.067 | Train_Acc: 97.810
+| Global Round : 13/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.043 | Train_Acc: 98.555
+| Global Round : 13/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.046 | Train_Acc: 98.550
+| Global Round : 13/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.036 | Train_Acc: 98.855
+aggregating weights...
+lambda: tensor([0.3362, 0.3306, 0.3332])
+| Client id:0 | Test_Loss: 0.907 | Test_Acc: 80.240
+| Class: 0 - T-shirt/top | Class_Acc: 75.884
+| Class: 1 - Trouser    | Class_Acc: 95.845
+| Class: 2 - Pullover   | Class_Acc: 61.846
+| Class: 3 - Dress      | Class_Acc: 83.478
+| Class: 4 - Coat       | Class_Acc: 73.134
+| Class: 5 - Sandal     | Class_Acc: 85.460
+| Class: 6 - Shirt      | Class_Acc: 48.328
+| Class: 7 - Sneaker    | Class_Acc: 90.407
+| Class: 8 - Bag        | Class_Acc: 94.551
+| Class: 9 - Ankle boot | Class_Acc: 91.541
+| Global Round : 14/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.090 | Train_Acc: 96.905
+| Global Round : 14/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.070 | Train_Acc: 97.465
+| Global Round : 14/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.059 | Train_Acc: 97.910
+| Global Round : 14/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.041 | Train_Acc: 98.575
+| Global Round : 14/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.022 | Train_Acc: 99.330
+| Client id:1 | Test_Loss: 0.898 | Test_Acc: 80.120
+| Class: 0 - T-shirt/top | Class_Acc: 74.920
+| Class: 1 - Trouser    | Class_Acc: 94.183
+| Class: 2 - Pullover   | Class_Acc: 62.462
+| Class: 3 - Dress      | Class_Acc: 82.319
+| Class: 4 - Coat       | Class_Acc: 73.134
+| Class: 5 - Sandal     | Class_Acc: 88.131
+| Class: 6 - Shirt      | Class_Acc: 51.064
+| Class: 7 - Sneaker    | Class_Acc: 86.919
+| Class: 8 - Bag        | Class_Acc: 93.590
+| Class: 9 - Ankle boot | Class_Acc: 92.749
+| Global Round : 14/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.077 | Train_Acc: 97.255
+| Global Round : 14/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.067 | Train_Acc: 97.655
+| Global Round : 14/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.060 | Train_Acc: 97.905
+| Global Round : 14/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.037 | Train_Acc: 98.795
+| Global Round : 14/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.023 | Train_Acc: 99.305
+| Client id:2 | Test_Loss: 0.877 | Test_Acc: 80.659
+| Class: 0 - T-shirt/top | Class_Acc: 80.769
+| Class: 1 - Trouser    | Class_Acc: 93.370
+| Class: 2 - Pullover   | Class_Acc: 66.154
+| Class: 3 - Dress      | Class_Acc: 84.682
+| Class: 4 - Coat       | Class_Acc: 71.598
+| Class: 5 - Sandal     | Class_Acc: 89.911
+| Class: 6 - Shirt      | Class_Acc: 45.619
+| Class: 7 - Sneaker    | Class_Acc: 89.306
+| Class: 8 - Bag        | Class_Acc: 91.987
+| Class: 9 - Ankle boot | Class_Acc: 91.843
+| Global Round : 14/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.103 | Train_Acc: 96.335
+| Global Round : 14/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.079 | Train_Acc: 97.310
+| Global Round : 14/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.049 | Train_Acc: 98.325
+| Global Round : 14/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.029 | Train_Acc: 99.050
+| Global Round : 14/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.017 | Train_Acc: 99.565
+aggregating weights...
+lambda: tensor([0.3363, 0.3307, 0.3331])
+| Client id:0 | Test_Loss: 0.911 | Test_Acc: 80.000
+| Class: 0 - T-shirt/top | Class_Acc: 74.920
+| Class: 1 - Trouser    | Class_Acc: 96.399
+| Class: 2 - Pullover   | Class_Acc: 69.231
+| Class: 3 - Dress      | Class_Acc: 81.449
+| Class: 4 - Coat       | Class_Acc: 68.657
+| Class: 5 - Sandal     | Class_Acc: 89.318
+| Class: 6 - Shirt      | Class_Acc: 48.328
+| Class: 7 - Sneaker    | Class_Acc: 90.698
+| Class: 8 - Bag        | Class_Acc: 91.987
+| Class: 9 - Ankle boot | Class_Acc: 87.009
+| Global Round : 15/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.078 | Train_Acc: 97.295
+| Global Round : 15/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.064 | Train_Acc: 97.825
+| Global Round : 15/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.058 | Train_Acc: 97.960
+| Global Round : 15/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.052 | Train_Acc: 98.165
+| Global Round : 15/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.029 | Train_Acc: 99.055
+| Client id:1 | Test_Loss: 0.880 | Test_Acc: 80.691
+| Class: 0 - T-shirt/top | Class_Acc: 75.241
+| Class: 1 - Trouser    | Class_Acc: 94.460
+| Class: 2 - Pullover   | Class_Acc: 71.385
+| Class: 3 - Dress      | Class_Acc: 77.971
+| Class: 4 - Coat       | Class_Acc: 71.045
+| Class: 5 - Sandal     | Class_Acc: 90.504
+| Class: 6 - Shirt      | Class_Acc: 53.799
+| Class: 7 - Sneaker    | Class_Acc: 89.244
+| Class: 8 - Bag        | Class_Acc: 93.590
+| Class: 9 - Ankle boot | Class_Acc: 88.218
+| Global Round : 15/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.080 | Train_Acc: 97.270
+| Global Round : 15/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.059 | Train_Acc: 98.105
+| Global Round : 15/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.050 | Train_Acc: 98.325
+| Global Round : 15/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.049 | Train_Acc: 98.275
+| Global Round : 15/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.034 | Train_Acc: 98.845
+| Client id:2 | Test_Loss: 0.878 | Test_Acc: 80.569
+| Class: 0 - T-shirt/top | Class_Acc: 78.205
+| Class: 1 - Trouser    | Class_Acc: 93.370
+| Class: 2 - Pullover   | Class_Acc: 71.385
+| Class: 3 - Dress      | Class_Acc: 80.347
+| Class: 4 - Coat       | Class_Acc: 71.893
+| Class: 5 - Sandal     | Class_Acc: 93.175
+| Class: 6 - Shirt      | Class_Acc: 48.036
+| Class: 7 - Sneaker    | Class_Acc: 89.306
+| Class: 8 - Bag        | Class_Acc: 91.026
+| Class: 9 - Ankle boot | Class_Acc: 87.613
+| Global Round : 15/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.085 | Train_Acc: 97.065
+| Global Round : 15/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.052 | Train_Acc: 98.175
+| Global Round : 15/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.053 | Train_Acc: 98.130
+| Global Round : 15/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.046 | Train_Acc: 98.480
+| Global Round : 15/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.034 | Train_Acc: 98.845
+aggregating weights...
+lambda: tensor([0.3365, 0.3306, 0.3330])
+| Client id:0 | Test_Loss: 0.894 | Test_Acc: 80.060
+| Class: 0 - T-shirt/top | Class_Acc: 71.704
+| Class: 1 - Trouser    | Class_Acc: 93.075
+| Class: 2 - Pullover   | Class_Acc: 68.308
+| Class: 3 - Dress      | Class_Acc: 84.638
+| Class: 4 - Coat       | Class_Acc: 66.567
+| Class: 5 - Sandal     | Class_Acc: 89.911
+| Class: 6 - Shirt      | Class_Acc: 50.760
+| Class: 7 - Sneaker    | Class_Acc: 88.081
+| Class: 8 - Bag        | Class_Acc: 92.949
+| Class: 9 - Ankle boot | Class_Acc: 92.749
+| Global Round : 16/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.082 | Train_Acc: 97.090
+| Global Round : 16/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.054 | Train_Acc: 98.245
+| Global Round : 16/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.058 | Train_Acc: 98.010
+| Global Round : 16/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.052 | Train_Acc: 98.230
+| Global Round : 16/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.041 | Train_Acc: 98.665
+| Client id:1 | Test_Loss: 0.854 | Test_Acc: 79.760
+| Class: 0 - T-shirt/top | Class_Acc: 70.418
+| Class: 1 - Trouser    | Class_Acc: 93.906
+| Class: 2 - Pullover   | Class_Acc: 67.077
+| Class: 3 - Dress      | Class_Acc: 80.870
+| Class: 4 - Coat       | Class_Acc: 67.463
+| Class: 5 - Sandal     | Class_Acc: 91.098
+| Class: 6 - Shirt      | Class_Acc: 53.191
+| Class: 7 - Sneaker    | Class_Acc: 83.430
+| Class: 8 - Bag        | Class_Acc: 95.513
+| Class: 9 - Ankle boot | Class_Acc: 93.051
+| Global Round : 16/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.071 | Train_Acc: 97.490
+| Global Round : 16/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.066 | Train_Acc: 97.750
+| Global Round : 16/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.053 | Train_Acc: 98.140
+| Global Round : 16/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.045 | Train_Acc: 98.515
+| Global Round : 16/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.031 | Train_Acc: 99.000
+| Client id:2 | Test_Loss: 0.857 | Test_Acc: 80.359
+| Class: 0 - T-shirt/top | Class_Acc: 75.962
+| Class: 1 - Trouser    | Class_Acc: 91.989
+| Class: 2 - Pullover   | Class_Acc: 71.077
+| Class: 3 - Dress      | Class_Acc: 83.237
+| Class: 4 - Coat       | Class_Acc: 68.639
+| Class: 5 - Sandal     | Class_Acc: 92.878
+| Class: 6 - Shirt      | Class_Acc: 49.245
+| Class: 7 - Sneaker    | Class_Acc: 84.971
+| Class: 8 - Bag        | Class_Acc: 91.987
+| Class: 9 - Ankle boot | Class_Acc: 92.447
+| Global Round : 16/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.077 | Train_Acc: 97.290
+| Global Round : 16/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.067 | Train_Acc: 97.545
+| Global Round : 16/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.056 | Train_Acc: 98.080
+| Global Round : 16/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.043 | Train_Acc: 98.570
+| Global Round : 16/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.037 | Train_Acc: 98.735
+aggregating weights...
+lambda: tensor([0.3367, 0.3304, 0.3328])
+| Client id:0 | Test_Loss: 0.888 | Test_Acc: 80.300
+| Class: 0 - T-shirt/top | Class_Acc: 72.347
+| Class: 1 - Trouser    | Class_Acc: 94.737
+| Class: 2 - Pullover   | Class_Acc: 72.615
+| Class: 3 - Dress      | Class_Acc: 84.638
+| Class: 4 - Coat       | Class_Acc: 68.358
+| Class: 5 - Sandal     | Class_Acc: 85.460
+| Class: 6 - Shirt      | Class_Acc: 47.720
+| Class: 7 - Sneaker    | Class_Acc: 89.535
+| Class: 8 - Bag        | Class_Acc: 93.910
+| Class: 9 - Ankle boot | Class_Acc: 91.843
+| Global Round : 17/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.076 | Train_Acc: 97.310
+| Global Round : 17/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.055 | Train_Acc: 98.015
+| Global Round : 17/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.037 | Train_Acc: 98.810
+| Global Round : 17/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.019 | Train_Acc: 99.415
+| Global Round : 17/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.015 | Train_Acc: 99.625
+| Client id:1 | Test_Loss: 0.809 | Test_Acc: 80.811
+| Class: 0 - T-shirt/top | Class_Acc: 72.990
+| Class: 1 - Trouser    | Class_Acc: 94.183
+| Class: 2 - Pullover   | Class_Acc: 72.000
+| Class: 3 - Dress      | Class_Acc: 82.319
+| Class: 4 - Coat       | Class_Acc: 68.955
+| Class: 5 - Sandal     | Class_Acc: 88.427
+| Class: 6 - Shirt      | Class_Acc: 50.456
+| Class: 7 - Sneaker    | Class_Acc: 88.081
+| Class: 8 - Bag        | Class_Acc: 96.154
+| Class: 9 - Ankle boot | Class_Acc: 93.051
+| Global Round : 17/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.086 | Train_Acc: 96.980
+| Global Round : 17/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.056 | Train_Acc: 98.145
+| Global Round : 17/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.045 | Train_Acc: 98.505
+| Global Round : 17/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.032 | Train_Acc: 99.020
+| Global Round : 17/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.025 | Train_Acc: 99.155
+| Client id:2 | Test_Loss: 0.821 | Test_Acc: 80.898
+| Class: 0 - T-shirt/top | Class_Acc: 76.923
+| Class: 1 - Trouser    | Class_Acc: 91.436
+| Class: 2 - Pullover   | Class_Acc: 74.462
+| Class: 3 - Dress      | Class_Acc: 83.237
+| Class: 4 - Coat       | Class_Acc: 71.006
+| Class: 5 - Sandal     | Class_Acc: 91.098
+| Class: 6 - Shirt      | Class_Acc: 47.130
+| Class: 7 - Sneaker    | Class_Acc: 87.283
+| Class: 8 - Bag        | Class_Acc: 93.590
+| Class: 9 - Ankle boot | Class_Acc: 91.843
+| Global Round : 17/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.071 | Train_Acc: 97.530
+| Global Round : 17/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.051 | Train_Acc: 98.295
+| Global Round : 17/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.035 | Train_Acc: 98.810
+| Global Round : 17/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.042 | Train_Acc: 98.630
+| Global Round : 17/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.033 | Train_Acc: 99.035
+aggregating weights...
+lambda: tensor([0.3372, 0.3301, 0.3327])
+| Client id:0 | Test_Loss: 0.934 | Test_Acc: 79.910
+| Class: 0 - T-shirt/top | Class_Acc: 75.884
+| Class: 1 - Trouser    | Class_Acc: 96.122
+| Class: 2 - Pullover   | Class_Acc: 70.769
+| Class: 3 - Dress      | Class_Acc: 84.638
+| Class: 4 - Coat       | Class_Acc: 66.567
+| Class: 5 - Sandal     | Class_Acc: 88.724
+| Class: 6 - Shirt      | Class_Acc: 44.377
+| Class: 7 - Sneaker    | Class_Acc: 87.791
+| Class: 8 - Bag        | Class_Acc: 93.590
+| Class: 9 - Ankle boot | Class_Acc: 88.822
+| Global Round : 18/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.074 | Train_Acc: 97.405
+| Global Round : 18/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.053 | Train_Acc: 98.315
+| Global Round : 18/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.057 | Train_Acc: 98.060
+| Global Round : 18/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.040 | Train_Acc: 98.625
+| Global Round : 18/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.029 | Train_Acc: 99.005
+| Client id:1 | Test_Loss: 0.855 | Test_Acc: 79.850
+| Class: 0 - T-shirt/top | Class_Acc: 75.563
+| Class: 1 - Trouser    | Class_Acc: 95.014
+| Class: 2 - Pullover   | Class_Acc: 68.923
+| Class: 3 - Dress      | Class_Acc: 80.580
+| Class: 4 - Coat       | Class_Acc: 66.567
+| Class: 5 - Sandal     | Class_Acc: 90.504
+| Class: 6 - Shirt      | Class_Acc: 48.632
+| Class: 7 - Sneaker    | Class_Acc: 88.663
+| Class: 8 - Bag        | Class_Acc: 94.551
+| Class: 9 - Ankle boot | Class_Acc: 87.915
+| Global Round : 18/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.064 | Train_Acc: 97.795
+| Global Round : 18/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.056 | Train_Acc: 98.160
+| Global Round : 18/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.046 | Train_Acc: 98.390
+| Global Round : 18/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.044 | Train_Acc: 98.410
+| Global Round : 18/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.024 | Train_Acc: 99.215
+| Client id:2 | Test_Loss: 0.881 | Test_Acc: 80.719
+| Class: 0 - T-shirt/top | Class_Acc: 80.128
+| Class: 1 - Trouser    | Class_Acc: 92.541
+| Class: 2 - Pullover   | Class_Acc: 71.385
+| Class: 3 - Dress      | Class_Acc: 84.393
+| Class: 4 - Coat       | Class_Acc: 70.118
+| Class: 5 - Sandal     | Class_Acc: 93.769
+| Class: 6 - Shirt      | Class_Acc: 42.900
+| Class: 7 - Sneaker    | Class_Acc: 87.572
+| Class: 8 - Bag        | Class_Acc: 93.910
+| Class: 9 - Ankle boot | Class_Acc: 89.426
+| Global Round : 18/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.069 | Train_Acc: 97.605
+| Global Round : 18/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.051 | Train_Acc: 98.260
+| Global Round : 18/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.046 | Train_Acc: 98.560
+| Global Round : 18/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.039 | Train_Acc: 98.795
+| Global Round : 18/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.022 | Train_Acc: 99.390
+aggregating weights...
+lambda: tensor([0.3377, 0.3298, 0.3326])
+| Client id:0 | Test_Loss: 0.906 | Test_Acc: 79.700
+| Class: 0 - T-shirt/top | Class_Acc: 73.312
+| Class: 1 - Trouser    | Class_Acc: 93.629
+| Class: 2 - Pullover   | Class_Acc: 68.615
+| Class: 3 - Dress      | Class_Acc: 84.638
+| Class: 4 - Coat       | Class_Acc: 63.582
+| Class: 5 - Sandal     | Class_Acc: 86.647
+| Class: 6 - Shirt      | Class_Acc: 51.672
+| Class: 7 - Sneaker    | Class_Acc: 88.953
+| Class: 8 - Bag        | Class_Acc: 92.308
+| Class: 9 - Ankle boot | Class_Acc: 91.843
+| Global Round : 19/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.066 | Train_Acc: 97.750
+| Global Round : 19/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.049 | Train_Acc: 98.430
+| Global Round : 19/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.052 | Train_Acc: 98.205
+| Global Round : 19/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.037 | Train_Acc: 98.810
+| Global Round : 19/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.034 | Train_Acc: 98.880
+| Client id:1 | Test_Loss: 0.839 | Test_Acc: 80.360
+| Class: 0 - T-shirt/top | Class_Acc: 73.312
+| Class: 1 - Trouser    | Class_Acc: 93.629
+| Class: 2 - Pullover   | Class_Acc: 70.154
+| Class: 3 - Dress      | Class_Acc: 81.159
+| Class: 4 - Coat       | Class_Acc: 64.478
+| Class: 5 - Sandal     | Class_Acc: 86.944
+| Class: 6 - Shirt      | Class_Acc: 55.623
+| Class: 7 - Sneaker    | Class_Acc: 88.663
+| Class: 8 - Bag        | Class_Acc: 95.192
+| Class: 9 - Ankle boot | Class_Acc: 93.051
+| Global Round : 19/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.066 | Train_Acc: 97.705
+| Global Round : 19/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.043 | Train_Acc: 98.635
+| Global Round : 19/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.031 | Train_Acc: 99.060
+| Global Round : 19/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.036 | Train_Acc: 98.750
+| Global Round : 19/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.032 | Train_Acc: 98.925
+| Client id:2 | Test_Loss: 0.855 | Test_Acc: 80.868
+| Class: 0 - T-shirt/top | Class_Acc: 77.564
+| Class: 1 - Trouser    | Class_Acc: 91.989
+| Class: 2 - Pullover   | Class_Acc: 71.077
+| Class: 3 - Dress      | Class_Acc: 84.682
+| Class: 4 - Coat       | Class_Acc: 67.456
+| Class: 5 - Sandal     | Class_Acc: 92.285
+| Class: 6 - Shirt      | Class_Acc: 49.547
+| Class: 7 - Sneaker    | Class_Acc: 88.150
+| Class: 8 - Bag        | Class_Acc: 92.628
+| Class: 9 - Ankle boot | Class_Acc: 92.145
+| Global Round : 19/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.061 | Train_Acc: 97.910
+| Global Round : 19/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.050 | Train_Acc: 98.360
+| Global Round : 19/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.048 | Train_Acc: 98.305
+| Global Round : 19/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.034 | Train_Acc: 98.895
+| Global Round : 19/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.033 | Train_Acc: 98.915
+aggregating weights...
+lambda: tensor([0.3381, 0.3295, 0.3325])
+| Client id:0 | Test_Loss: 0.879 | Test_Acc: 79.820
+| Class: 0 - T-shirt/top | Class_Acc: 70.418
+| Class: 1 - Trouser    | Class_Acc: 93.906
+| Class: 2 - Pullover   | Class_Acc: 68.615
+| Class: 3 - Dress      | Class_Acc: 84.928
+| Class: 4 - Coat       | Class_Acc: 65.373
+| Class: 5 - Sandal     | Class_Acc: 89.021
+| Class: 6 - Shirt      | Class_Acc: 50.152
+| Class: 7 - Sneaker    | Class_Acc: 90.698
+| Class: 8 - Bag        | Class_Acc: 92.308
+| Class: 9 - Ankle boot | Class_Acc: 90.634
+| Global Round : 20/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.061 | Train_Acc: 97.925
+| Global Round : 20/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.062 | Train_Acc: 97.725
+| Global Round : 20/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.051 | Train_Acc: 98.305
+| Global Round : 20/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.051 | Train_Acc: 98.210
+| Global Round : 20/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.037 | Train_Acc: 98.800
+| Client id:1 | Test_Loss: 0.829 | Test_Acc: 80.210
+| Class: 0 - T-shirt/top | Class_Acc: 70.740
+| Class: 1 - Trouser    | Class_Acc: 93.352
+| Class: 2 - Pullover   | Class_Acc: 66.462
+| Class: 3 - Dress      | Class_Acc: 82.609
+| Class: 4 - Coat       | Class_Acc: 69.552
+| Class: 5 - Sandal     | Class_Acc: 91.988
+| Class: 6 - Shirt      | Class_Acc: 53.495
+| Class: 7 - Sneaker    | Class_Acc: 87.500
+| Class: 8 - Bag        | Class_Acc: 93.590
+| Class: 9 - Ankle boot | Class_Acc: 90.937
+| Global Round : 20/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.074 | Train_Acc: 97.410
+| Global Round : 20/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.061 | Train_Acc: 97.915
+| Global Round : 20/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.053 | Train_Acc: 98.220
+| Global Round : 20/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.048 | Train_Acc: 98.425
+| Global Round : 20/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.035 | Train_Acc: 98.825
+| Client id:2 | Test_Loss: 0.835 | Test_Acc: 80.749
+| Class: 0 - T-shirt/top | Class_Acc: 73.397
+| Class: 1 - Trouser    | Class_Acc: 92.541
+| Class: 2 - Pullover   | Class_Acc: 69.231
+| Class: 3 - Dress      | Class_Acc: 85.549
+| Class: 4 - Coat       | Class_Acc: 69.527
+| Class: 5 - Sandal     | Class_Acc: 93.769
+| Class: 6 - Shirt      | Class_Acc: 50.755
+| Class: 7 - Sneaker    | Class_Acc: 87.572
+| Class: 8 - Bag        | Class_Acc: 92.628
+| Class: 9 - Ankle boot | Class_Acc: 90.937
+| Global Round : 20/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.067 | Train_Acc: 97.720
+| Global Round : 20/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.055 | Train_Acc: 98.030
+| Global Round : 20/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.057 | Train_Acc: 98.060
+| Global Round : 20/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.038 | Train_Acc: 98.715
+| Global Round : 20/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.035 | Train_Acc: 98.890
+aggregating weights...
+lambda: tensor([0.3384, 0.3293, 0.3323])
+| Client id:0 | Test_Loss: 0.850 | Test_Acc: 79.309
+| Class: 0 - T-shirt/top | Class_Acc: 73.312
+| Class: 1 - Trouser    | Class_Acc: 94.460
+| Class: 2 - Pullover   | Class_Acc: 67.077
+| Class: 3 - Dress      | Class_Acc: 82.319
+| Class: 4 - Coat       | Class_Acc: 62.985
+| Class: 5 - Sandal     | Class_Acc: 88.724
+| Class: 6 - Shirt      | Class_Acc: 51.064
+| Class: 7 - Sneaker    | Class_Acc: 90.116
+| Class: 8 - Bag        | Class_Acc: 93.590
+| Class: 9 - Ankle boot | Class_Acc: 87.613
+| Global Round : 21/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.058 | Train_Acc: 98.115
+| Global Round : 21/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.042 | Train_Acc: 98.545
+| Global Round : 21/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.041 | Train_Acc: 98.740
+| Global Round : 21/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.033 | Train_Acc: 98.900
+| Global Round : 21/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.027 | Train_Acc: 99.165
+| Client id:1 | Test_Loss: 0.806 | Test_Acc: 80.270
+| Class: 0 - T-shirt/top | Class_Acc: 75.563
+| Class: 1 - Trouser    | Class_Acc: 94.460
+| Class: 2 - Pullover   | Class_Acc: 68.615
+| Class: 3 - Dress      | Class_Acc: 78.551
+| Class: 4 - Coat       | Class_Acc: 64.776
+| Class: 5 - Sandal     | Class_Acc: 91.395
+| Class: 6 - Shirt      | Class_Acc: 56.231
+| Class: 7 - Sneaker    | Class_Acc: 88.081
+| Class: 8 - Bag        | Class_Acc: 92.949
+| Class: 9 - Ankle boot | Class_Acc: 90.634
+| Global Round : 21/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.067 | Train_Acc: 97.685
+| Global Round : 21/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.045 | Train_Acc: 98.440
+| Global Round : 21/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.035 | Train_Acc: 98.875
+| Global Round : 21/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.034 | Train_Acc: 98.895
+| Global Round : 21/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.025 | Train_Acc: 99.240
+| Client id:2 | Test_Loss: 0.820 | Test_Acc: 80.210
+| Class: 0 - T-shirt/top | Class_Acc: 76.603
+| Class: 1 - Trouser    | Class_Acc: 92.265
+| Class: 2 - Pullover   | Class_Acc: 71.077
+| Class: 3 - Dress      | Class_Acc: 80.636
+| Class: 4 - Coat       | Class_Acc: 65.089
+| Class: 5 - Sandal     | Class_Acc: 94.362
+| Class: 6 - Shirt      | Class_Acc: 51.662
+| Class: 7 - Sneaker    | Class_Acc: 88.728
+| Class: 8 - Bag        | Class_Acc: 92.308
+| Class: 9 - Ankle boot | Class_Acc: 88.218
+| Global Round : 21/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.059 | Train_Acc: 98.145
+| Global Round : 21/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.052 | Train_Acc: 98.315
+| Global Round : 21/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.036 | Train_Acc: 98.880
+| Global Round : 21/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.026 | Train_Acc: 99.165
+| Global Round : 21/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.019 | Train_Acc: 99.435
+aggregating weights...
+lambda: tensor([0.3386, 0.3291, 0.3323])
+| Client id:0 | Test_Loss: 0.935 | Test_Acc: 79.640
+| Class: 0 - T-shirt/top | Class_Acc: 71.704
+| Class: 1 - Trouser    | Class_Acc: 94.460
+| Class: 2 - Pullover   | Class_Acc: 68.615
+| Class: 3 - Dress      | Class_Acc: 85.217
+| Class: 4 - Coat       | Class_Acc: 64.776
+| Class: 5 - Sandal     | Class_Acc: 85.460
+| Class: 6 - Shirt      | Class_Acc: 48.024
+| Class: 7 - Sneaker    | Class_Acc: 90.116
+| Class: 8 - Bag        | Class_Acc: 93.910
+| Class: 9 - Ankle boot | Class_Acc: 92.145
+| Global Round : 22/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.048 | Train_Acc: 98.525
+| Global Round : 22/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.056 | Train_Acc: 98.130
+| Global Round : 22/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.062 | Train_Acc: 97.905
+| Global Round : 22/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.049 | Train_Acc: 98.330
+| Global Round : 22/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.029 | Train_Acc: 99.045
+| Client id:1 | Test_Loss: 0.880 | Test_Acc: 80.210
+| Class: 0 - T-shirt/top | Class_Acc: 72.669
+| Class: 1 - Trouser    | Class_Acc: 94.737
+| Class: 2 - Pullover   | Class_Acc: 70.154
+| Class: 3 - Dress      | Class_Acc: 81.449
+| Class: 4 - Coat       | Class_Acc: 68.358
+| Class: 5 - Sandal     | Class_Acc: 85.757
+| Class: 6 - Shirt      | Class_Acc: 51.064
+| Class: 7 - Sneaker    | Class_Acc: 88.081
+| Class: 8 - Bag        | Class_Acc: 95.513
+| Class: 9 - Ankle boot | Class_Acc: 92.749
+| Global Round : 22/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.055 | Train_Acc: 98.150
+| Global Round : 22/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.058 | Train_Acc: 98.040
+| Global Round : 22/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.071 | Train_Acc: 97.430
+| Global Round : 22/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.053 | Train_Acc: 98.200
+| Global Round : 22/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.031 | Train_Acc: 99.080
+| Client id:2 | Test_Loss: 0.894 | Test_Acc: 81.108
+| Class: 0 - T-shirt/top | Class_Acc: 76.282
+| Class: 1 - Trouser    | Class_Acc: 92.265
+| Class: 2 - Pullover   | Class_Acc: 72.308
+| Class: 3 - Dress      | Class_Acc: 84.104
+| Class: 4 - Coat       | Class_Acc: 70.710
+| Class: 5 - Sandal     | Class_Acc: 91.395
+| Class: 6 - Shirt      | Class_Acc: 48.640
+| Class: 7 - Sneaker    | Class_Acc: 89.306
+| Class: 8 - Bag        | Class_Acc: 93.269
+| Class: 9 - Ankle boot | Class_Acc: 91.541
+| Global Round : 22/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.060 | Train_Acc: 97.970
+| Global Round : 22/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.067 | Train_Acc: 97.595
+| Global Round : 22/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.049 | Train_Acc: 98.300
+| Global Round : 22/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.034 | Train_Acc: 98.910
+| Global Round : 22/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.021 | Train_Acc: 99.390
+aggregating weights...
+lambda: tensor([0.3389, 0.3289, 0.3322])
+| Client id:0 | Test_Loss: 0.937 | Test_Acc: 80.090
+| Class: 0 - T-shirt/top | Class_Acc: 74.277
+| Class: 1 - Trouser    | Class_Acc: 94.460
+| Class: 2 - Pullover   | Class_Acc: 63.077
+| Class: 3 - Dress      | Class_Acc: 85.507
+| Class: 4 - Coat       | Class_Acc: 75.821
+| Class: 5 - Sandal     | Class_Acc: 88.427
+| Class: 6 - Shirt      | Class_Acc: 44.073
+| Class: 7 - Sneaker    | Class_Acc: 88.953
+| Class: 8 - Bag        | Class_Acc: 93.590
+| Class: 9 - Ankle boot | Class_Acc: 90.634
+| Global Round : 23/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.062 | Train_Acc: 97.990
+| Global Round : 23/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.052 | Train_Acc: 98.270
+| Global Round : 23/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.042 | Train_Acc: 98.595
+| Global Round : 23/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.042 | Train_Acc: 98.565
+| Global Round : 23/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.042 | Train_Acc: 98.615
+| Client id:1 | Test_Loss: 0.868 | Test_Acc: 80.480
+| Class: 0 - T-shirt/top | Class_Acc: 76.849
+| Class: 1 - Trouser    | Class_Acc: 93.906
+| Class: 2 - Pullover   | Class_Acc: 63.692
+| Class: 3 - Dress      | Class_Acc: 81.449
+| Class: 4 - Coat       | Class_Acc: 74.925
+| Class: 5 - Sandal     | Class_Acc: 89.318
+| Class: 6 - Shirt      | Class_Acc: 48.936
+| Class: 7 - Sneaker    | Class_Acc: 88.372
+| Class: 8 - Bag        | Class_Acc: 94.551
+| Class: 9 - Ankle boot | Class_Acc: 91.239
+| Global Round : 23/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.052 | Train_Acc: 98.355
+| Global Round : 23/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.047 | Train_Acc: 98.355
+| Global Round : 23/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.042 | Train_Acc: 98.610
+| Global Round : 23/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.040 | Train_Acc: 98.700
+| Global Round : 23/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.048 | Train_Acc: 98.445
+| Client id:2 | Test_Loss: 0.907 | Test_Acc: 80.210
+| Class: 0 - T-shirt/top | Class_Acc: 76.282
+| Class: 1 - Trouser    | Class_Acc: 92.265
+| Class: 2 - Pullover   | Class_Acc: 66.769
+| Class: 3 - Dress      | Class_Acc: 83.237
+| Class: 4 - Coat       | Class_Acc: 75.740
+| Class: 5 - Sandal     | Class_Acc: 92.582
+| Class: 6 - Shirt      | Class_Acc: 43.807
+| Class: 7 - Sneaker    | Class_Acc: 87.572
+| Class: 8 - Bag        | Class_Acc: 92.949
+| Class: 9 - Ankle boot | Class_Acc: 89.426
+| Global Round : 23/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.077 | Train_Acc: 97.340
+| Global Round : 23/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.059 | Train_Acc: 98.030
+| Global Round : 23/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.049 | Train_Acc: 98.420
+| Global Round : 23/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.041 | Train_Acc: 98.600
+| Global Round : 23/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.026 | Train_Acc: 99.115
+aggregating weights...
+lambda: tensor([0.3393, 0.3285, 0.3322])
+| Client id:0 | Test_Loss: 0.901 | Test_Acc: 79.429
+| Class: 0 - T-shirt/top | Class_Acc: 73.312
+| Class: 1 - Trouser    | Class_Acc: 93.629
+| Class: 2 - Pullover   | Class_Acc: 64.308
+| Class: 3 - Dress      | Class_Acc: 84.638
+| Class: 4 - Coat       | Class_Acc: 66.269
+| Class: 5 - Sandal     | Class_Acc: 87.834
+| Class: 6 - Shirt      | Class_Acc: 49.544
+| Class: 7 - Sneaker    | Class_Acc: 90.988
+| Class: 8 - Bag        | Class_Acc: 92.949
+| Class: 9 - Ankle boot | Class_Acc: 88.822
+| Global Round : 24/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.050 | Train_Acc: 98.370
+| Global Round : 24/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.043 | Train_Acc: 98.555
+| Global Round : 24/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.041 | Train_Acc: 98.705
+| Global Round : 24/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.034 | Train_Acc: 98.890
+| Global Round : 24/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.017 | Train_Acc: 99.550
+| Client id:1 | Test_Loss: 0.790 | Test_Acc: 80.240
+| Class: 0 - T-shirt/top | Class_Acc: 74.277
+| Class: 1 - Trouser    | Class_Acc: 92.521
+| Class: 2 - Pullover   | Class_Acc: 65.538
+| Class: 3 - Dress      | Class_Acc: 82.899
+| Class: 4 - Coat       | Class_Acc: 67.761
+| Class: 5 - Sandal     | Class_Acc: 89.318
+| Class: 6 - Shirt      | Class_Acc: 52.888
+| Class: 7 - Sneaker    | Class_Acc: 89.535
+| Class: 8 - Bag        | Class_Acc: 95.192
+| Class: 9 - Ankle boot | Class_Acc: 90.937
+| Global Round : 24/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.055 | Train_Acc: 98.245
+| Global Round : 24/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.040 | Train_Acc: 98.675
+| Global Round : 24/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.044 | Train_Acc: 98.515
+| Global Round : 24/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.043 | Train_Acc: 98.490
+| Global Round : 24/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.034 | Train_Acc: 98.945
+| Client id:2 | Test_Loss: 0.830 | Test_Acc: 80.329
+| Class: 0 - T-shirt/top | Class_Acc: 77.885
+| Class: 1 - Trouser    | Class_Acc: 91.713
+| Class: 2 - Pullover   | Class_Acc: 68.308
+| Class: 3 - Dress      | Class_Acc: 85.260
+| Class: 4 - Coat       | Class_Acc: 67.456
+| Class: 5 - Sandal     | Class_Acc: 91.988
+| Class: 6 - Shirt      | Class_Acc: 49.547
+| Class: 7 - Sneaker    | Class_Acc: 88.150
+| Class: 8 - Bag        | Class_Acc: 92.628
+| Class: 9 - Ankle boot | Class_Acc: 89.124
+| Global Round : 24/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.061 | Train_Acc: 97.990
+| Global Round : 24/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.045 | Train_Acc: 98.390
+| Global Round : 24/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.042 | Train_Acc: 98.545
+| Global Round : 24/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.031 | Train_Acc: 98.995
+| Global Round : 24/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.022 | Train_Acc: 99.300
+aggregating weights...
+lambda: tensor([0.3399, 0.3280, 0.3321])
+| Client id:0 | Test_Loss: 0.899 | Test_Acc: 79.640
+| Class: 0 - T-shirt/top | Class_Acc: 74.598
+| Class: 1 - Trouser    | Class_Acc: 94.460
+| Class: 2 - Pullover   | Class_Acc: 71.692
+| Class: 3 - Dress      | Class_Acc: 82.899
+| Class: 4 - Coat       | Class_Acc: 65.373
+| Class: 5 - Sandal     | Class_Acc: 89.614
+| Class: 6 - Shirt      | Class_Acc: 42.553
+| Class: 7 - Sneaker    | Class_Acc: 92.151
+| Class: 8 - Bag        | Class_Acc: 94.551
+| Class: 9 - Ankle boot | Class_Acc: 86.707
+| Global Round : 25/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.048 | Train_Acc: 98.450
+| Global Round : 25/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.055 | Train_Acc: 98.115
+| Global Round : 25/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.053 | Train_Acc: 98.150
+| Global Round : 25/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.047 | Train_Acc: 98.460
+| Global Round : 25/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.033 | Train_Acc: 98.925
+| Client id:1 | Test_Loss: 0.866 | Test_Acc: 79.730
+| Class: 0 - T-shirt/top | Class_Acc: 75.884
+| Class: 1 - Trouser    | Class_Acc: 94.183
+| Class: 2 - Pullover   | Class_Acc: 72.923
+| Class: 3 - Dress      | Class_Acc: 80.290
+| Class: 4 - Coat       | Class_Acc: 65.672
+| Class: 5 - Sandal     | Class_Acc: 89.614
+| Class: 6 - Shirt      | Class_Acc: 45.289
+| Class: 7 - Sneaker    | Class_Acc: 89.244
+| Class: 8 - Bag        | Class_Acc: 95.833
+| Class: 9 - Ankle boot | Class_Acc: 87.009
+| Global Round : 25/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.048 | Train_Acc: 98.510
+| Global Round : 25/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.047 | Train_Acc: 98.425
+| Global Round : 25/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.047 | Train_Acc: 98.315
+| Global Round : 25/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.042 | Train_Acc: 98.575
+| Global Round : 25/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.048 | Train_Acc: 98.445
+| Client id:2 | Test_Loss: 0.905 | Test_Acc: 79.850
+| Class: 0 - T-shirt/top | Class_Acc: 79.487
+| Class: 1 - Trouser    | Class_Acc: 91.713
+| Class: 2 - Pullover   | Class_Acc: 75.692
+| Class: 3 - Dress      | Class_Acc: 83.237
+| Class: 4 - Coat       | Class_Acc: 64.793
+| Class: 5 - Sandal     | Class_Acc: 93.472
+| Class: 6 - Shirt      | Class_Acc: 39.879
+| Class: 7 - Sneaker    | Class_Acc: 89.595
+| Class: 8 - Bag        | Class_Acc: 93.269
+| Class: 9 - Ankle boot | Class_Acc: 86.405
+| Global Round : 25/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.060 | Train_Acc: 97.940
+| Global Round : 25/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.054 | Train_Acc: 98.205
+| Global Round : 25/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.052 | Train_Acc: 98.190
+| Global Round : 25/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.039 | Train_Acc: 98.755
+| Global Round : 25/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.030 | Train_Acc: 99.025
+aggregating weights...
+lambda: tensor([0.3400, 0.3278, 0.3323])
+| Client id:0 | Test_Loss: 0.927 | Test_Acc: 79.730
+| Class: 0 - T-shirt/top | Class_Acc: 73.955
+| Class: 1 - Trouser    | Class_Acc: 94.737
+| Class: 2 - Pullover   | Class_Acc: 62.462
+| Class: 3 - Dress      | Class_Acc: 83.768
+| Class: 4 - Coat       | Class_Acc: 76.119
+| Class: 5 - Sandal     | Class_Acc: 88.427
+| Class: 6 - Shirt      | Class_Acc: 43.161
+| Class: 7 - Sneaker    | Class_Acc: 88.663
+| Class: 8 - Bag        | Class_Acc: 93.590
+| Class: 9 - Ankle boot | Class_Acc: 90.332
+| Global Round : 26/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.044 | Train_Acc: 98.565
+| Global Round : 26/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.035 | Train_Acc: 98.915
+| Global Round : 26/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.029 | Train_Acc: 99.070
+| Global Round : 26/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.021 | Train_Acc: 99.270
+| Global Round : 26/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.013 | Train_Acc: 99.670
+| Client id:1 | Test_Loss: 0.839 | Test_Acc: 79.880
+| Class: 0 - T-shirt/top | Class_Acc: 74.920
+| Class: 1 - Trouser    | Class_Acc: 94.460
+| Class: 2 - Pullover   | Class_Acc: 60.923
+| Class: 3 - Dress      | Class_Acc: 78.261
+| Class: 4 - Coat       | Class_Acc: 75.522
+| Class: 5 - Sandal     | Class_Acc: 89.021
+| Class: 6 - Shirt      | Class_Acc: 49.544
+| Class: 7 - Sneaker    | Class_Acc: 88.663
+| Class: 8 - Bag        | Class_Acc: 94.231
+| Class: 9 - Ankle boot | Class_Acc: 91.541
+| Global Round : 26/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.055 | Train_Acc: 98.090
+| Global Round : 26/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.051 | Train_Acc: 98.280
+| Global Round : 26/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.037 | Train_Acc: 98.815
+| Global Round : 26/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.033 | Train_Acc: 98.915
+| Global Round : 26/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.029 | Train_Acc: 99.090
+| Client id:2 | Test_Loss: 0.847 | Test_Acc: 80.180
+| Class: 0 - T-shirt/top | Class_Acc: 78.526
+| Class: 1 - Trouser    | Class_Acc: 92.265
+| Class: 2 - Pullover   | Class_Acc: 66.462
+| Class: 3 - Dress      | Class_Acc: 81.792
+| Class: 4 - Coat       | Class_Acc: 74.260
+| Class: 5 - Sandal     | Class_Acc: 91.988
+| Class: 6 - Shirt      | Class_Acc: 45.317
+| Class: 7 - Sneaker    | Class_Acc: 88.150
+| Class: 8 - Bag        | Class_Acc: 91.667
+| Class: 9 - Ankle boot | Class_Acc: 90.030
+| Global Round : 26/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.047 | Train_Acc: 98.380
+| Global Round : 26/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.038 | Train_Acc: 98.785
+| Global Round : 26/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.039 | Train_Acc: 98.670
+| Global Round : 26/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.040 | Train_Acc: 98.710
+| Global Round : 26/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.038 | Train_Acc: 98.730
+aggregating weights...
+lambda: tensor([0.3405, 0.3274, 0.3320])
+| Client id:0 | Test_Loss: 0.876 | Test_Acc: 79.219
+| Class: 0 - T-shirt/top | Class_Acc: 67.846
+| Class: 1 - Trouser    | Class_Acc: 96.122
+| Class: 2 - Pullover   | Class_Acc: 68.615
+| Class: 3 - Dress      | Class_Acc: 81.159
+| Class: 4 - Coat       | Class_Acc: 66.866
+| Class: 5 - Sandal     | Class_Acc: 89.318
+| Class: 6 - Shirt      | Class_Acc: 46.809
+| Class: 7 - Sneaker    | Class_Acc: 85.756
+| Class: 8 - Bag        | Class_Acc: 95.192
+| Class: 9 - Ankle boot | Class_Acc: 92.447
+| Global Round : 27/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.060 | Train_Acc: 98.000
+| Global Round : 27/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.069 | Train_Acc: 97.565
+| Global Round : 27/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.056 | Train_Acc: 98.170
+| Global Round : 27/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.058 | Train_Acc: 98.055
+| Global Round : 27/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.034 | Train_Acc: 98.825
+| Client id:1 | Test_Loss: 0.841 | Test_Acc: 80.120
+| Class: 0 - T-shirt/top | Class_Acc: 72.347
+| Class: 1 - Trouser    | Class_Acc: 95.291
+| Class: 2 - Pullover   | Class_Acc: 70.769
+| Class: 3 - Dress      | Class_Acc: 77.681
+| Class: 4 - Coat       | Class_Acc: 67.761
+| Class: 5 - Sandal     | Class_Acc: 90.208
+| Class: 6 - Shirt      | Class_Acc: 51.672
+| Class: 7 - Sneaker    | Class_Acc: 86.047
+| Class: 8 - Bag        | Class_Acc: 94.231
+| Class: 9 - Ankle boot | Class_Acc: 93.656
+| Global Round : 27/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.044 | Train_Acc: 98.675
+| Global Round : 27/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.038 | Train_Acc: 98.815
+| Global Round : 27/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.042 | Train_Acc: 98.570
+| Global Round : 27/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.041 | Train_Acc: 98.580
+| Global Round : 27/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.046 | Train_Acc: 98.440
+| Client id:2 | Test_Loss: 0.858 | Test_Acc: 80.299
+| Class: 0 - T-shirt/top | Class_Acc: 73.397
+| Class: 1 - Trouser    | Class_Acc: 93.094
+| Class: 2 - Pullover   | Class_Acc: 72.923
+| Class: 3 - Dress      | Class_Acc: 80.636
+| Class: 4 - Coat       | Class_Acc: 68.343
+| Class: 5 - Sandal     | Class_Acc: 92.878
+| Class: 6 - Shirt      | Class_Acc: 48.338
+| Class: 7 - Sneaker    | Class_Acc: 85.549
+| Class: 8 - Bag        | Class_Acc: 94.551
+| Class: 9 - Ankle boot | Class_Acc: 92.145
+| Global Round : 27/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.042 | Train_Acc: 98.690
+| Global Round : 27/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.026 | Train_Acc: 99.175
+| Global Round : 27/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.030 | Train_Acc: 99.055
+| Global Round : 27/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.029 | Train_Acc: 99.140
+| Global Round : 27/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.021 | Train_Acc: 99.340
+aggregating weights...
+lambda: tensor([0.3407, 0.3273, 0.3320])
+| Client id:0 | Test_Loss: 0.887 | Test_Acc: 79.459
+| Class: 0 - T-shirt/top | Class_Acc: 73.312
+| Class: 1 - Trouser    | Class_Acc: 93.352
+| Class: 2 - Pullover   | Class_Acc: 68.308
+| Class: 3 - Dress      | Class_Acc: 83.188
+| Class: 4 - Coat       | Class_Acc: 67.463
+| Class: 5 - Sandal     | Class_Acc: 87.537
+| Class: 6 - Shirt      | Class_Acc: 49.544
+| Class: 7 - Sneaker    | Class_Acc: 89.244
+| Class: 8 - Bag        | Class_Acc: 91.667
+| Class: 9 - Ankle boot | Class_Acc: 89.124
+| Global Round : 28/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.042 | Train_Acc: 98.640
+| Global Round : 28/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.027 | Train_Acc: 99.200
+| Global Round : 28/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.022 | Train_Acc: 99.365
+| Global Round : 28/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.009 | Train_Acc: 99.800
+| Global Round : 28/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.010 | Train_Acc: 99.735
+| Client id:1 | Test_Loss: 0.801 | Test_Acc: 80.450
+| Class: 0 - T-shirt/top | Class_Acc: 72.026
+| Class: 1 - Trouser    | Class_Acc: 95.291
+| Class: 2 - Pullover   | Class_Acc: 72.000
+| Class: 3 - Dress      | Class_Acc: 79.130
+| Class: 4 - Coat       | Class_Acc: 68.060
+| Class: 5 - Sandal     | Class_Acc: 90.208
+| Class: 6 - Shirt      | Class_Acc: 53.495
+| Class: 7 - Sneaker    | Class_Acc: 89.535
+| Class: 8 - Bag        | Class_Acc: 92.949
+| Class: 9 - Ankle boot | Class_Acc: 90.030
+| Global Round : 28/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.046 | Train_Acc: 98.585
+| Global Round : 28/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.040 | Train_Acc: 98.700
+| Global Round : 28/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.055 | Train_Acc: 98.115
+| Global Round : 28/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.052 | Train_Acc: 98.360
+| Global Round : 28/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.035 | Train_Acc: 98.840
+| Client id:2 | Test_Loss: 0.847 | Test_Acc: 80.389
+| Class: 0 - T-shirt/top | Class_Acc: 76.603
+| Class: 1 - Trouser    | Class_Acc: 92.265
+| Class: 2 - Pullover   | Class_Acc: 73.538
+| Class: 3 - Dress      | Class_Acc: 82.370
+| Class: 4 - Coat       | Class_Acc: 68.639
+| Class: 5 - Sandal     | Class_Acc: 93.175
+| Class: 6 - Shirt      | Class_Acc: 48.640
+| Class: 7 - Sneaker    | Class_Acc: 89.017
+| Class: 8 - Bag        | Class_Acc: 89.744
+| Class: 9 - Ankle boot | Class_Acc: 88.520
+| Global Round : 28/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.069 | Train_Acc: 97.615
+| Global Round : 28/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.066 | Train_Acc: 97.805
+| Global Round : 28/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.063 | Train_Acc: 97.840
+| Global Round : 28/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.046 | Train_Acc: 98.530
+| Global Round : 28/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.028 | Train_Acc: 99.105
+aggregating weights...
+lambda: tensor([0.3411, 0.3268, 0.3320])
+| Client id:0 | Test_Loss: 0.895 | Test_Acc: 79.760
+| Class: 0 - T-shirt/top | Class_Acc: 70.418
+| Class: 1 - Trouser    | Class_Acc: 94.737
+| Class: 2 - Pullover   | Class_Acc: 69.846
+| Class: 3 - Dress      | Class_Acc: 83.478
+| Class: 4 - Coat       | Class_Acc: 67.463
+| Class: 5 - Sandal     | Class_Acc: 90.504
+| Class: 6 - Shirt      | Class_Acc: 46.809
+| Class: 7 - Sneaker    | Class_Acc: 90.407
+| Class: 8 - Bag        | Class_Acc: 92.949
+| Class: 9 - Ankle boot | Class_Acc: 88.822
+| Global Round : 29/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.065 | Train_Acc: 97.745
+| Global Round : 29/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.078 | Train_Acc: 97.310
+| Global Round : 29/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.062 | Train_Acc: 97.990
+| Global Round : 29/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.047 | Train_Acc: 98.405
+| Global Round : 29/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.030 | Train_Acc: 99.005
+| Client id:1 | Test_Loss: 0.842 | Test_Acc: 80.541
+| Class: 0 - T-shirt/top | Class_Acc: 74.920
+| Class: 1 - Trouser    | Class_Acc: 93.629
+| Class: 2 - Pullover   | Class_Acc: 71.077
+| Class: 3 - Dress      | Class_Acc: 80.000
+| Class: 4 - Coat       | Class_Acc: 70.448
+| Class: 5 - Sandal     | Class_Acc: 90.801
+| Class: 6 - Shirt      | Class_Acc: 51.368
+| Class: 7 - Sneaker    | Class_Acc: 86.628
+| Class: 8 - Bag        | Class_Acc: 95.192
+| Class: 9 - Ankle boot | Class_Acc: 90.030
+| Global Round : 29/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.047 | Train_Acc: 98.530
+| Global Round : 29/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.030 | Train_Acc: 99.180
+| Global Round : 29/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.032 | Train_Acc: 99.070
+| Global Round : 29/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.023 | Train_Acc: 99.320
+| Global Round : 29/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.015 | Train_Acc: 99.645
+| Client id:2 | Test_Loss: 0.882 | Test_Acc: 80.569
+| Class: 0 - T-shirt/top | Class_Acc: 76.923
+| Class: 1 - Trouser    | Class_Acc: 92.541
+| Class: 2 - Pullover   | Class_Acc: 69.846
+| Class: 3 - Dress      | Class_Acc: 84.682
+| Class: 4 - Coat       | Class_Acc: 70.118
+| Class: 5 - Sandal     | Class_Acc: 92.878
+| Class: 6 - Shirt      | Class_Acc: 47.432
+| Class: 7 - Sneaker    | Class_Acc: 87.861
+| Class: 8 - Bag        | Class_Acc: 92.949
+| Class: 9 - Ankle boot | Class_Acc: 89.124
+| Global Round : 29/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.034 | Train_Acc: 98.965
+| Global Round : 29/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.019 | Train_Acc: 99.475
+| Global Round : 29/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.013 | Train_Acc: 99.680
+| Global Round : 29/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.005 | Train_Acc: 99.945
+| Global Round : 29/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.002 | Train_Acc: 99.985
+aggregating weights...
+lambda: tensor([0.3413, 0.3265, 0.3321])
+| Client id:0 | Test_Loss: 0.922 | Test_Acc: 80.000
+| Class: 0 - T-shirt/top | Class_Acc: 72.990
+| Class: 1 - Trouser    | Class_Acc: 95.014
+| Class: 2 - Pullover   | Class_Acc: 70.154
+| Class: 3 - Dress      | Class_Acc: 82.899
+| Class: 4 - Coat       | Class_Acc: 68.060
+| Class: 5 - Sandal     | Class_Acc: 87.537
+| Class: 6 - Shirt      | Class_Acc: 47.416
+| Class: 7 - Sneaker    | Class_Acc: 86.919
+| Class: 8 - Bag        | Class_Acc: 93.910
+| Class: 9 - Ankle boot | Class_Acc: 93.353
+| Global Round : 30/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.024 | Train_Acc: 99.370
+| Global Round : 30/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.014 | Train_Acc: 99.700
+| Global Round : 30/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.005 | Train_Acc: 99.915
+| Global Round : 30/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.002 | Train_Acc: 100.000
+| Global Round : 30/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+| Client id:1 | Test_Loss: 0.869 | Test_Acc: 80.631
+| Class: 0 - T-shirt/top | Class_Acc: 74.920
+| Class: 1 - Trouser    | Class_Acc: 94.460
+| Class: 2 - Pullover   | Class_Acc: 71.077
+| Class: 3 - Dress      | Class_Acc: 79.420
+| Class: 4 - Coat       | Class_Acc: 70.149
+| Class: 5 - Sandal     | Class_Acc: 89.318
+| Class: 6 - Shirt      | Class_Acc: 51.064
+| Class: 7 - Sneaker    | Class_Acc: 84.302
+| Class: 8 - Bag        | Class_Acc: 95.513
+| Class: 9 - Ankle boot | Class_Acc: 94.864
+| Global Round : 30/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.044 | Train_Acc: 98.665
+| Global Round : 30/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.056 | Train_Acc: 98.255
+| Global Round : 30/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.044 | Train_Acc: 98.600
+| Global Round : 30/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.050 | Train_Acc: 98.290
+| Global Round : 30/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.040 | Train_Acc: 98.680
+| Client id:2 | Test_Loss: 0.880 | Test_Acc: 80.958
+| Class: 0 - T-shirt/top | Class_Acc: 78.526
+| Class: 1 - Trouser    | Class_Acc: 92.265
+| Class: 2 - Pullover   | Class_Acc: 72.000
+| Class: 3 - Dress      | Class_Acc: 84.104
+| Class: 4 - Coat       | Class_Acc: 70.710
+| Class: 5 - Sandal     | Class_Acc: 91.691
+| Class: 6 - Shirt      | Class_Acc: 47.130
+| Class: 7 - Sneaker    | Class_Acc: 84.393
+| Class: 8 - Bag        | Class_Acc: 94.872
+| Class: 9 - Ankle boot | Class_Acc: 93.051
+| Global Round : 30/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.079 | Train_Acc: 97.355
+| Global Round : 30/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.071 | Train_Acc: 97.655
+| Global Round : 30/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.059 | Train_Acc: 98.060
+| Global Round : 30/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.054 | Train_Acc: 98.305
+| Global Round : 30/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.030 | Train_Acc: 98.975
+aggregating weights...
+lambda: tensor([0.3417, 0.3263, 0.3320])
+
+Final Results
+| Client id:0 | Test_Loss: 0.838 | Test_Acc: 79.850
+| Class: 0 - T-shirt/top | Class_Acc: 73.312
+| Class: 1 - Trouser    | Class_Acc: 94.460
+| Class: 2 - Pullover   | Class_Acc: 64.923
+| Class: 3 - Dress      | Class_Acc: 83.478
+| Class: 4 - Coat       | Class_Acc: 67.761
+| Class: 5 - Sandal     | Class_Acc: 89.318
+| Class: 6 - Shirt      | Class_Acc: 50.760
+| Class: 7 - Sneaker    | Class_Acc: 87.791
+| Class: 8 - Bag        | Class_Acc: 92.949
+| Class: 9 - Ankle boot | Class_Acc: 91.843
+| Client id:1 | Test_Loss: 0.794 | Test_Acc: 80.420
+| Class: 0 - T-shirt/top | Class_Acc: 74.598
+| Class: 1 - Trouser    | Class_Acc: 94.183
+| Class: 2 - Pullover   | Class_Acc: 64.923
+| Class: 3 - Dress      | Class_Acc: 79.130
+| Class: 4 - Coat       | Class_Acc: 71.045
+| Class: 5 - Sandal     | Class_Acc: 88.427
+| Class: 6 - Shirt      | Class_Acc: 52.888
+| Class: 7 - Sneaker    | Class_Acc: 89.244
+| Class: 8 - Bag        | Class_Acc: 95.513
+| Class: 9 - Ankle boot | Class_Acc: 92.749
+| Client id:2 | Test_Loss: 0.827 | Test_Acc: 80.778
+| Class: 0 - T-shirt/top | Class_Acc: 76.282
+| Class: 1 - Trouser    | Class_Acc: 91.989
+| Class: 2 - Pullover   | Class_Acc: 67.077
+| Class: 3 - Dress      | Class_Acc: 85.260
+| Class: 4 - Coat       | Class_Acc: 70.710
+| Class: 5 - Sandal     | Class_Acc: 91.988
+| Class: 6 - Shirt      | Class_Acc: 49.547
+| Class: 7 - Sneaker    | Class_Acc: 88.439
+| Class: 8 - Bag        | Class_Acc: 94.231
+| Class: 9 - Ankle boot | Class_Acc: 90.937
+jdolle@535-project-CPU-ONLY: ~/agnostic_federated_learning[01;32mjdolle@535-project-CPU-ONLY[00m:[01;34m~/agnostic_federated_learning[00m$   [K[Kexit
+exit
+
+Script done on 2023-12-04 10:02:32-05:00 [COMMAND_EXIT_CODE="0"]
