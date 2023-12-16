@@ -1,8 +1,8 @@
 <h1>Contributions</h1>
 
- ##James Dolle:
+ ## James Dolle:
 
-##Bryan Leung:
+## Bryan Leung:
 
-##Allen Molekunnel:
+## Allen Molekunnel:
 
