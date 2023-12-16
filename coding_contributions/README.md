@@ -2,11 +2,11 @@
 
  ## James Dolle:
 
-<contributions here>
+contributions here
  
 ## Bryan Leung:
 
-<contributions here>
+contributions here
  
 ## Allen Molekunnel:
 
