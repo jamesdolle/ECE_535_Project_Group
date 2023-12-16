@@ -2,7 +2,12 @@
 
  ## James Dolle:
 
-contributions here
+Coded Gaussian Noise
+Got all of the data in the DATA/ folder by running the model 6 times
+Created the spreadsheet in Processed_DATA/ Folder by extracting the data in the textfiles uploaded using bash and AWK.
+Created the graphs in the report
+Calculated the group bias for each model I created.
+Drew conclusions for task 3/4 using the uploaded Excel file. Data used for my conclusions are listed under TASK_3 and TASK_4 in the Excel sheet.
 
 ...
  
