@@ -27,6 +27,6 @@ Assisted in setting up the work environment.
 
 Developed code to save a trained model and evaluate per client group performance evaluation.
 
-Analyzed AFL and FedAvg performance on the clients and compared the two techniques in reducing bias. Results are in a excel file uploaded to the repository.
+Analyzed AFL and FedAvg performance on the clients and compared the two techniques in reducing bias. Results are in a excel file uploaded to the repository (FedAvg VS AFL per-client Bias Analysis - Allen.xlsx).
 
 Report Writing - Abstract, Introduction, Background on FedAvg, AFL, and datasets.  
