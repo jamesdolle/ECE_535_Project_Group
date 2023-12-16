@@ -14,7 +14,6 @@ Calculated the group bias for each model I created.
 Drew conclusions for task 3/4 using the uploaded Excel file. Data used for my conclusions are listed under TASK_3 and TASK_4 in the ECE_535_Project_Group/Processed_DATA
 /data_extract_backup.xlsx.
 
-...
  
 ## Bryan Leung:
 
@@ -28,6 +27,6 @@ Assisted in setting up the work environment.
 
 Developed code to save a trained model and evaluate per client group performance evaluation.
 
-Analyzed AFL and FedAvg performance on the clients and compared the two techniques in reducing bias. 
+Analyzed AFL and FedAvg performance on the clients and compared the two techniques in reducing bias. Results are in a excel file uploaded to the repository.
 
 Report Writing - Abstract, Introduction, Background on FedAvg, AFL, and datasets.  
