@@ -1,4 +1,4 @@
-Contributions
+<h1>Contributions</h1>
 
 James Dolle - 
 
